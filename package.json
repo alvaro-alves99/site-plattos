@@ -1,0 +1,19 @@
+{
+  "name": "plattos",
+  "version": "1.0.0",
+  "description": "Site do studio Plattos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvaro-alves99/site-plattos.git"
+  },
+  "author": "Álvaro Alves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvaro-alves99/site-plattos/issues"
+  },
+  "homepage": "https://github.com/alvaro-alves99/site-plattos#readme"
+}
