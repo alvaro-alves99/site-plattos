@@ -1,0 +1,76 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Ambit', 'Roboto', sans-serif; }
+
+.menu-lateral {
+  position: fixed;
+  height: 100vh;
+  box-shadow: 7px 2px 70px rgba(143, 87, 69, 0.2); }
+  .menu-lateral__container {
+    position: relative;
+    display: flex;
+    height: 100%;
+    padding: 2rem 0rem 0rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+    .menu-lateral__container::after {
+      content: '';
+      width: .5px;
+      height: 27%;
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translatex(-50%);
+      background-color: rgba(247, 90, 37, 0.5); }
+    .menu-lateral__container::before {
+      content: '';
+      width: .5px;
+      height: 26%;
+      position: absolute;
+      top: 53%;
+      left: 50%;
+      transform: translatex(-50%);
+      background-color: rgba(247, 90, 37, 0.5); }
+  .menu-lateral__logo {
+    width: 5rem; }
+  .menu-lateral__toggle {
+    display: block;
+    background-color: #F75A25;
+    width: 5rem;
+    height: 4.5rem;
+    border-radius: 20%;
+    background-image: url("../../img/menu-risquinhos.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 8px 8px #FFEEDB; }
+  .menu-lateral__social-media-container {
+    margin-top: 1.8rem;
+    padding: 2rem 2.4rem;
+    display: block;
+    background-color: #F75A25; }
+  .menu-lateral__icon-social-media:not(:last-child) {
+    margin-right: 1rem; }
+  .menu-lateral__frase-container {
+    text-align: center; }
+  .menu-lateral__frase {
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.25;
+    font-family: 'playfair';
+    text-align: center;
+    display: inline-block;
+    color: #8F5745; }

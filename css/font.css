@@ -1,0 +1,17 @@
+@font-face{
+    font-family: Ambit;
+    src: local("fonts/Ambit-regular.otf");
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: Playfair;
+    src: local("fonts/playfair/PlayfairDisplay-Italic.ttf");
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: Playfair;
+    src: local("fonts/playfair/PlayfairDisplay-BoldItalic.ttf");
+    font-weight: 600;
+}
