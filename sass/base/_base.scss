@@ -12,4 +12,19 @@ html{
 
 body{
     box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+}
+
+li{
+    display: inline-block;
+}
+
+::selection{
+    background-color: $primary-light;
 }

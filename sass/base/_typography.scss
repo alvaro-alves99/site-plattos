@@ -1,3 +1,26 @@
 body{
     font-family: 'Ambit', 'Roboto', sans-serif;
 }
+
+.paragraph{
+    color: $primary-dark;
+    font-size: 1.28rem;
+    line-height: 1.55;
+    letter-spacing: .4px;
+    font-weight: 400;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.bold-laranja{
+    color: $primary;
+    font-weight: 700;
+}
+
+.main-title-pagina{
+    color: $primary-dark;
+    font-size: 3.1rem;
+    font-weight: 100;
+}

@@ -39,14 +39,14 @@
         </div>
     </section>
 
-    <main class="home-layout">
+    <main class="portfolio-layout main-section-layout">
         <section class="mini-menu">
             <ul class="mini-menu__lista">
                 <li class="mini-menu__lista-item">
-                    <span class="mini-menu__lista-link mini-menu__lista-link--active">Home</span>
+                    <span class="mini-menu__lista-link">Home</span>
                 </li>
                 <li class="mini-menu__lista-item">
-                    <span class="mini-menu__lista-link">Serviços</span>
+                    <span class="mini-menu__lista-link mini-menu__lista-link--active">Serviços</span>
                 </li>
                 <li class="mini-menu__lista-item">
                     <span class="mini-menu__lista-link">Portfólio</span>
@@ -79,28 +79,49 @@
             </ul>
         </section>
 
-        <section class="home-layout__content">
-            <div class="home-layout__title-container">
-                <h1 class="home-layout__title">We are a <br><span class="home-layout__title-emphasis">Design Studio</span><br> that cares</h1>
-                <p class="home-layout__paragraph paragraph paragraph--20 --mt-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="bold">Maecenas sed odio a augue accumsan porttitor boldin id dui.</span> Pellentesque non tempor ante. Donec sed justo at enim iaculis dapibus.
-                </p>
+        <section class="portfolio-layout__header-title-container">
+            <h1 class="portfolio-layout__header-title main-title-pagina">
+                Amamos o que fazemos e <br>
+                <span class="bold-laranja">executamos com excelência</span>
+            </h1>
+            <p class="portfolio-layout__header-paragraph paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quos, quasi laboriosam id vero at illo cupiditate neque architecto illo cupiditate neque architecto</p>
+        </section>
 
-                <a href="#" class="btn home-layout__btn-primary --mt-5">Conheça nosso <b>Portfólio</b></a>
+        <section class="portfolio-layout__services-container">
+            <div class="portfolio-layout__services-interno">
+                <div class="portfolio-layout__services-item portfolio-layout__services-item--branding">
+                    <img src="./img/img-branding-cropped.png" alt="" class="portfolio-layout__img-servico portfolio-layout__img-servico--branding">
+                    <a href="#" class="portfolio-layout__services-btn btn">Branding</a>
+                </div>
+
+                <div class="portfolio-layout__services-item portfolio-layout__services-item--branding">
+                    <img src="./img/img-video-cropped.png" alt="" class="portfolio-layout__img-servico portfolio-layout__img-servico--branding">
+                    <a href="#" class="portfolio-layout__services-btn btn">Motion & Video</a>
+                </div>
+
+                <div class="portfolio-layout__services-item portfolio-layout__services-item--branding">
+                    <img src="./img/img-social-media-cropped.png" alt="" class="portfolio-layout__img-servico portfolio-layout__img-servico--branding">
+                   
+                    <a href="#" class="portfolio-layout__services-btn btn">Social Media & Content</a>
+                </div>
+            </div>
+
+            <div class="portfolio-layout__proxima-secao-container">
+                <a href="#" class="portfolio-layout__proxima-secao-btn btn btn--dark-rounded"></a>
+                <div class="portfolio-layout__linha-horizontal"></div>
+                <div class="portfolio-layout__contador-slider">
+                    <span class="portfolio-layout__current-contador"><span class="bold">1</span></span>/
+                    <span class="portfolio-layout__total-contador">1</span>
+                </div>
             </div>
         </section>
 
-        <section class="home-layout__images-container">
-            <img src="./img/ESTATUA-home.png" alt="" class="home-layout__img-estatua">
-            <img src="./img/colunas-gregas.png" alt="" class="home-layout__img-colunas">
-            <div class="home-layout__img-circulo"></div>
+        <div class="portfolio-layout__images-container">
+            <img src="./img/linhas-arco.svg" alt="" class="portfolio-layout__img-risquinho-sol">
+            <img src="./img/ESTATUA-HOMEM-1.png" alt="" class="portfolio-layout__img-estatua-masculina">
+            <div class="portfolio-layout__img-bg-creme"></div>
+        </div>
 
-            <object data="./img/pi-quadrado.svg" type="image/svg+xml" class="home-layout__img-pi-quadrado"></object>
-            <object class="home-layout__risquinhos-arco--comp" data="./img/linhas-arco.svg" type="image/svg+xml"></object>
-        </section>
-
-        <object class="home-layout__risquinhos-arco" data="./img/linhas-arco.svg" type="image/svg+xml"></object>
-        <div class="home-layout__ciruclo-bg-creme"></div>
     </main>
     
 </body>

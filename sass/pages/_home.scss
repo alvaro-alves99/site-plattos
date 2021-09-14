@@ -1,0 +1,169 @@
+.home-layout{
+    position: relative;
+    width: 94%;
+    float: right;
+    min-height: 100vh;
+    overflow:hidden;
+
+        &__images-container{
+            position: relative;
+            float: right;
+            width: 65%;
+            min-height: 100vh;
+            left: 2rem;
+        }
+
+        &__img-estatua{
+            position: absolute;
+            left: 4%;
+            bottom: -7%;
+            width: 73%;
+            z-index: 50;
+        }
+
+        &__img-colunas{
+            position: absolute;
+            bottom: 0;
+            left: -3%;
+            z-index: 40;
+            width: 45rem;
+        }
+
+        &__img-pi-quadrado{
+            position: absolute;
+            top: 54%;
+            left: 80%;
+            width: 4.2rem;
+        }
+
+
+        &__risquinhos-arco--comp{
+            position: absolute;
+            top: 63%;
+            left: 38%;
+            transform: rotate(140deg);
+        }
+
+        &__img-circulo{
+            position: absolute;
+            width: 35rem;
+            height: 35rem;
+            top: 20%;
+            left: 14%;
+            z-index: -1;
+            background-color: $primary;
+            border-radius: 30rem;
+
+                &::after{
+                    content: '';
+                    @include align-middle;
+                    display: block;
+                    width: 113%;
+                    height: 113%;
+                    border-radius: 30rem;
+                    border: 2px solid $primary;
+                }
+        }
+
+        &:after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2rem;
+            position: absolute;
+            bottom: 0;
+            background-image: url('../../img/bg_tangerina_saturado-footer.png');
+            background-size: cover;
+            background-position: center;
+            z-index: 900;
+        }
+
+        &:before{
+            content: '';
+            display: block;
+            width: 70rem;
+            height: 70rem;
+            position: absolute;
+            right: -10%;
+            top: -38%;
+            background-image: url('../../img/bg-creme.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &__ciruclo-bg-creme{
+            width: 30rem;
+            height: 30rem;
+            position: absolute;
+            right: -4%;
+            bottom: -14rem;
+            background-image: url(../../img/bg-creme.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        &__risquinhos-arco{
+            position: absolute;
+            top: 80%;
+            left: -6%;
+            z-index: -1;
+            width: 41rem;
+        }
+
+
+        &__title-container{
+            position: absolute;
+            top: 22%;
+            left: 7.5%;
+        }
+
+        &__content{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        &__title{
+            color: $primary-dark;
+            font-weight: 100;
+            font-size: 5.3rem;
+            line-height: 1;
+        }
+
+        &__title-emphasis{
+            color: $primary;
+            font-weight: 700;
+            font-size: 5.8rem;
+        }
+
+        &__paragraph{
+            width: 28rem;
+        }
+
+        &__btn-primary{
+            &:link,
+            &:visited{
+                font-weight: 100;
+                padding-bottom: 1.5rem;
+                margin-left: -1rem;
+
+            }
+
+            &::before{
+                content: '';
+                vertical-align: sub;
+                display: inline-block;
+                width: 2rem;
+                height: 2rem;
+                background-image: url('../../img/icon-portfolio-home.svg');
+                margin-right: 1rem;
+                background-size: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+
+
+}
