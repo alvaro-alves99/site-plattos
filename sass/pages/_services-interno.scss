@@ -1,0 +1,299 @@
+.services-int-layout{
+    &__select-service-container{
+        margin-top: 8rem;
+        padding-left: 10rem;
+        display: flex;
+        align-items: center;
+        width: 61%;
+    }
+
+    &__select-service-text{
+        margin-right: 6rem;
+    }
+
+    &__select-service-content{
+        display: flex;
+    }
+
+    &__nossos-trabalhos-container{
+        margin-top: 3rem;
+    }
+
+    &__nossos-trabalhos-content-row{
+        margin-top: 2.2rem;
+        margin-bottom: 2.2rem;
+        display: flex;
+    }
+
+    &__nossos-trabalhos-item-img{
+        border-radius: 1rem;
+        height: 10rem;
+    }
+
+    &__servico-aberto-title{
+        font-weight: 100;
+        color: $primary-dark;
+        font-size: 1.7rem;
+        position: relative;
+
+            &::after{
+                content:'';
+                position: absolute;
+                width: 75%;
+                height: .5px;
+                top: 50%;
+                right: 0;
+                transform: translatey(-50%);
+                background-color: rgba($primary-dark, .3);
+
+            }
+
+            &--tarefas-executamos{
+                &::after{
+                    width: 68%;
+                }
+            }
+    }
+
+    &__nossos-trabalhos-content-item{
+        &:not(:last-of-type){
+            margin-right: 1rem;
+        }
+    }
+
+    &__open-service-container{
+        margin-top: 8rem;
+        padding-left: 11rem;
+        display: flex;
+    }
+
+    &__proxima-secao-container{
+        justify-content: center;
+    }
+
+    &__linha-horizontal{
+        margin: 3rem 0;
+        height: 20rem;
+    }
+
+    &__contador-slider{
+        text-align: center;
+    }
+
+    &__open-service-content{
+        position: relative;
+        width: 66%;
+        transform: translatex(-14rem);
+        padding: 5rem 8rem 2rem 21rem;
+        box-shadow: 4px 0px 30px rgba($primary-dark, .2);
+        border-radius: 0 3rem 3rem 0;
+
+            &::after{
+                content: '';
+                position: absolute;
+                display: block;
+                border-radius: 1rem 1rem 0 0;
+                bottom: 0;
+                right: 8%;
+                width: 71%;
+                height: .3rem;
+                background-color: $primary;
+            }
+    }
+
+    &__tarefas-executamos-container{
+        margin-top: 1rem;
+    }
+
+    &__tarefas-executamos_lista-item{
+        color: $primary-dark;
+        font-size: 1.5rem;
+        text-decoration: none;
+        font-weight: 100;
+        margin: 1.1rem 2rem 0 0;
+
+            &::before{
+                content: '';
+                display: inline-block;
+                width: 2rem;
+                height: 2rem;
+                margin-right: .4rem;
+                vertical-align: middle;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                transform: translatey(-.2rem);
+                background-image: url('../../img/servico-interno/after-lista-tarefas.svg');
+            }
+    }
+
+    &__open-service-title-container{
+        display: flex;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+
+    &__open-service-description{
+        max-width: 32rem;
+        display: inline-block;
+    }
+
+    &__open-service-title{
+        color: $primary;
+        font-size: 2.8rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-right: 3rem;
+        line-height: 1.1;
+
+        &::before{
+            content:'';
+            display: inline-block;
+            height: 5.8rem;
+            width: 5.8rem;
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-right: 1.4rem;
+        }
+
+        &--branding{
+            &::before{
+                background-image: url('../../img/branding-service-after-img.svg');
+            }
+        }
+
+
+    }
+
+    &__open-service-item{
+
+        &>.portfolio-layout__services-item{
+            width: 33rem;
+        }
+
+        width: 33rem;
+        z-index: 200;
+    }
+
+    &__select-service-title{
+        display: inline-block;
+        position: relative;
+        color: $primary-dark;
+        font-weight: 100;
+        font-size: 1.8rem;
+        line-height: 1.1;
+        white-space: nowrap;
+
+            &::after{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2rem;
+                margin-top: .6rem;
+                background-size: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../../img/arrow-servico.svg);
+
+            }
+    }
+
+    &__services-btn{
+        &,
+        &:link,
+        &:visited{
+            font-size: 1.8rem !important;
+            padding: 1.2rem 2.8rem 1.2rem 2.8rem;
+        }
+    }
+
+    &__select-service-btn{
+            &,
+            &:link,
+            &:active{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+                border-radius: 0 5rem 5rem 0;
+                padding: .8rem 1.9rem 0.8rem .81rem;
+                font-size: 1.3rem;
+                box-shadow: 0px 9px $primary-light;
+                background-color: $white;
+                color: $primary-dark;
+                box-shadow: none;
+                opacity: .92;
+                font-weight: 100;
+            }
+
+            &--active,
+            &--active:link,
+            &--active:active{
+                color: $white;
+                background-color: $primary;
+                opacity: 1;
+                box-shadow: 0px 9px $primary-light;
+                font-weight: 400;
+            }
+
+            
+    }
+
+    &__select-service-item{
+        position: relative;
+        width: 9rem;
+        cursor: pointer;
+        
+            &:not(:last-child){
+                margin-right: 2.8rem;
+
+            }
+
+            &::before{
+                content: '';
+                display: block;
+                @include align-middle;
+                width: 109%;
+                height: 109%;
+                background-image: url('../../img/stroke-img-servico.svg');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index: -1;
+            }
+
+            
+            
+    }
+
+    // -------- IMAGENS FLUTANDO NO FUNDO ---------------
+
+
+    &__img-risquinho-sol-2{
+        position: absolute;
+        bottom: -7%;
+        right: -2%;
+        width: 35rem;
+    }
+
+    &__select-service-img-item{
+        width: 100%;
+        filter: opacity(.4);
+
+            &--active{
+                filter: none;
+            }
+    }
+
+    &__img-estatua-masculina{
+        left: 62%;
+        width: 41rem;
+    }
+
+    &__img-risquinho-sol{
+        left: 60%;
+        width: 28rem;
+    }
+}

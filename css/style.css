@@ -33,7 +33,7 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 70.5%; }
 
 body {
   box-sizing: border-box;
@@ -72,6 +72,16 @@ body {
   font-size: 3.1rem;
   font-weight: 100; }
 
+.helper_header-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 63%; }
+
+.helper_header-paragraph {
+  width: 37%;
+  min-width: 35rem; }
+
 .main-section-layout {
   position: relative;
   width: 94%;
@@ -90,6 +100,40 @@ body {
     background-size: cover;
     background-position: center;
     z-index: 900; }
+
+.main-section-spacing-layout {
+  padding-top: 13rem;
+  padding-left: 10rem;
+  position: relative; }
+
+.default-images-container {
+  z-index: -200;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%; }
+  .default-images-container__img-bg-creme {
+    position: absolute;
+    top: -26%;
+    right: -2%;
+    width: 45rem;
+    height: 45rem;
+    z-index: -1;
+    background-image: url(../../img/bg-creme.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .default-images-container__img-estatua-masculina {
+    position: absolute;
+    top: -23%;
+    left: 59%;
+    width: 38rem; }
+  .default-images-container__img-risquinho-sol {
+    position: absolute;
+    top: -5%;
+    left: 57%;
+    width: 25rem;
+    transform: rotate(-143deg); }
 
 .language-selector {
   background-color: #F75A25;
@@ -254,6 +298,377 @@ body {
     text-align: center;
     display: inline-block;
     color: #8F5745; }
+
+.sobre-nos_layout__header-title-container {
+  justify-content: unset; }
+
+.sobre-nos_layout__header-title {
+  margin-right: 4rem; }
+
+.sobre-nos_layout__crencas-lista-coluna--1 {
+  margin-right: 6rem; }
+
+.sobre-nos_layout__crencas-lista {
+  position: relative;
+  margin-top: 6.7rem;
+  display: flex;
+  max-width: 97rem; }
+
+.sobre-nos_layout__crencas-lista_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem; }
+  .sobre-nos_layout__crencas-lista_item::before {
+    content: '';
+    display: inline-block;
+    height: 13rem;
+    width: 11rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../../img/sobre-nos/portal-lista-item.svg"); }
+
+.sobre-nos_layout__crencas-lista_texto {
+  font-family: 'Playfair';
+  color: #8F5745;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 2.2rem;
+  margin-left: -4rem;
+  -webkit-box-decoration-break: clone; }
+  .sobre-nos_layout__crencas-lista_texto:nth-of-type(odd) {
+    background-color: #FFEEDB; }
+
+.services-layout {
+  padding-top: 13rem;
+  padding-left: 10rem;
+  position: relative; }
+  .services-layout:before {
+    content: '';
+    position: absolute;
+    right: -6%;
+    top: 76%;
+    display: block;
+    width: 35rem;
+    height: 35rem;
+    background-image: url(../../img/linhas-arco.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: rotate(-50deg); }
+  .services-layout__images-container {
+    z-index: -200;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%; }
+  .services-layout__proxima-secao-btn {
+    background-image: url("../../img/arrow-next.svg");
+    background-size: 22%;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .services-layout__img-bg-creme {
+    position: absolute;
+    top: -26%;
+    right: -2%;
+    width: 45rem;
+    height: 45rem;
+    z-index: -1;
+    background-image: url(../../img/bg-creme.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .services-layout__img-estatua-masculina {
+    position: absolute;
+    top: -23%;
+    left: 59%;
+    width: 38rem; }
+  .services-layout__img-risquinho-sol {
+    position: absolute;
+    top: -5%;
+    left: 57%;
+    width: 25rem;
+    transform: rotate(-143deg); }
+  .services-layout__header-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 63%; }
+  .services-layout__header-paragraph {
+    width: 37%;
+    min-width: 35rem; }
+  .services-layout__services-container {
+    padding-right: 19rem;
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .services-layout__proxima-secao-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 30rem;
+    justify-content: space-between; }
+  .services-layout__services-item {
+    position: relative;
+    display: inline-block;
+    width: 29rem;
+    shape-outside: url("../../img/clip-path-portal.svg");
+    clip-path: url("../../img/clip-path-portal.svg");
+    cursor: pointer; }
+    .services-layout__services-item::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 106%;
+      height: 106%;
+      background-image: url("../../img/stroke-img-servico.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1; }
+    .services-layout__services-item:not(:last-child) {
+      margin-right: 5.5rem; }
+  .services-layout__services-btn, .services-layout__services-btn:link, .services-layout__services-btn:visited {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.45rem;
+    font-weight: 400; }
+  .services-layout__img-servico {
+    width: 100%; }
+  .services-layout__contador-slider {
+    font-size: 1.2rem;
+    color: #8F5745; }
+  .services-layout__linha-horizontal {
+    width: .5px;
+    background-color: rgba(199, 171, 162, 0.6);
+    height: 16rem; }
+
+.services-int-layout__select-service-container {
+  margin-top: 8rem;
+  padding-left: 10rem;
+  display: flex;
+  align-items: center;
+  width: 61%; }
+
+.services-int-layout__select-service-text {
+  margin-right: 6rem; }
+
+.services-int-layout__select-service-content {
+  display: flex; }
+
+.services-int-layout__nossos-trabalhos-container {
+  margin-top: 3rem; }
+
+.services-int-layout__nossos-trabalhos-content-row {
+  margin-top: 2.2rem;
+  margin-bottom: 2.2rem;
+  display: flex; }
+
+.services-int-layout__nossos-trabalhos-item-img {
+  border-radius: 1rem;
+  height: 10rem; }
+
+.services-int-layout__servico-aberto-title {
+  font-weight: 100;
+  color: #8F5745;
+  font-size: 1.7rem;
+  position: relative; }
+  .services-int-layout__servico-aberto-title::after {
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: .5px;
+    top: 50%;
+    right: 0;
+    transform: translatey(-50%);
+    background-color: rgba(143, 87, 69, 0.3); }
+  .services-int-layout__servico-aberto-title--tarefas-executamos::after {
+    width: 68%; }
+
+.services-int-layout__nossos-trabalhos-content-item:not(:last-of-type) {
+  margin-right: 1rem; }
+
+.services-int-layout__open-service-container {
+  margin-top: 8rem;
+  padding-left: 11rem;
+  display: flex; }
+
+.services-int-layout__proxima-secao-container {
+  justify-content: center; }
+
+.services-int-layout__linha-horizontal {
+  margin: 3rem 0;
+  height: 20rem; }
+
+.services-int-layout__contador-slider {
+  text-align: center; }
+
+.services-int-layout__open-service-content {
+  position: relative;
+  width: 66%;
+  transform: translatex(-14rem);
+  padding: 5rem 8rem 2rem 21rem;
+  box-shadow: 4px 0px 30px rgba(143, 87, 69, 0.2);
+  border-radius: 0 3rem 3rem 0; }
+  .services-int-layout__open-service-content::after {
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 1rem 1rem 0 0;
+    bottom: 0;
+    right: 8%;
+    width: 71%;
+    height: .3rem;
+    background-color: #F75A25; }
+
+.services-int-layout__tarefas-executamos-container {
+  margin-top: 1rem; }
+
+.services-int-layout__tarefas-executamos_lista-item {
+  color: #8F5745;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 100;
+  margin: 1.1rem 2rem 0 0; }
+  .services-int-layout__tarefas-executamos_lista-item::before {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: .4rem;
+    vertical-align: middle;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translatey(-0.2rem);
+    background-image: url("../../img/servico-interno/after-lista-tarefas.svg"); }
+
+.services-int-layout__open-service-title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem; }
+
+.services-int-layout__open-service-description {
+  max-width: 32rem;
+  display: inline-block; }
+
+.services-int-layout__open-service-title {
+  color: #F75A25;
+  font-size: 2.8rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+  line-height: 1.1; }
+  .services-int-layout__open-service-title::before {
+    content: '';
+    display: inline-block;
+    height: 5.8rem;
+    width: 5.8rem;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-right: 1.4rem; }
+  .services-int-layout__open-service-title--branding::before {
+    background-image: url("../../img/branding-service-after-img.svg"); }
+
+.services-int-layout__open-service-item {
+  width: 33rem;
+  z-index: 200; }
+  .services-int-layout__open-service-item > .portfolio-layout__services-item {
+    width: 33rem; }
+
+.services-int-layout__select-service-title {
+  display: inline-block;
+  position: relative;
+  color: #8F5745;
+  font-weight: 100;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  white-space: nowrap; }
+  .services-int-layout__select-service-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2rem;
+    margin-top: .6rem;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../img/arrow-servico.svg); }
+
+.services-int-layout__services-btn, .services-int-layout__services-btn:link, .services-int-layout__services-btn:visited {
+  font-size: 1.8rem !important;
+  padding: 1.2rem 2.8rem 1.2rem 2.8rem; }
+
+.services-int-layout__select-service-btn, .services-int-layout__select-service-btn:link, .services-int-layout__select-service-btn:active {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  border-radius: 0 5rem 5rem 0;
+  padding: .8rem 1.9rem 0.8rem .81rem;
+  font-size: 1.3rem;
+  box-shadow: 0px 9px #FFEEDB;
+  background-color: #ffffff;
+  color: #8F5745;
+  box-shadow: none;
+  opacity: .92;
+  font-weight: 100; }
+
+.services-int-layout__select-service-btn--active, .services-int-layout__select-service-btn--active:link, .services-int-layout__select-service-btn--active:active {
+  color: #ffffff;
+  background-color: #F75A25;
+  opacity: 1;
+  box-shadow: 0px 9px #FFEEDB;
+  font-weight: 400; }
+
+.services-int-layout__select-service-item {
+  position: relative;
+  width: 9rem;
+  cursor: pointer; }
+  .services-int-layout__select-service-item:not(:last-child) {
+    margin-right: 2.8rem; }
+  .services-int-layout__select-service-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 109%;
+    height: 109%;
+    background-image: url("../../img/stroke-img-servico.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; }
+
+.services-int-layout__img-risquinho-sol-2 {
+  position: absolute;
+  bottom: -7%;
+  right: -2%;
+  width: 35rem; }
+
+.services-int-layout__select-service-img-item {
+  width: 100%;
+  filter: opacity(0.4); }
+  .services-int-layout__select-service-img-item--active {
+    filter: none; }
+
+.services-int-layout__img-estatua-masculina {
+  left: 62%;
+  width: 41rem; }
+
+.services-int-layout__img-risquinho-sol {
+  left: 60%;
+  width: 28rem; }
 
 .home-layout {
   position: relative;

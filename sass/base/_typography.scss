@@ -24,3 +24,15 @@ body{
     font-size: 3.1rem;
     font-weight: 100;
 }
+
+.helper_header-title-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 63%;
+}
+
+.helper_header-paragraph{
+    width: 37%;
+    min-width: 35rem;
+}

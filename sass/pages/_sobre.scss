@@ -1,0 +1,78 @@
+.sobre-nos_layout{
+    
+    // -------  HEADER TEXTO COMECO ------ 
+
+    &__header-title-container{
+        justify-content: unset;
+    }
+
+    &__header-title{
+        margin-right: 4rem;
+    }
+
+
+    // ---------- FIM::: HEADER TEXTO COMECO 
+
+    // ------------- CRENCAS COMEÇO ----------------
+
+    &__crencas-container{
+        // width: 70%;
+    }
+
+    &__crencas-lista-coluna--1{
+        margin-right: 6rem;
+    }
+
+    &__crencas-lista{
+        position: relative;
+        margin-top: 6.7rem;
+        display: flex;
+        max-width: 97rem;
+
+    }
+    
+    &__crencas-lista_item{
+        display: flex;
+        align-items: center;
+        margin-bottom: 4rem;
+
+        // &:not(:last-child){
+        //     margin-right: 3rem;
+        // }
+
+        // &:nth-child(odd){
+        //     background-color:$primary-light;
+        // }
+
+        // &:nth-child(even){
+        //     float: right;
+        //     margin-right: 5rem;
+        // }
+
+        &::before{
+            content: '';
+            display: inline-block;
+            height: 13rem;
+            width: 11rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../../img/sobre-nos/portal-lista-item.svg');
+        }
+    }
+
+    &__crencas-lista_texto{
+        font-family: 'Playfair';
+        color: $primary-dark;
+        font-style: italic;
+        font-weight: 100;
+        font-size: 2.2rem;
+        margin-left: -4rem;
+        -webkit-box-decoration-break:clone;
+
+            &:nth-of-type(odd){ 
+                background-color:$primary-light;
+            }
+    }
+
+}

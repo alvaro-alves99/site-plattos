@@ -5,6 +5,7 @@
 @import "base/typography";
 @import "base/animations";
 
+
 @import "layout/structure";
 
 @import "components/language-selector";
@@ -12,5 +13,8 @@
 @import "components/mini-menu";
 @import "components/menu";
 
+@import "pages/sobre";
+@import "pages/services";
+@import "pages/services-interno";
 @import "pages/home";
 @import "pages/portfolio";
