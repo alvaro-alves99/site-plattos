@@ -10,13 +10,23 @@
         margin-right: 4rem;
     }
 
-
     // ---------- FIM::: HEADER TEXTO COMECO 
+
+    // ------------- MIOLO CONTAINER COMEÇO ----------------
+
+    &__miolo-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 133rem;
+    }
+
+    // ------------- FIM::: MIOLO CONTAINER ----------------
 
     // ------------- CRENCAS COMEÇO ----------------
 
     &__crencas-container{
-        // width: 70%;
+        margin-top: 7.7rem;
     }
 
     &__crencas-lista-coluna--1{
@@ -25,7 +35,6 @@
 
     &__crencas-lista{
         position: relative;
-        margin-top: 6.7rem;
         display: flex;
         max-width: 97rem;
 
@@ -35,19 +44,6 @@
         display: flex;
         align-items: center;
         margin-bottom: 4rem;
-
-        // &:not(:last-child){
-        //     margin-right: 3rem;
-        // }
-
-        // &:nth-child(odd){
-        //     background-color:$primary-light;
-        // }
-
-        // &:nth-child(even){
-        //     float: right;
-        //     margin-right: 5rem;
-        // }
 
         &::before{
             content: '';
@@ -67,12 +63,134 @@
         font-style: italic;
         font-weight: 100;
         font-size: 2.2rem;
-        margin-left: -4rem;
+        transform: translate(-4.5rem, -0.4rem);
         -webkit-box-decoration-break:clone;
+        background-color: white;
+        padding: .5rem 0;
 
-            &:nth-of-type(odd){ 
-                background-color:$primary-light;
+            .bold{
+                background-image: linear-gradient(to top, $primary-light 0%, $primary-light 40%, #ffffff 40%);
             }
+        
+    }
+
+    // ------------- FIM:::: CRENCAS COMEÇO ----------------
+
+    // ------------- BOX SOBRE NÓS COMEÇO ----------------
+
+    &__descricao-box_container{
+        position: relative;
+        background-color: $primary-light;
+        border-radius: 3rem;
+        padding: 1rem 0;
+        max-width: 42rem;
+        height: fit-content;
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: -12%;
+                left: 54%;
+                z-index: -1;
+                transform: translate(-50%, -50%) rotate(
+            178deg);
+                display: block;
+                width: 67rem;
+                height: 42rem;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-image: url(../../img/ESTATUA-HOMEM-1.png);
+            }   
+
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: -60%;
+                left: 51%;
+                z-index: -1;
+                transform: translate(-50%, -50%) rotate(175deg);
+                display: block;
+                width: 32rem;
+                height: 28rem;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-image: url(../../img/linhas-arco.svg);
+            }
+    }
+
+    &__descricao-box_item{
+        width: 87%;
+        height: 19.5rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 2rem auto;
+        padding: 0rem 1rem 0rem 4rem;
+        background-color: #ffffff;
+        border-radius: 3rem 20rem 20rem 3rem;
+
+            &:not(:first-child){
+                margin-top: 0;
+            }
+    }
+
+    &__descricao-box_title{
+        color: $primary-dark;
+        font-size: 2.3rem;
+        font-weight: 400;
+    }
+
+    &__descricao-box-img-container{
+        // position: absolute;
+        transform: scale(1.1) translatex(1rem);
+        margin-left: 1rem;
+        width: 20rem;
+    }
+
+    &__descricao-box-img{
+        width: 100%;
+    }
+
+    &__descricao-box_paragraph{
+        margin: 1rem 0;
+        font-weight: 100;
+        font-size: 1.2rem;
+        max-width: 27rem;
+    }
+
+    &__descricao-box_social-media-link{
+        width: 2rem;
+        text-decoration: none;
+        vertical-align: middle;
+        display: inline-block;
+
+            &:not(:last-child){
+                margin-right: .5rem;
+            }
+    }
+
+    &__descricao-box_social-media-img{
+        width: 100%;
+    }
+
+
+       // ------------- FIM :::: BOX SOBRE NÓS COMEÇO ----------------
+
+    &__img-risquinho-sol{
+        top: -5%;
+        left: 48%;
+        width: 32rem;
+        transform: rotate(235deg);
+        z-index: -2;
+    }
+
+    &__img-bg-creme{
+        top: -31%;
+        right: 15%;
+        width: 45rem;
+        height: 45rem;
     }
 
 }

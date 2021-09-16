@@ -1,0 +1,156 @@
+.contato-layout{
+
+    // TITULO NO COMECO E TEXTOS/CONTAINERS
+
+    &__title-container{
+        margin-top: 20rem;
+        margin-left: 12rem;
+        display: flex;
+    }
+
+    &__title{
+        font-size: 3.6rem;
+        color: $primary;
+    }
+
+    &__paragraph{
+        width: 40rem;
+        margin-left: 4rem;
+    }
+
+
+    // ------ FORMULARIO INICIO -------
+
+    &__form-container{
+        margin-top: 6rem;
+        margin-left: 12rem;
+        width: 80%;
+    }
+
+    &__form-text{
+        color: $primary-dark;
+        font-size: 3rem;
+        font-weight: 100;
+        line-height: 2;
+        vertical-align: -webkit-baseline-middle;
+    }
+
+    &__btn-form{
+        &,
+        &:visited,
+        &:link{
+            font-size: 1.7rem;
+            margin-left: 2.2rem;
+            padding: 1.3rem 2.3rem;
+            transform: translatey(.5rem);
+
+        }
+    }
+
+    // ----------- FORMULARIO FIM ------------
+
+    // --------- INICIO SHORTCUTS BOTOES DE CONTATO 
+
+    &__shortcuts-contato-container{
+        margin-left: 13rem;
+        margin-top: 5rem;
+    }
+
+    &__shortcuts-contato-link{
+        position: relative;
+        font-size: 2rem;
+        color: $primary-dark;
+        text-decoration: none;
+        font-weight: 100;
+
+            &::before{
+                content:'';
+                display: inline-block;
+                width: 4rem;
+                height: 4rem;
+                margin-right:2rem;
+                vertical-align: middle;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            &--whatsapp{
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    display: inline-block;
+                    width: 70%;
+                    height: 1px;
+                    bottom: -27%;
+                    right: 0;
+                    background-color: $primary;
+                }
+                // border-bottom:1px solid $primary;
+
+                    &::before{
+                        background-image: url(../../img/portfolio/icone-zap.svg);
+                    }
+
+
+            }
+
+            &--telefone{
+                &::before{
+                    background-image: url(../../img/portfolio/icone-telefone.svg);
+                }
+            }
+
+            &--email{
+                &::before{
+                    background-image: url(../../img/portfolio/icone-email.svg);
+                }
+            }
+
+            &:not(:last-child){
+                margin-right: 4rem;
+            }
+    }
+
+    // COMECO NAV FINAL PAGINA 
+
+    &__final-section-nav{
+        
+        .btn{
+            font-size: 1.8rem;
+            padding: 1.5rem 3rem;
+        }
+    }
+
+    // IMAGENS NA PAGINA 
+
+    &__img-risquinho-sol-2{
+        position: absolute;
+        top: 82%;
+        left: 58%;
+        width: 41rem;
+    }
+
+    &__img-bg-creme{
+        top: -34%;
+        right: 7%;
+        width: 40rem;
+        height: 40rem;
+    }
+
+    &__img-bg-creme-2{
+        position: absolute;
+        top: 70%;
+        left: 85%;
+        width: 30rem;
+        height: 30rem;
+    }
+
+    &__img-estatua-em-pe{
+        position: absolute;
+        left: 67%;
+        top: 29%;
+        width: 46rem;
+    }
+}

@@ -1,0 +1,29 @@
+.final-section-nav{
+    margin-top: 9rem;
+    margin-left: 10rem;
+
+    &__btn{
+        &,
+        &:link,
+        &:visited{
+            font-size: 1.2rem;
+
+            &::before{
+                content: '';
+                width: 6rem;
+                height: 1.4rem;
+                margin-right: 1.2rem;
+                display: inline-block;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../../img/portfolio/seta-nav.svg);
+            }
+
+            &:not(:last-child){
+                margin-right: 4rem;
+            }
+
+        }
+    }
+}

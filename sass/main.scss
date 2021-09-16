@@ -8,11 +8,14 @@
 
 @import "layout/structure";
 
+@import "components/final-section-nav";
+@import "components/input";
 @import "components/language-selector";
 @import "components/button";
 @import "components/mini-menu";
 @import "components/menu";
 
+@import "pages/contato";
 @import "pages/sobre";
 @import "pages/services";
 @import "pages/services-interno";

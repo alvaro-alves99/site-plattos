@@ -6,8 +6,8 @@
         &:before{
             content: '';
             position: absolute;
-            right: -6%;
-            top: 76%;
+            right: 10%;
+            top: 78%;
             display: block;
             width: 35rem;
             height: 35rem;
@@ -18,19 +18,318 @@
             transform: rotate(-50deg);
         }
 
-        &__images-container{
-            z-index: -200;
-            position: absolute;
-            top: 0;
-            height: 100vh;
+        // FIM:: SETTINGS MAIN TAG PORTFOLIO ----------------
+
+        // COMECO:: JOBS CONTAINER -----------------
+
+
+        &__miolo-container{
+            margin-top: 9rem;
+            margin-left: 3rem;
+            display: flex;
+            
+        }
+
+        &__job-item{
+            position: relative;
+            display: inline-block;
+            width: 42rem;
+            
+
+            &:not(:last-child){
+                margin-right: 14rem;
+            }
+        }
+
+        &__job-item_comp{
+            position: relative;
+            width: 100%;
+
+                img{
+                    position: absolute;
+                    z-index: 300;
+                }
+        }
+
+        &__job-item_comp-fundo{
+            position: relative;
             width: 100%;
         }
 
-        &__proxima-secao-btn{
-            background-image: url('../../img/arrow-next.svg');
-            background-size: 22%;
-            background-repeat: no-repeat;
+        &__job-item_comp-img{
+            position: absolute;
+            top: -12%;
+            left: -5%;
+            border-radius: 1.5rem;
+            box-shadow: 0px 0px 20px rgba($primary-dark, .2);
+            width: 46%;
+            z-index: 200;
+        }
+
+        &__job-item_comp-img--site{
+            position: absolute;
+            width: 45%;
+            z-index: 300;
+            top: 55%;
+            left: 69%;
+            transform: translate(-50%, -50%);
+        }
+
+        &__job-item_comp-img--post2{
+            position: absolute;
+            width: 46%;
+            z-index: 300;
+            transform: translate(-50%, -50%);
+            top: 93%;
+            left: 18%;
+            border-radius: 1.5rem;
+        }
+
+        &__job-item-info-container{
+            margin-top: 12rem;
+            display: flex;
+        }
+
+        &__job-item_comp-img-site-inloco-1{
+            width: 90%;
+            border-radius: 2rem;
+            top: 14%;
+            left: 39%;
+            box-shadow: 0px 0px 20px rgba($primary-dark, .2);
+            transform: translate(-50%, -50%);
+        }
+
+        &__job-item_comp-img-site-inloco-2{
+            width: 90%;
+            border-radius: 2rem;
+            top: 87%;
+            left: 39%;
+            box-shadow: 0px 0px 20px rgba($primary-dark, .2);
+            transform: translate(-50%, -50%);
+        }
+
+        &__job-item-info-cliente-dados{
+            display: flex;
+        }
+
+        &__job-item-btn-container{
+            z-index: 400;
+            position: absolute;
+            top: 34%;
+            left: 99%;
+        }
+
+        &__job-item-cliente-logo{
+            width: 7rem;
+            box-shadow: -7px 7px $primary-light;
+            height: auto;
+            border-radius: 100%;
+        }
+
+        &__job-item-title-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            margin-left: 1.5rem;
+            color: $primary-dark;
+        }
+
+        &__job-item-title{
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        &__job-item-ano{
+            font-size: 1.3rem;
+            font-weight: 100;
+        }
+
+        &__job-item-categorias-container{
+            max-width: 20rem;
+            margin-left: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__job-item-categorias-lista-item{
+            color: $primary-dark;
+            font-size: 1.4rem;
+            text-decoration: none;
+            font-weight: 100;
+            margin: .8rem 1rem 0 0;
+
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin-right: .2rem;
+                    vertical-align: middle;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    transform: translatey(-.2rem);
+                    background-image: url('../../img/servico-interno/after-lista-tarefas.svg');
+                }
+           
+
+
+        }
+
+
+        &__job-item-btn{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $primary;
+            padding-bottom: .4rem;
+            text-decoration: none;
+            color: $white;
+            text-align: center;
+            width: 11rem;
+            height: 11rem;
+            border-radius: 100%;
+            font-size: 1.5rem;
+            transform: translate(-50%, -50%);
+            
+
+    
+
+                &::before{
+                    content:'';
+                    @include align-middle;
+                    width: 107%;
+                    height: 107%;
+                    border-radius: 100%;
+                    z-index: -2;
+                    border: 1px solid $primary;
+                }
+
+                &::after{
+                    content: '';
+                    width: 100%;
+                    height: 1.2rem;
+                    opacity: 0.8;
+                    margin-top: .7rem;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-image: url(../../img/portfolio/seta-branca.svg);
+                }
+        }
+
+        &__job-item-btn::selection{
+            background-color: unset;
+        }
+
+        &__job-item-info-container--inloco-arquitetura{
+            .portfolio-layout__job-item-title-container{
+                left: 90%;
+            }
+        }
+
+        &__job-item_fundo-creme{
+            position: relative;
+            width: 35rem;
+            height: 35rem;
             background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(../../img/bg-creme.png);
+            box-shadow: 0px 0px 23px 5px rgba($primary, .25);
+            border-radius: 100%;
+
+                &::after{
+                    content:'';
+                    position: absolute;
+                    top: 3%;
+                    left: -3%;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                    z-index: -2;
+                    border: 1px solid $primary;
+                }
+        }
+
+        // ----- FIM:: JOBS CONTAINER --------------
+
+        // -------COMECO:: NEXT PAGE CONTAINER
+
+        &__next-page-container{
+            margin-left: 18rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 40rem;
+            transform: translatey(6rem);
+        }
+
+        &__next-page-btn{
+            &,
+            &:visited,
+            &:link{
+                display: inline-block;
+                width: 6rem;
+                height: 6rem;
+                background-image: url('../../img/arrow-next.svg');
+                background-size: 22%;
+                background-repeat: no-repeat;
+                background-position: center;
+                box-shadow: 8px 8px $primary-light;
+
+            }
+        }
+
+        &__next-page-title-link{
+            color: $primary-dark;
+            text-decoration: none;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        &__next-page-linha{
+            width: .5px;
+            margin: 3rem 0;
+            background-color: rgba($primary-lighter, .6);
+            height: 6rem;
+        }
+
+
+        // --------FIM:: NEXT PAGE CONTAINER 
+
+
+        // ----------------- COMECO:: IMGS DE FUNDO -------
+
+        &__images-container{
+            z-index: -1;
+        }
+
+        &__img-estatua-masculina{
+            position: absolute;
+            top: -23%;
+            left: 59%;
+            width: 38rem;
+        }
+
+        &__img-homem-canto{
+            position: absolute;
+            width: 35rem;
+            left: 80%;
+            top: 64%;
+        }
+
+        &__img-risquinho-sol{
+            position: absolute;
+            top: -5%;
+            left: 57%;
+            width: 25rem;
+            transform: rotate(-143deg);
         }
 
         &__img-bg-creme{
@@ -46,100 +345,19 @@
             background-repeat: no-repeat;
         }
 
-        &__img-estatua-masculina{
+        &__img-bg-creme-2{
             position: absolute;
-            top: -23%;
-            left: 59%;
-            width: 38rem;
-        }
-
-        &__img-risquinho-sol{
-            position: absolute;
-            top: -5%;
-            left: 57%;
+            bottom: -5%;
+            right: -2%;
             width: 25rem;
-            transform: rotate(-143deg);
+            height: 25rem;
+            z-index: -1;
+            background-image: url(../../img/bg-creme.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-
-        &__header-title-container{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 63%;
-        }
-
-        &__header-paragraph{
-            width: 37%;
-            min-width: 35rem;
-        }
-
-        &__services-container{
-            padding-right: 19rem;
-            margin-top: 6rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        &__proxima-secao-container{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 30rem;
-            justify-content: space-between;
-        }
-
-        &__services-item{
-            position: relative;
-            display: inline-block;
-            width: 29rem;
-            shape-outside: url("../../img/clip-path-portal.svg");
-            clip-path: url("../../img/clip-path-portal.svg");
-            cursor: pointer;
-            
-            &::before{
-                content: '';
-                display: block;
-                @include align-middle;
-                width: 106%;
-                height: 106%;
-                background-image: url('../../img/stroke-img-servico.svg');
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-                z-index: -1;
-            }
-
-            &:not(:last-child){
-                margin-right: 5.5rem;
-            }
-        }
-
-        &__services-btn,
-        &__services-btn:link,
-        &__services-btn:visited{
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.45rem;
-            font-weight: 400;
-        }
-
-        &__img-servico{
-           width: 100%;
-        }
-
-        &__contador-slider{
-            font-size: 1.2rem;
-            color: $primary-dark;
-        }
-
-        &__linha-horizontal{
-            width: .5px;
-            background-color: rgba($primary-lighter, .6);
-            height: 16rem;
-        }
+         // ----------------- FIM:: IMGS DE FUNDO -------
 
 }
