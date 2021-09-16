@@ -1,0 +1,41 @@
+.blog-layout{
+        // SECAO DE TEXTO NO COMECO 
+
+    &__title-container{
+        margin-top: 15rem;
+        margin-left: 12rem;
+        display: flex;
+        align-items: center;
+        max-width: 50%;
+    }
+
+    &__title{
+        font-size: 3rem;
+        color: $primary;
+        min-width: 35rem;
+    }
+
+    &__paragraph{
+        margin-left: 4rem;
+    }
+
+    // --------- SECAO DE DESTAQUES ----------
+
+    &__destaques-blog-container{
+        margin-top: 4rem;
+        margin-left: 13rem;
+        background-color: $primary-light;
+        width: 80%;
+        border-radius: 5rem;
+    }
+
+    &__destaques-item{
+        max-width: 26rem;
+    }
+
+    &__destaques-title-link{
+        color: $primary;
+        font-size: 2rem;
+        text-decoration: none;
+    }
+}
