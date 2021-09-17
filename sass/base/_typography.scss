@@ -2,6 +2,11 @@ body{
     font-family: 'Ambit', 'Roboto', sans-serif;
 }
 
+h1, h2, h3, h4, h5{
+    font-weight: inherit;
+    letter-spacing: .5px;
+}
+
 .paragraph{
     color: $primary-dark;
     font-size: 1.28rem;

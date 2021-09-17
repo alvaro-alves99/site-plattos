@@ -5,6 +5,14 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin settings-bg{
+    content: '';
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 // @mixin layout-basico{
 //     padding-top: 13rem;
 //     padding-left: 10rem;

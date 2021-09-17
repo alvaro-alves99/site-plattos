@@ -1,6 +1,10 @@
 .blog-layout{
         // SECAO DE TEXTO NO COMECO 
 
+        &::after{
+            display: none;
+        }
+
     &__title-container{
         margin-top: 15rem;
         margin-left: 12rem;
@@ -13,6 +17,9 @@
         font-size: 3rem;
         color: $primary;
         min-width: 35rem;
+        font-weight: 700;
+        letter-spacing: .5px;
+
     }
 
     &__paragraph{
@@ -22,20 +29,196 @@
     // --------- SECAO DE DESTAQUES ----------
 
     &__destaques-blog-container{
-        margin-top: 4rem;
-        margin-left: 13rem;
+        position: relative;
+        margin-top: 6rem;
+        margin-left: 11rem;
+        margin-right: 16rem;
         background-color: $primary-light;
-        width: 80%;
-        border-radius: 5rem;
+        width: fit-content;
+        border-radius: 3rem;
+        padding: 4rem 4rem 3rem 4rem;
+
+            &::after{
+                @include settings-bg;
+                position: absolute;
+                background-image: url(../../img/blog/ESTATUA-MULHER.png);
+                width: 25rem;
+                height: 41rem;
+                right: 2%;
+                top: -10%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
     }
 
+    &__destaques-blog-content{
+        display: flex;
+        width: fit-content;
+        // justify-content: space-between;
+    }
+
+    &__destaques-title-container{
+        position: absolute;
+        background-color: $white;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        color: $primary-dark;
+        top: 0;
+        transform: translatey(-50%);
+        left: 3.5%;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: .5px;
+
+    }
+
+
     &__destaques-item{
-        max-width: 26rem;
+        width: 25%;
+        position: relative;
+        background-color: $white;
+        border-radius: 2rem;
+
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+    }
+
+    &__destaque-img{
+        display: block;
+        border-radius: 2rem;
+        width: 100%;
+    }
+
+
+
+    &__destaques-img-container{
+        position: relative;
+        width: 100%;
+    }
+
+    &__destaques-dados-container{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 1rem 1.4rem 0 2.7rem;
+        border-radius: 0 1rem 0 0;
+        color: $primary-dark;
+        font-size: 1.2rem;
+        background-color: $white;
+    }
+
+    &__item-dado{
+
+        &:not(:last-child){
+            margin-right: .5rem;
+        }
+
+        &::before{
+            @include settings-bg;
+            width: 1.1rem;
+            height: 1.1rem;
+            vertical-align: text-bottom;
+            margin-right: .51rem;
+            transform: translatey(-.2rem);
+        }
+
+        &--tempo{
+            &::before{
+                background-image: url(../../img/blog/clock.svg);
+            }
+        }
+
+        &--data{
+            &::before{
+                background-image: url(../../img/blog/calendar.svg);
+            }
+        }
+    }
+
+    &__destaques-text-container{
+        margin-top: 1.5rem;
+        padding: 0 2.7rem 2.7rem 2.7rem;
     }
 
     &__destaques-title-link{
         color: $primary;
-        font-size: 2rem;
+        letter-spacing: .2px;
+        display: inline-block;
+        font-size: 1.69rem;
+        margin-bottom: .5rem;
         text-decoration: none;
+        font-weight: 400;
     }
+
+    //  ---------- SECAO DE ARTIGOS ------------ 
+
+    &__artigos-geral-container{
+        margin-left: 13rem;
+        margin-top: 4rem;
+        width: 82%;
+    }
+
+    &__artigos-geral-title-content{
+        font-size: 1.5rem;
+        color: $primary-dark;
+        letter-spacing: .5px;
+        margin-bottom: 4rem;
+    }
+
+    &__artigos-content{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+
+    //-------------- SECAO FINAL LINKS DE NAVEGACAO
+
+    &__botoes-navegacao-container{
+        display: flex;
+        position: relative;
+        width: 83%;
+        justify-content: center;
+        margin-left: 13rem;
+        margin-top: 6rem;
+        margin-bottom: 10rem;
+
+            .btn{
+                font-size: 1.52rem;
+
+                &:not(:last-child){
+                    margin-right: 2rem;
+                }
+            }
+
+            &::after{
+                content: '';
+                position: absolute;
+                width: 50%;
+                transform: translate(-50%, -50%);
+                top: 54%;
+                left: 50%;
+                height: 1px;
+                z-index: -1;
+                background-color: rgba($primary, .4);
+            }
+    }
+
+
+    // ------ CONTAINER IMAGENS--- 
+
+    &__img-bg-creme{
+        top: -38%;
+        right: 9%;
+        width: 45rem;
+        height: 45rem;
+    }
+
+    &__img-risquinho-sol{
+        z-index: -2;
+    }
+
+
 }
