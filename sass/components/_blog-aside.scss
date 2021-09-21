@@ -1,0 +1,127 @@
+.blog-aside{
+    position: absolute;
+    top: 33%;
+    left: 66%;
+
+    &__lista-content{
+        margin-bottom: 3rem;
+        position: relative;
+        background-color: $white;
+        box-shadow: 11px 11px $primary-light;
+        padding: 2rem 2.8rem;
+        border-radius: 2.4rem;
+        border:.5px solid rgba($primary, .5);
+
+            &::after{
+                content: 'Compartilhe';
+                display: inline-block;
+                position: absolute;
+                color: $primary-dark;
+                background-color: $white;
+                top: 0;
+                left: 25%;
+                padding: 0 .71rem;
+                font-size: 1.3rem;
+                font-weight: 100;
+                letter-spacing: .5px;
+                transform: translate(-50%, -50%);
+            }
+    }
+
+    &__lista-item{
+
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+
+    &__lista-link{
+        display: inline-block;
+        font-size: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        // background-color: $primary;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+
+            &--whatsapp{
+                background-image: url(../../img/blog/icones-aside/whatsapp.svg);
+            }
+
+            &--facebook{
+                background-image: url(../../img/blog/icones-aside/facebook.svg);
+            }
+
+            &--instagram{
+                background-image: url(../../img/blog/icones-aside/instagram.svg);
+            }
+
+            &--twitter{
+                background-image: url(../../img/blog/icones-aside/twitter.svg);
+            }
+
+            &--linkedin{
+                background-image: url(../../img/blog/icones-aside/linkedin.svg);
+            }
+
+            &--link{
+                background-image: url(../../img/blog/icones-aside/link.svg);
+            }
+
+    }
+
+    &__btn-navegacao{
+        width: 100%;
+    }
+}
+
+.secao-compartilhar{
+    padding: 2rem 2.8rem;
+    border-radius: 2.4rem;
+
+    &__lista-item{
+
+        &:not(:last-child){
+            margin-right: .7rem;
+        }
+    }
+
+    &__lista-link{
+        display: inline-block;
+        font-size: 0;
+        width: 2rem;
+        height: 2rem;
+        // background-color: $primary;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+
+            &--whatsapp{
+                background-image: url(../../img/blog/icones-aside/whatsapp.svg);
+            }
+
+            &--facebook{
+                background-image: url(../../img/blog/icones-aside/facebook.svg);
+            }
+
+            &--instagram{
+                background-image: url(../../img/blog/icones-aside/instagram.svg);
+            }
+
+            &--twitter{
+                background-image: url(../../img/blog/icones-aside/twitter.svg);
+            }
+
+            &--linkedin{
+                background-image: url(../../img/blog/icones-aside/linkedin.svg);
+            }
+
+            &--link{
+                background-image: url(../../img/blog/icones-aside/link.svg);
+            }
+
+    }
+}

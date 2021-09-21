@@ -13,6 +13,9 @@ html{
 body{
     box-sizing: border-box;
     overflow-x: hidden;
+    color: $primary-dark;
+    -webkit-font-smoothing:antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 ul{

@@ -1,0 +1,39 @@
+.figure-post{
+    display: flex;
+    align-items: flex-start;
+    margin: 3rem 0;
+
+    &__img-figure{
+        margin: 0 !important;
+        border-radius: 2rem;
+        height: 22rem;
+        width: 22rem !important;
+        object-fit: cover;
+    }
+
+    &__figcaption{
+        display: inline-block;
+        margin-left: 4rem;
+    }
+
+    &__titulo{
+        position: relative;
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: 100;
+        margin-bottom: 1.6rem;
+
+            &::after{
+                content: '';
+                height: 1px;
+                display: block;
+                margin-top: -.4rem;
+                width: 100%;
+                background-color: $primary-dark;
+            }
+    }
+
+    &__figcaption-text{
+        display: block;
+    }
+}

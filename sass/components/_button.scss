@@ -49,3 +49,25 @@
         padding: 0;
     }
 }
+
+.btn--navegacao{
+        display: inline-block;
+        color: $primary-dark;
+        text-decoration: none;
+        font-size: 1.7rem;
+        padding: 1.72rem 2.8rem;
+        border: 1px solid rgba($primary, .5);
+        letter-spacing: .5px;
+        border-radius: 2.4rem;
+        box-shadow: 11px 11px $primary-light;
+        font-weight: 100;
+
+            &::after{
+                @include settings-bg;
+                background-image: url(../../img/seta-laranja-pequena.svg);
+                height: 2rem;
+                width: 6rem;
+                vertical-align: middle;
+                margin-left: 1.5rem;
+            }
+}
