@@ -47,6 +47,9 @@
         width: 5.5rem;
         height: 5.5rem;
         padding: 0;
+        background-size: 22%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 
@@ -62,12 +65,42 @@
         box-shadow: 11px 11px $primary-light;
         font-weight: 100;
 
-            &::after{
-                @include settings-bg;
+        &::after{
+            @include settings-bg;
+            background-image: url(../../img/seta-laranja-pequena.svg);
+            height: 2rem;
+            width: 6rem;
+            vertical-align: middle;
+            margin-left: 1.5rem;
+        }
+        
+        &--back{
+            &::before{
+                content: '';
+                display: inline-block;
+                /* background-size: contain; */
+                background-repeat: no-repeat;
+                background-position: right;
                 background-image: url(../../img/seta-laranja-pequena.svg);
                 height: 2rem;
-                width: 6rem;
+                width: 4rem;
                 vertical-align: middle;
-                margin-left: 1.5rem;
+                margin-right: 1.5rem;
+                transform: rotate(180deg);
             }
-}
+
+            &::after{
+                display: none;
+            }
+
+        }
+
+        &--laranja{
+            &::after{
+                filter: saturate(0) brightness(2);
+                background-position: right;
+                background-size: unset;
+                width: 4rem;
+            }
+        }
+    }

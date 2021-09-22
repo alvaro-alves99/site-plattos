@@ -8,6 +8,8 @@
 
 @import "layout/structure";
 
+
+@import "components/slider-posts.scss";
 @import "components/figure-post.scss";
 @import "components/blog-aside";
 @import "components/card-artigo";
@@ -17,6 +19,7 @@
 @import "components/button";
 @import "components/mini-menu";
 @import "components/menu";
+@import "components/card-destaque";
 
 @import "pages/blog-item";
 @import "pages/blog";

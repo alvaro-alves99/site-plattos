@@ -1,7 +1,16 @@
 .blog-item-layout{
 
-    padding-bottom: 6rem;
+    position: relative;
 
+        &::before{
+            position: absolute;
+            @include settings-bg;
+            background-image: url(../../img/linhas-arco.svg);
+            height: 20rem;
+            width: 30rem;
+            bottom: -2%;
+            right: -6%;
+        }
     // HEADER CONTAINER DO COMECO DA PAGINA
 
     &__header-container{
@@ -18,7 +27,7 @@
         position: relative;
         margin: 0 auto;
         margin-top: -9rem;
-        width: 54rem;
+        width: 60rem;
         max-width: 80rem;
         background-color: #fff;
         border-radius: 2rem;
@@ -33,7 +42,7 @@
         display: block;
         font-family: 'playfair';
         font-style:italic;
-        font-size: 1.6em;
+        font-size: 1.4em;
         line-height: 1.3;
     }
 
@@ -99,7 +108,7 @@
         display: inline-block;
         color: $primary-dark;
         letter-spacing: .5px;
-        font-size: 3.5rem;
+        font-size: 4rem;
         font-weight: 100;
 
             &::after{
@@ -229,22 +238,104 @@
     // RODAPE DO BLOG
 
     &__rodape-post{
-        width: 54rem;
-        padding-top: 4rem;
+        width: 45rem;
         margin: 0 auto;
+        margin-top: 6rem;
+        position: relative;
 
             &::before{
                 content: '';
-                width: 100%;
+                position: absolute;
+                left: 50%;
+                top: -1rem;
+                transform: translate(-50%, -50%);
+                width: 120%;
+                display: block;
+                height: .5px;
+                background-color: rgba($primary-darker, .2);
+            }
+
+            &::after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: -1rem;
+                transform: translate(-50%, -50%);
+                width: 120%;
                 display: block;
                 height: .5px;
                 background-color: rgba($primary-darker, .2);
             }
 
             .blog-item-layout__dados-descricao{
-                width: 82%;
+                margin: 0;
             }
     }
+
+    // SECAO OUTROS POSTS 
+
+    &__outros-posts-container{
+        position: relative;
+        margin-top: 12rem;
+    }
+
+    &__title-outros-posts{
+        font-size: 2rem;
+        position: absolute;
+        z-index: 2;
+        transform: translate(-50%, -50%);
+        top: 0;
+        left: 50%;
+        background-color: $white;
+        border-radius: 3rem;
+        padding: 1.7rem 3.5rem;
+        font-weight: 100;
+
+            &::before{
+                @include settings-bg;
+                width: 2.2rem;
+                height: 2.2rem;
+                background-image: url(../../img/pi-symbol.svg);
+                vertical-align: text-top;
+                margin-right: 1rem;
+            }
+    }
+
+    //  BLOG FOOTER 
+
+    &__blog-footer{
+        position: relative;
+        width: 67%;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 2rem 0 2.5rem 0 ;
+        justify-content: space-between;
+
+            
+    }
+
+    &__logo-footer-container{
+        width: 26rem;
+    }
+
+    &__logo-footer{
+        width: 100%;
+    }
+
+    & &__btn-footer{
+        font-size: 1.4rem;
+        padding: 1.2rem 2.6rem;
+        box-shadow: 7px 8px #ffeedb;
+        border: .5px solid rgba($primary, .3);
+
+            &:not(:last-child){
+                margin-right: 2rem;
+            }
+    }
+
+
 
     
 
