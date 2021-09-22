@@ -38,6 +38,16 @@
     }
 }
 
+.btn--light-default{
+    &,
+    &:link,
+    &:visited{
+        background-color: $white;
+        color: $primary-dark;
+        border: 1px solid rgba($primary, .5);
+    }
+}
+
 .btn--dark-rounded{
     &,
     &:link,
@@ -67,9 +77,11 @@
 
         &::after{
             @include settings-bg;
+            background-position: right;
+            background-size: unset;
+            width: 4rem;
             background-image: url(../../img/seta-laranja-pequena.svg);
             height: 2rem;
-            width: 6rem;
             vertical-align: middle;
             margin-left: 1.5rem;
         }

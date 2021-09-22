@@ -1,0 +1,144 @@
+.portfolio-item-layout{
+    padding-bottom: 12rem;
+
+    // HEADER TITLE 
+
+    &__header-info-container{
+        margin-top: 19rem;
+        margin-left: 12rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 81rem;
+    }
+
+    &__title-container{
+        display: flex;
+        align-items: center;
+    }
+
+    &__img-cliente-title{
+        margin-right: .4rem;
+        max-width: 8rem;
+    }
+
+    &__item-tag{
+        font-size: 1.5rem;
+    }
+
+    &__item-tag-valor{
+        font-weight: 100;
+        display: inline-block;
+
+            &--ano{
+                &::before{
+                    @include settings-bg;
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    background-image: url(../../img/blog/calendar.svg);
+                    margin-right: .7rem;
+                    vertical-align: text-top;
+                }
+            }
+    }
+
+    &__item-tag-nome{
+        display: inline-block;
+        font-weight: 700;
+        margin-right: 1rem;
+        letter-spacing: 0.3px;
+    }
+
+    &__lista-tag-item{
+        font-weight: 100;
+
+            &:not(:last-child){
+                margin-right: 1rem;
+            }
+
+            &::before{
+                @include settings-bg;
+                width: 1.55rem;
+                height: 1.55rem;
+                background-size: 72%;
+                margin-right: .7rem;
+                background-image: url(../../img/arco-item-categoria.svg);
+                vertical-align: text-top;
+            }
+    }
+
+    &__item-tag{
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__title{
+        font-weight: 100;
+        font-size: 5rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+            &::before{
+                content: '';
+                display: inline-block;
+                height: 10rem;
+                width: 1px;
+                background-color: rgba($primary-darker, .5);
+                vertical-align: middle;
+                margin: 0 2rem 0 0;
+            }
+    }
+
+    // POST CONTENT 
+
+    &__post-content-container{
+        margin-top: 6rem;
+        margin-left: 12rem;
+        margin-bottom: 6rem;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3rem;
+        line-height: 1.6;
+
+            img{
+                width: 110%;
+            }
+    }
+
+
+    &__title-post-content{
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        font-size: 2.8rem;
+        font-weight: 700;
+    }
+
+    &__post-content{
+        margin-right: 4rem;
+        width: 65%;
+    }
+
+    &__lista-content-tags-item{
+        font-size: 1.8rem;
+        position: relative;
+        margin-bottom: 1.1rem;
+
+            &::before{
+                @include settings-bg;
+                width: 1.85rem;
+                height: 1.85rem;
+                background-size: 77%;
+                margin-right: .7rem;
+                background-image: url(../../img/arco-item-categoria.svg);
+                vertical-align: text-top;
+            }
+
+            &:not(:last-child){
+                margin-right: 2rem;
+            }
+
+    }
+}

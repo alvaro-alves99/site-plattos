@@ -1,15 +1,19 @@
 .blog-aside{
-    position: absolute;
-    top: 33%;
-    left: 66%;
+    position: relative;
+    top: 0;
+    width: 28rem;
+    align-self: flex-start;
+    // top: 33%;
+    // left: 66%;
 
     &__lista-content{
         margin-bottom: 3rem;
         position: relative;
+        width: fit-content;
         background-color: $white;
         box-shadow: 11px 11px $primary-light;
-        padding: 2rem 2.8rem;
-        border-radius: 2.4rem;
+        padding: 1.5rem 2.8rem;
+        border-radius: 2rem;
         border:.5px solid rgba($primary, .5);
 
             &::after{
@@ -38,8 +42,8 @@
     &__lista-link{
         display: inline-block;
         font-size: 0;
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 1.9rem;
+        height: 1.9rem;
         // background-color: $primary;
         background-size: contain;
         background-position: center;
@@ -72,8 +76,11 @@
 
     }
 
-    &__btn-navegacao{
-        width: 100%;
+    & &__btn-navegacao{
+        width: fit-content;
+        padding: 1.2rem 2.3rem;
+        font-size: 1.5rem;
+        border-radius: 2rem;
     }
 }
 

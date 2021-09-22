@@ -16,6 +16,7 @@ body{
     color: $primary-dark;
     -webkit-font-smoothing:antialiased;
     text-rendering: optimizeLegibility;
+    image-rendering: pixelated;
 }
 
 ul{
