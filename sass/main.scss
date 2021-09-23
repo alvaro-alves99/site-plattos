@@ -6,9 +6,12 @@
 @import "base/animations";
 
 
+@import "layout/menu-aberto";
+@import "layout/footer-nav";
 @import "layout/structure";
 
 
+@import "components/projetos-lista";
 @import "components/form-portatil";
 @import "components/slider-posts.scss";
 @import "components/figure-post.scss";

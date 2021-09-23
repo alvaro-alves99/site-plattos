@@ -1,0 +1,339 @@
+.menu-aberto{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 78vw;
+    height: 100vh;
+    background-color: $white;
+    z-index: 3000;
+
+        &::after{
+            content: '';
+            position: fixed;
+            z-index: 2900;
+            background-color: rgba(#000 , .93);
+            width: 22vw;
+            height: 100vh;
+            top: 0;
+            right: 0;
+        }
+
+        &__content-container{
+            position: relative;
+            height: 100vh;
+        }
+
+        // HEADER
+
+        &__header-img{
+            margin-right: 7rem;
+            width: 26rem;
+        }
+
+        &__header-img-container{
+            display: flex;
+            align-items: center;
+        }
+
+        &__content-header-container{
+            position: absolute;
+            top: 11rem;
+            left: 38rem;
+        }
+
+        & &__header-btn-zap{
+            &,
+            &:visited,
+            &:link,
+            &:active{
+                padding: 1.1rem 2.5rem;
+                border: 1px solid rgba($primary, .3);
+                font-size: 1.6rem;
+                box-shadow: 5px 6px #ffeedb;
+                font-weight: 400;
+            }
+        }
+
+        & &__header-btn-zap{
+
+            &::before{
+                @include settings-bg;
+                background-size: 97%;
+                background-image: url(../../img/icone-whatsapp.svg);
+                width: 1.9rem;
+                height: 1.9rem;
+                vertical-align: text-top;
+                margin-right: 0.8rem;
+                image-rendering: -webkit-optimize-contrast;
+            }
+        }
+
+        // BUTTON CONTAINER
+
+        &__btn-close-container{
+            position: absolute;
+            right: -4%;
+            z-index: 4000;
+            top: 50%;
+            font-size: 0;
+            border-radius: 1rem;
+            transform: translate(-50%, -50%);
+            background-color: $primary;
+        }
+
+        &__btn-close{
+            display: inline-block;
+            width: 5.4rem;
+            height: 4.5rem;
+            border-radius: 1rem;
+            box-shadow: 8px 8px $primary-light;
+            background-size:50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(../../img/_logos/arrow-branca-botao.svg);
+        }
+
+        // MAIN CONTENT NAV
+
+        &__content-main-container{
+            position: absolute;
+            top: 40%;
+            left: 38rem;
+            display: flex;
+        }
+
+        &__nav-container{
+            width: 15rem;
+        }
+
+        &__lista-nav{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__lista-nav-item{
+            &:not(:last-child){
+                margin-bottom: 2.9rem;
+            }
+        }
+
+        &__lista-nav-link{
+            display: inline-block;
+            color: rgba($primary-dark, .8);
+            font-size: 2.8rem;
+            text-decoration: none;
+            font-weight: 400;
+
+            &--active{
+                background-color: $primary;
+                color: $white;
+                border-radius: 1rem;
+                font-weight: 700;
+                padding: 1rem 2rem;
+
+                    &::before{
+                        content: '';
+                        width: 1rem;
+                        height: 1rem;
+                        background-color: $white;
+                        display: inline-block;
+                        border-radius: 50%;
+                        transform: translateY(-.5rem);
+                        margin-right: 1rem;
+                    }
+            }
+        }
+
+        &__ultimos-posts-container{
+            margin-left: 20rem;
+            position: relative;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    display: inline-block;
+                    height: 45rem;
+                    width: 1px;
+                    transform: translate(-50%, -50%);
+                    left: -15%;
+                    top: 50%;
+                    background-color: rgba($primary-dark, .25);
+                }
+
+
+        }
+
+        &__post-portfolio-container{
+            margin-bottom: 2rem;
+        }
+
+        &__post-title{
+            font-size: 1.7rem;
+            margin-bottom: 1.5rem;
+        }
+
+
+        & &__item-portfolio{
+            display: flex;
+            flex-direction: row;
+            width: 63rem;
+
+            .projetos-lista__item-text-container{
+                width: 52rem;
+                margin-left: 3rem;
+            }
+
+            .projetos-lista__item-img-container{
+                width: 22rem;
+            }
+
+            .projetos-lista__item-btn-link{
+                font-weight: 600;
+            }
+        }
+
+        & &__item-artigo{
+
+            width: 100%;
+
+            .card-artigo__img-container{
+                width: 20rem;
+            }
+
+            .card-artigo__text-container{
+                width: 16rem;
+                margin-left: 1.5rem;
+            }
+        }
+
+
+        // IMAGES CONTAINER MENU
+
+
+        &__img-estatua-homem-canto{
+            position: absolute;
+            right: -1%;
+            top: -14rem;
+            width: 36rem;
+            transform: rotate(15deg);
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        &__img-colunas{
+            position: absolute;
+            left: -22%;
+            bottom: -3%;
+            width: 60rem;
+            z-index: 1;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        &__arco-risquinhos{
+            position: absolute;
+            right: 10%;
+            top: -3rem;
+            width: 26rem;
+            transform: rotate(216deg);
+            z-index: -1;
+        }
+
+        &__arco-risquinhos2{
+            position: absolute;
+            left: 1%;
+            top: 15rem;
+            width: 29rem;
+            transform: rotate(33deg);
+            z-index: -1;
+        }
+
+        &__bg-circulo-creme{
+            position: absolute;
+            width: 45rem;
+            top: -24rem;
+            left: -19rem;
+            z-index: -1;
+        }
+
+
+        // FOOTER CONTAINER 
+
+        &__footer-container{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            background-color: $primary;
+            padding: 1.2rem 8rem;
+        }
+
+        &__social-icons-container{
+            display: flex;
+        }
+
+        &__social-icons-link-container{
+            display: inline-block;
+            width: 2.6rem;
+            height: 2.6rem;
+            font-size: 0;
+            background-position: center;
+            background-size: 90%;
+            background-repeat: no-repeat;
+
+                &:not(:last-child){
+                    margin-right: .7rem;
+                }
+            
+            
+                &--instagram{
+                    background-image: url(../../img/_logos/instagram-white.svg);
+                }
+
+                &--linkedin{
+                    background-image: url(../../img/_logos/linkedin-white.svg);
+                }
+        }
+
+        &__linha-separacao-footer{
+            width: 35rem;
+            margin: 0 4rem;
+            height: 1px;
+            background-color: rgba($white, .5);
+        }
+
+        &__footer-contato-lista-item{
+            font-size: 1.5rem;
+
+                &::before{
+                    @include settings-bg;
+                    height: 2rem;
+                    width: 2rem;
+                    vertical-align: text-top;
+                    margin-right: .6rem;
+                }
+
+                &:not(:last-child){
+                    margin-right: 2rem;
+                }
+
+                &--email{
+                    &::before{
+                        background-image: url(../../img/_logos/icon-email-white.svg);
+
+                    }
+                }
+
+                &--telefone{
+                    &::before{
+                        background-image: url(../../img/_logos/icon-telefone-white.svg);
+                    }
+                }
+        }
+
+        &__footer-contato-lista-item-link{
+            color: $white;
+            text-decoration: none;
+        }
+        
+}

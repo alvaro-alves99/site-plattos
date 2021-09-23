@@ -1,8 +1,8 @@
 .form-portatil{
-        width: 93rem;
+        width: 82rem;
         margin-left: 12rem;
-        padding: 5rem 7rem 6rem 7rem;
-        border: 1px solid $primary;
+        padding: 5rem 6rem 6rem 6rem;
+        border: 1px solid rgba($primary, .5);
         border-radius: 3rem;
         box-shadow: 13px 15px $primary-light;
 
@@ -14,7 +14,7 @@
     }
 
     &__title-form{
-        font-size: 2.7rem;
+        font-size: 2.3rem;
         font-weight: 400;
     }
 
@@ -94,8 +94,8 @@
     }
 
     &__btns-container{
-        min-width: 20rem;
-        margin-left: 6rem;
+        min-width: 19rem;
+        margin-left: 2rem;
     }
 
     & &__btn-form{

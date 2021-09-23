@@ -1,0 +1,77 @@
+.footer-nav{
+
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0 3.5rem 0;
+    justify-content: start;
+    margin-top: 9rem;
+    padding-left: 14rem;
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-image: url(../../img/BG_CREME.jpg);
+
+        &::after{
+            @include settings-bg;
+            background-image: url(../../img/bg-creme.png);
+            width: 28rem;
+            height: 28rem;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 73%;
+            top: 93%;
+            z-index: -2;
+        }
+
+        &::before{
+            @include settings-bg;
+            background-image: url(../../img/linhas-arco.svg);
+            width: 32rem;
+            height: 32rem;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: -1%;
+            top: 76%;
+
+        }
+
+
+        &__logo-footer-container{
+            width: 26rem;
+            margin-right: 50rem;
+            position: relative;
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    display: inline-block;
+                    height: 2px;
+                    width: 42rem;
+                    background-color: rgba($primary, 0.3);
+                    top: 50%;
+                    left: 109%;
+                }
+        }
+
+        &__logo-footer{
+            width: 100%;
+        }
+
+        & &__btn-footer{
+            &,
+            &:link,
+            &:visited,
+            &:active{
+                font-size: 1.4rem;
+                padding: 1.2rem 2.6rem;
+                box-shadow: 7px 8px #ffeedb;
+                border: .5px solid rgba($primary, .3);
+            }
+
+                &:not(:last-child){
+                    margin-right: 2rem;
+                }
+        }
+}

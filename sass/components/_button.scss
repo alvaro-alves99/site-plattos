@@ -8,7 +8,6 @@
         background-color: $primary;
         color: $white;
         padding: 1.1rem 2.7rem;
-        letter-spacing: .8px;
         text-decoration: none;
         font-size: 1.4rem;
         border-radius: 5rem;
@@ -114,5 +113,15 @@
                 background-size: unset;
                 width: 4rem;
             }
+        }
+    }
+
+    .btn--img{
+        &,
+        &:link,
+        &:active,
+        &:visited{
+            display: inline-block;
+            width: 100%;
         }
     }

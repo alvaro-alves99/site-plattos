@@ -1,0 +1,75 @@
+.projetos-lista{
+        width: 70%;
+        min-width: 100rem;
+        position: relative;
+
+    
+    &__item{
+        width: 28rem;
+        display: inline-flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        position: relative;
+
+            &:not(:last-child){
+                margin-right: 3rem;
+            }
+
+            // &::before{
+            //     content: '';
+            //     display: inline-block;
+            //     position: absolute;
+            //     bottom: -11%;
+            //     left: 50%;
+            //     width: 92%;
+            //     height: 4px;
+            //     border-radius: 7rem;
+            //     background-color: $primary-dark;
+            //     transform: translate(-50%, -50%);
+            // }
+    }
+
+    &__item-text-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item-title-link{
+        color: $primary-dark;
+        font-size: 2.1rem;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    &__item-data-text{
+        font-size: 1.2rem;
+    }
+
+    &__item-img{
+        width: 100%;
+        image-rendering: auto;
+    }
+
+    &__item-btn-link{
+        display: inline-block;
+        color: $primary;
+        text-decoration: none;
+        font-size: 1.5em;
+        margin-top: 0.3rem;
+        font-weight: 700;
+
+            &::after{
+                content: '';
+                display: inline-block;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-image: url(../../img/seta-laranja-pequena.svg);
+                width: 5rem;
+                height: 1.2rem;
+                margin-left: 1rem;
+                transform: translatey(.2rem);
+            }
+    }
+}
