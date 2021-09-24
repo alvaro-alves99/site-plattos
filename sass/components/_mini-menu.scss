@@ -16,6 +16,10 @@
         font-weight: 100;
         color: $primary-dark;
         cursor: pointer;
+
+            @include media('<=large-notebook'){
+                font-size: 1.2rem;
+            }  
     }
 
     &__lista-link{

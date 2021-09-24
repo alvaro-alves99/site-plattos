@@ -7,6 +7,14 @@
     background-color: $white;
     z-index: 3000;
 
+        &--disabled{
+            display: none;
+        }
+
+        @include media('<=large-notebook'){
+            width: 88vw;
+        }
+
         &::after{
             content: '';
             position: fixed;
@@ -16,6 +24,10 @@
             height: 100vh;
             top: 0;
             right: 0;
+
+                @include media('<=large-notebook'){
+                    width: 12vw;
+                }
         }
 
         &__content-container{
@@ -300,6 +312,10 @@
             margin: 0 4rem;
             height: 1px;
             background-color: rgba($white, .5);
+
+                @include media('<=large-notebook'){
+                    width: 26rem;
+                }
         }
 
         &__footer-contato-lista-item{

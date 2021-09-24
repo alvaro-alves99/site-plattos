@@ -27,10 +27,27 @@
         }
 
         &__proxima-secao-btn{
-            background-image: url('../../img/arrow-next.svg');
-            background-size: 22%;
-            background-repeat: no-repeat;
-            background-position: center;
+            &,
+            &:link,
+            &:visited,
+            &:active{
+                background-image: url('../../img/arrow-next.svg');
+                background-size: 22%;
+                background-repeat: no-repeat;
+                background-position: center;
+    
+                    @include media('<=large-notebook'){
+                        width: 5rem;
+                        height: 5rem;
+                        box-shadow: 6px 7px $primary-light;
+                    }
+
+                    @include media('<=notebook'){
+                        width: 4.3rem;
+                        height: 4.3rem;
+                    }
+
+            }
         }
 
         &__img-bg-creme{
@@ -44,6 +61,13 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
+                @include media('<=large-notebook'){
+                    width: 38rem;
+                    height: 38rem;
+                }
+
+
         }
 
         &__img-estatua-masculina{
@@ -51,6 +75,11 @@
             top: -23%;
             left: 59%;
             width: 38rem;
+
+                @include media('<=large-notebook'){
+                    left: 61%;
+                }
+                
         }
 
         &__img-risquinho-sol{
@@ -59,6 +88,10 @@
             left: 57%;
             width: 25rem;
             transform: rotate(-143deg);
+
+                @include media('<=large-notebook'){
+                    left: 60%;
+                }
         }
 
 
@@ -67,6 +100,15 @@
             justify-content: space-between;
             align-items: center;
             width: 63%;
+
+                @include media('<=large-notebook'){
+                    width: 68%;
+                    margin-top: 2rem;
+                }
+
+                @include media('<=notebook'){
+                    width: 71%;
+                }
         }
 
         &__header-paragraph{
@@ -80,6 +122,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+                @include media('<=large-notebook'){
+                    padding-right: 11rem;
+                    margin-top: 7rem;
+                }
+
+                @include media('<=notebook'){
+                    padding-right: 13rem;
+                    margin-top: 6rem;
+                }
         }
 
         &__proxima-secao-container{
@@ -88,6 +140,10 @@
             align-items: center;
             min-height: 30rem;
             justify-content: space-between;
+
+                @include media('<=notebook'){
+                    min-height: 27rem;
+                }
         }
 
         &__services-item{
@@ -97,6 +153,14 @@
             shape-outside: url("../../img/clip-path-portal.svg");
             clip-path: url("../../img/clip-path-portal.svg");
             cursor: pointer;
+
+                @include media('<=large-notebook'){
+                    width: 27rem;
+                }
+
+                @include media('<=notebook'){
+                    width: 25rem;
+                }
             
             &::before{
                 content: '';
@@ -109,6 +173,11 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 z-index: -1;
+
+                    @include media('<=notebook'){
+                        width: 107%;
+                        height: 107%;
+                    }
             }
 
             &:not(:last-child){

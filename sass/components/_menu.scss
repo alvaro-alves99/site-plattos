@@ -25,6 +25,11 @@
                 left: 50%;
                 transform: translatex(-50%);
                 background-color:rgba($primary, .5);
+
+                    @include media('<=large-notebook'){
+                        height: 23vh;
+                        top: 16.5%;
+                    }
             }
 
             &::before{
@@ -36,12 +41,26 @@
                 left: 50%;
                 transform: translatex(-50%);
                 background-color:rgba($primary, .5);
+
+                    @include media('<=large-notebook'){
+                        height: 23vh;
+                    }
             }
 
         }
 
+        &__botao-container{
+            @include media('<=large-notebook'){
+                transform: translatex(-4px);
+            }
+        }
+
         &__logo{
             width: 5rem;
+
+                @include media('<=large-notebook'){
+                    width: 4.4rem;
+                }
         }
 
         &__toggle{
@@ -55,18 +74,34 @@
             background-repeat: no-repeat;
             background-position: center;
             box-shadow: 8px 8px $primary-light;
+
+                @include media('<=large-notebook'){
+                    width: 4.5rem;
+                    height: 4rem
+                }
         }
 
         &__social-media-container{
+            display: inline-block;
+            width: 100%;
             margin-top: 1.8rem;
             padding: 2rem 0;
-            display: block;
             background-color: $primary;
-        }
 
+                img{
+                    width: 100%;
+                }
+
+        }
+        
         &__icon-social-media{
+            display: inline-block;
             &:not(:last-child){
                 margin-right: .71rem;
+            }
+
+            @include media('<=large-notebook'){
+                width: 1.9rem;
             }
         }
 
@@ -81,7 +116,7 @@
             line-height: 1.25;
             font-family: 'playfair';
             text-align: center;
-            display: inline-block;
+            display: block;
             color: $primary-dark;
         }
 

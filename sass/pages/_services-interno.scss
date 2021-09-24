@@ -5,10 +5,19 @@
         display: flex;
         align-items: center;
         width: 61%;
+
+            @include media('<=large-notebook'){
+                margin-top: 6.5rem;
+                padding-left: 13rem;
+            }
     }
 
     &__select-service-text{
         margin-right: 6rem;
+
+            @include media('<=large-notebook'){
+                margin-right: 5rem;
+            }
     }
 
     &__select-service-content{
@@ -25,16 +34,28 @@
         display: flex;
     }
 
+    &__img-servico{
+        width: 100%;
+    }
+
     &__nossos-trabalhos-item-img{
         border-radius: 1rem;
         height: 10rem;
+
+            @include media('<=large-notebook'){
+                height: 8rem;
+            }
     }
 
     &__servico-aberto-title{
-        font-weight: 100;
+        font-weight: 400;
         color: $primary-dark;
         font-size: 1.7rem;
         position: relative;
+
+            @include media('<=notebook'){
+                font-size: 1.5rem;
+            }
 
             &::after{
                 content:'';
@@ -65,19 +86,52 @@
         margin-top: 8rem;
         padding-left: 11rem;
         display: flex;
+
+            @include media('<=large-notebook'){
+                margin-top: 7.5rem;
+            }
+
+            @include media('<=notebook'){
+                margin-top: 6.2rem;
+            }
+
+            @include media('<=small-notebook'){
+                padding-left: 9rem;
+                margin-top: 6rem;
+            }  
+
     }
 
     &__proxima-secao-container{
         justify-content: center;
+
+            @include media('<=large-notebook'){
+                position: absolute;
+                right: 9rem;
+                top: 32rem;
+            }
+
+            @include media('<=notebook'){
+                right: 8rem;
+            } 
     }
 
     &__linha-horizontal{
         margin: 3rem 0;
         height: 20rem;
+
+            @include media('<=notebook'){
+                margin: 2rem 0;
+                height: 3rem;
+            }
     }
 
     &__contador-slider{
         text-align: center;
+
+            @include media('<=large-notebook'){
+                font-size: 1.3rem;
+            } 
     }
 
     &__open-service-content{
@@ -87,6 +141,22 @@
         padding: 5rem 8rem 2rem 21rem;
         box-shadow: 4px 0px 30px rgba($primary-dark, .2);
         border-radius: 0 3rem 3rem 0;
+
+            @include media('<=large-notebook'){
+                width: 91rem;
+                padding: 4rem 6rem 2rem 21rem;
+            }
+
+            @include media('<=notebook'){
+                width: 86rem;
+                padding: 4rem 5rem 2rem 21rem;
+            }
+
+            @include media('<=notebook'){
+                width: 84rem;
+                padding: 4rem 5rem 2rem 20rem;
+            } 
+
 
             &::after{
                 content: '';
@@ -112,6 +182,14 @@
         font-weight: 100;
         margin: 1.1rem 2rem 0 0;
 
+            @include media('<=large-notebook'){
+                margin: 1.1rem 1rem 0 0;
+            }
+
+            @include media('<=notebook'){
+                font-size: 1.4rem;
+            } 
+
             &::before{
                 content: '';
                 display: inline-block;
@@ -131,11 +209,20 @@
         display: flex;
         align-items: center;
         margin-bottom: 4rem;
+
+            @include media('<=notebook'){
+                margin-bottom: 2.3rem;
+            }
     }
 
     &__open-service-description{
         max-width: 32rem;
         display: inline-block;
+
+            @include media('<=large-notebook'){
+                width: 25rem;
+            }  
+
     }
 
     &__open-service-title{
@@ -146,6 +233,15 @@
         align-items: center;
         margin-right: 3rem;
         line-height: 1.1;
+        font-weight: 700;
+
+            @include media('<=large-notebook'){
+                font-size: 2.5rem;
+            }
+
+            @include media('<=notebook'){
+                font-size: 2.1rem;
+            }
 
         &::before{
             content:'';
@@ -156,6 +252,11 @@
             background-size: 100%;
             background-repeat: no-repeat;
             margin-right: 1.4rem;
+
+                @include media('<=notebook'){
+                    height: 5rem;
+                    width: 5rem;
+                }
         }
 
         &--branding{
@@ -168,23 +269,42 @@
     }
 
     &__open-service-item{
-
-        &>.portfolio-layout__services-item{
-            width: 33rem;
-        }
-
         width: 33rem;
         z-index: 200;
+
+            @include media('<=large-notebook'){
+                width: 26rem;
+            }
     }
+    
+    &__services-item{
+        width: 33rem;
+
+            @include media('<=large-notebook'){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 28rem;
+            }
+
+            @include media('<=small-notebook'){
+                width: 27rem;
+            }  
+    }
+
 
     &__select-service-title{
         display: inline-block;
         position: relative;
         color: $primary-dark;
-        font-weight: 100;
+        font-weight: 400;
         font-size: 1.8rem;
         line-height: 1.1;
         white-space: nowrap;
+
+            @include media('<=notebook'){
+                font-size: 1.6rem;
+            }
 
             &::after{
                 content: '';
@@ -206,6 +326,15 @@
         &:visited{
             font-size: 1.8rem !important;
             padding: 1.2rem 2.8rem 1.2rem 2.8rem;
+
+                @include media('<=large-notebook'){
+                    margin-top: -1.8rem;
+                }
+
+                @include media('<=notebook'){
+                    font-size: 1.6rem !important;
+                    padding: 1.1rem 2.4rem 1.1rem 2.4rem;
+                }
         }
     }
 
@@ -226,6 +355,10 @@
                 box-shadow: none;
                 opacity: .92;
                 font-weight: 100;
+
+                    @include media('<=large-notebook'){
+                        font-size: 1.35rem;
+                    }  
             }
 
             &--active,
@@ -245,6 +378,10 @@
         position: relative;
         width: 9rem;
         cursor: pointer;
+
+            @include media('<=large-notebook'){
+                // width: 9.5rem;
+            }
         
             &:not(:last-child){
                 margin-right: 2.8rem;
@@ -271,11 +408,25 @@
     // -------- IMAGENS FLUTANDO NO FUNDO ---------------
 
 
+
+    &__img-bg-creme{
+        @include media('<=large-notebook'){
+            top: -14%;
+            right: -2%;
+            width: 25rem;
+            height: 25rem;
+        }
+    }
+
     &__img-risquinho-sol-2{
         position: absolute;
         bottom: -7%;
         right: -2%;
         width: 35rem;
+
+            @include media('<=large-notebook'){
+                display: none;
+            }
     }
 
     &__select-service-img-item{
@@ -290,10 +441,24 @@
     &__img-estatua-masculina{
         left: 62%;
         width: 41rem;
+
+            @include media('<=large-notebook'){
+                left: 76%;
+                top: -14%;
+                width: 29rem;
+                transform: rotate(12deg);
+            }
     }
 
     &__img-risquinho-sol{
         left: 60%;
         width: 28rem;
+
+            @include media('<=large-notebook'){
+                transform: rotate(-123deg);
+                left: 74%;
+                width: 21rem;
+                z-index: -2;
+            }
     }
 }

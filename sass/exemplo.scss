@@ -1,0 +1,11 @@
+@include media('<=large-notebook'){
+    font-size: 2.5rem;
+}
+
+@include media('<=notebook'){
+    font-size: 2.1rem;
+}
+
+@include media('<=small-notebook'){
+    margin-top: 6rem;
+}  

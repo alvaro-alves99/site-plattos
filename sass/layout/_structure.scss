@@ -17,6 +17,10 @@
             background-size: cover;
             background-position: center;
             z-index: 900;
+
+                @include media('<=large-notebook'){
+                    height: 1.4rem;
+                }
         }
 }
 
