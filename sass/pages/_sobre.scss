@@ -8,6 +8,11 @@
 
     &__header-title{
         margin-right: 4rem;
+
+            @include media('<=small-notebook'){
+                font-size: 2.8rem;
+            }  
+
     }
 
     // ---------- FIM::: HEADER TEXTO COMECO 
@@ -19,6 +24,10 @@
         align-items: center;
         justify-content: space-between;
         max-width: 133rem;
+
+            @include media('<=large-notebook'){
+                justify-content: flex-start;
+            }
     }
 
     // ------------- FIM::: MIOLO CONTAINER ----------------
@@ -27,10 +36,24 @@
 
     &__crencas-container{
         margin-top: 7.7rem;
+
+            @include media('<=notebook'){
+                margin-top: 5.7rem;
+            }
     }
 
     &__crencas-lista-coluna--1{
         margin-right: 6rem;
+
+            @include media('<=large-notebook'){
+                margin-right: 4rem;
+            }
+
+            @include media('<=small-notebook'){
+                margin-right: 2rem;
+            } 
+
+       
     }
 
     &__crencas-lista{
@@ -45,16 +68,25 @@
         align-items: center;
         margin-bottom: 4rem;
 
-        &::before{
-            content: '';
-            display: inline-block;
-            height: 13rem;
-            width: 11rem;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-image: url('../../img/sobre-nos/portal-lista-item.svg');
-        }
+            @include media('<=large-notebook'){
+                margin-bottom: 3rem;
+            }
+
+            &::before{
+                content: '';
+                display: inline-block;
+                height: 13rem;
+                width: 11rem;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url('../../img/sobre-nos/portal-lista-item.svg');
+
+                    @include media('<=large-notebook'){
+                        height: 10rem;
+                        width: 9rem;
+                    }
+            }
     }
 
     &__crencas-lista_texto{
@@ -67,6 +99,14 @@
         -webkit-box-decoration-break:clone;
         background-color: white;
         padding: .5rem 0;
+
+            @include media('<=large-notebook'){
+                font-size: 2rem;
+            }
+
+            @include media('<=small-notebook'){
+                font-size: 1.9rem;
+            }  
 
             .bold{
                 background-image: linear-gradient(to top, $primary-light 0%, $primary-light 40%, #ffffff 40%);
@@ -86,14 +126,22 @@
         max-width: 42rem;
         height: fit-content;
 
+            @include media('<=large-notebook'){
+                max-width: 36rem;
+                margin-bottom: -2rem;
+            }
+
+            @include media('<=notebook'){
+                margin-bottom: -1rem;
+            }
+
             &::before{
                 content: '';
                 position: absolute;
                 top: -12%;
                 left: 54%;
                 z-index: -1;
-                transform: translate(-50%, -50%) rotate(
-            178deg);
+                transform: translate(-50%, -50%) rotate(178deg);
                 display: block;
                 width: 67rem;
                 height: 42rem;
@@ -101,6 +149,13 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 background-image: url(../../img/ESTATUA-HOMEM-1.png);
+
+                    @include media('<=large-notebook'){
+                        top: -7%;
+                        left: 54%;
+                        width: 43rem;
+                        height: 34rem;
+                    }
             }   
 
             &::after{
@@ -117,6 +172,10 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 background-image: url(../../img/linhas-arco.svg);
+
+                    @include media('<=large-notebook'){
+                        content: unset;
+                    }
             }
     }
 
@@ -131,6 +190,19 @@
         background-color: #ffffff;
         border-radius: 3rem 20rem 20rem 3rem;
 
+            @include media('<=large-notebook'){
+                border-radius: 3rem 3rem 3rem 3rem;
+                flex-direction: row-reverse;
+                padding: 0 2rem 0 0;
+                overflow: hidden;
+            }
+
+            
+            @include media('<=notebook'){
+                height: 18.5rem;
+            }
+
+
             &:not(:first-child){
                 margin-top: 0;
             }
@@ -139,7 +211,7 @@
     &__descricao-box_title{
         color: $primary-dark;
         font-size: 2.3rem;
-        font-weight: 400;
+        font-weight: 600;
     }
 
     &__descricao-box-img-container{
@@ -147,10 +219,26 @@
         transform: scale(1.1) translatex(1rem);
         margin-left: 1rem;
         width: 20rem;
+
+            @include media('<=large-notebook'){
+                width: 13rem;
+                height: 100%;
+                margin-right: 3rem;
+                margin-left: 0;
+                transform: unset;
+                border-radius: 3rem 0 0 3rem;
+                overflow: hidden;
+            }
     }
 
     &__descricao-box-img{
         width: 100%;
+
+            @include media('<=large-notebook'){
+                height: 100%;
+                object-fit: cover;
+                transform: scale(1.2);
+            }
     }
 
     &__descricao-box_paragraph{
@@ -158,6 +246,12 @@
         font-weight: 100;
         font-size: 1.2rem;
         max-width: 27rem;
+
+
+
+        @include media('<=large-notebook'){
+            font-weight: 400;
+        }
     }
 
     &__descricao-box_social-media-link{
@@ -184,6 +278,13 @@
         width: 32rem;
         transform: rotate(235deg);
         z-index: -2;
+
+            @include media('<=large-notebook'){
+                top: 2%;
+                left: 62%;
+                width: 25rem;
+                transform: rotate(235deg);
+            }
     }
 
     &__img-bg-creme{
@@ -191,6 +292,13 @@
         right: 15%;
         width: 45rem;
         height: 45rem;
+
+            @include media('<=large-notebook'){
+                top: -16%;
+                right: 6%;
+                width: 30rem;
+                height: 30rem;
+            }
     }
 
 }

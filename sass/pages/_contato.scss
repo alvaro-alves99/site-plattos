@@ -6,11 +6,21 @@
         margin-top: 20rem;
         margin-left: 12rem;
         display: flex;
+
+            @include media('<=large-notebook'){
+                margin-top: 17rem;
+                margin-left: 11rem;
+            }
     }
 
     &__title{
         font-size: 3.6rem;
         color: $primary;
+        font-weight: 700;
+
+            @include media('<=large-notebook'){
+                font-size: 3.5rem;
+            }
     }
 
     &__paragraph{
@@ -25,6 +35,10 @@
         margin-top: 6rem;
         margin-left: 12rem;
         width: 80%;
+
+            @include media('<=large-notebook'){
+                margin-top: 5rem;
+            }
     }
 
     &__form-text{
@@ -33,6 +47,10 @@
         font-weight: 100;
         line-height: 2;
         vertical-align: -webkit-baseline-middle;
+
+            @include media('<=large-notebook'){
+                font-size: 2.2rem;
+            }
     }
 
     &__btn-form{
@@ -43,6 +61,11 @@
             margin-left: 2.2rem;
             padding: 1.3rem 2.3rem;
             transform: translatey(.5rem);
+
+                @include media('<=large-notebook'){
+                    font-size: 1.5rem;
+                    padding: 1.1rem 2.1rem;
+                }
 
         }
     }
@@ -63,6 +86,10 @@
         text-decoration: none;
         font-weight: 100;
 
+            @include media('<=large-notebook'){
+                font-size: 1.7rem;
+            }
+
             &::before{
                 content:'';
                 display: inline-block;
@@ -73,6 +100,17 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
+
+                    @include media('<=large-notebook'){
+                        width: 3rem;
+                        height: 3rem;
+                    }
+
+                    @include media('<=notebook'){
+                        width: 2.3rem;
+                        height: 2.3rem;
+                        margin-right: 1.1rem;
+                    }
             }
 
             &--whatsapp{
@@ -116,14 +154,28 @@
     // COMECO NAV FINAL PAGINA 
 
     &__final-section-nav{
-        
+
+        @include media('<=large-notebook'){
+            margin-top: 8rem;
+        }
+
+        @include media('<=notebook'){
+            margin-top: 7rem;
+        }
+
         .btn{
             font-size: 1.8rem;
             padding: 1.5rem 3rem;
+
+                @include media('<=large-notebook'){
+                    font-size: 1.6rem;
+                    padding: 1.2rem 2.4rem;
+                }
         }
     }
 
     // IMAGENS NA PAGINA 
+
 
     &__img-risquinho-sol-2{
         position: absolute;
@@ -137,6 +189,13 @@
         right: 7%;
         width: 40rem;
         height: 40rem;
+
+            @include media('<=large-notebook'){
+                top: -18%;
+                right: -3%;
+                width: 26rem;
+                height: 26rem;
+            }
     }
 
     &__img-bg-creme-2{
@@ -152,5 +211,17 @@
         left: 67%;
         top: 29%;
         width: 46rem;
+
+            @include media('<=large-notebook'){
+                width: 40rem;
+                left: 68%;
+                top: 33%;
+            }
+
+            @include media('<=notebook'){
+                width: 36rem;
+                left: 68%;
+                top: 35%;
+            }
     }
 }

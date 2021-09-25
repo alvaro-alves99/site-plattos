@@ -49,6 +49,13 @@
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
+
+                    @include media('<=large-notebook'){
+                        top: -18%;
+                        right: -3%;
+                        width: 26rem;
+                        height: 26rem;
+                    }
             }
 
             &__img-estatua-masculina{
@@ -56,6 +63,12 @@
                 top: -23%;
                 left: 59%;
                 width: 38rem;
+
+                    @include media('<=large-notebook'){
+                        width: 28rem;
+                        top: -17%;
+                        left: 73%;
+                    }
             }
 
             &__img-risquinho-sol{
@@ -64,5 +77,10 @@
                 left: 57%;
                 width: 25rem;
                 transform: rotate(-143deg);
+
+                    @include media('<=large-notebook'){
+                        left: 69%;
+                        z-index: -1;
+                    }
             }
 }

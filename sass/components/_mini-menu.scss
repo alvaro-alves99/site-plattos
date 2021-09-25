@@ -5,11 +5,23 @@
     width: 28%;
     z-index: 2000;
 
+        @include media('<=large-notebook'){
+            top: 6.5rem;
+        }
+
+        @include media('<=large-notebook'){
+            width: 35%;
+        }
+
     &__lista{
         display: flex;
         justify-content: space-evenly;
         width: 100%;
         font-size: 1.3rem;
+
+            @include media('<=large-notebook'){
+                font-size: 1.45rem;
+            }  
     }
 
     &__lista-item{
@@ -17,9 +29,6 @@
         color: $primary-dark;
         cursor: pointer;
 
-            @include media('<=large-notebook'){
-                font-size: 1.2rem;
-            }  
     }
 
     &__lista-link{

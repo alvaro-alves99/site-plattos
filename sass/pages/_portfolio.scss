@@ -35,9 +35,24 @@
             display: inline-block;
             width: 42rem;
             
+            @include media('<=large-notebook'){
+                width: 33rem;
+            }
+
+            @include media('<=notebook'){
+                width: 30rem;
+            }
 
             &:not(:last-child){
                 margin-right: 14rem;
+
+                @include media('<=1600px'){
+                    margin-right: 10rem;
+                }
+
+                @include media('<=notebook'){
+                    margin-right: 12rem;
+                }
             }
         }
 
@@ -88,6 +103,10 @@
         &__job-item-info-container{
             margin-top: 12rem;
             display: flex;
+
+                @include media('<=notebook'){
+                    margin-top: 9rem;
+                }
         }
 
         &__job-item_comp-img-site-inloco-1{
@@ -110,6 +129,7 @@
 
         &__job-item-info-cliente-dados{
             display: flex;
+            align-items: center;
         }
 
         &__job-item-btn-container{
@@ -124,6 +144,11 @@
             box-shadow: -7px 7px $primary-light;
             height: auto;
             border-radius: 100%;
+
+            @include media('<=notebook'){
+                width: 6rem;
+                height: 6rem;
+            }
         }
 
         &__job-item-title-container{
@@ -143,7 +168,11 @@
 
         &__job-item-ano{
             font-size: 1.3rem;
-            font-weight: 100;
+            font-weight: 400;
+
+                @include media('<=large-notebook'){
+                    
+                }
         }
 
         &__job-item-categorias-container{
@@ -158,8 +187,9 @@
             color: $primary-dark;
             font-size: 1.4rem;
             text-decoration: none;
-            font-weight: 100;
+            font-weight: 400;
             margin: .8rem 1rem 0 0;
+
 
                 &::before{
                     content: '';
@@ -195,9 +225,16 @@
             border-radius: 100%;
             font-size: 1.5rem;
             transform: translate(-50%, -50%);
-            
 
-    
+                @include media('<=large-notebook'){
+                    width: 10rem;
+                    height: 10rem;
+                }
+
+                @include media('<=notebook'){
+                    width: 9rem;
+                    height: 9rem;
+                }
 
                 &::before{
                     content:'';
@@ -219,6 +256,15 @@
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-image: url(../../img/portfolio/seta-branca.svg);
+
+                        @include media('<=large-notebook'){
+                            width: 100%;
+                            height: 1rem;
+                        }
+
+                        @include media('<=large-notebook'){
+                            height: .91rem;
+                        }
                 }
         }
 
@@ -242,6 +288,17 @@
             background-image: url(../../img/bg-creme.png);
             box-shadow: 0px 0px 23px 5px rgba($primary, .25);
             border-radius: 100%;
+
+                @include media('<=large-notebook'){
+                    width: 28rem;
+                    height: 28rem;
+                }
+
+                @include media('<=notebook'){
+                    width: 26rem;
+                    height: 26rem;
+                }
+
 
                 &::after{
                     content:'';
@@ -268,6 +325,10 @@
             align-items: center;
             height: 40rem;
             transform: translatey(6rem);
+
+                @include media('<=large-notebook'){
+                    height: 35rem;
+                }
         }
 
         &__next-page-btn{
@@ -315,6 +376,12 @@
             top: -23%;
             left: 59%;
             width: 38rem;
+
+                @include media('<=large-notebook'){
+                    top: -21%;
+                    left: 66%;
+                    width: 40rem;
+                }
         }
 
         &__img-homem-canto{
@@ -330,6 +397,14 @@
             left: 57%;
             width: 25rem;
             transform: rotate(-143deg);
+
+                @include media('<=large-notebook'){
+                    top: -5%;
+                    left: 58%;
+                    width: 27rem;
+                    transform: rotate(-129deg);
+                    z-index: -1;
+                }
         }
 
         &__img-bg-creme{
@@ -343,6 +418,10 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
+                @include media('<=large-notebook'){
+                    top: -36%;
+                }
         }
 
         &__img-bg-creme-2{

@@ -12,10 +12,19 @@
     width: fit-content;
     transition: color .4s;
 
+        @include media('<=large-notebook'){
+            font-size: 2rem;
+            border-bottom: 1px solid $primary-dark;
+        }
+
     &::placeholder{
         color: rgba($primary-dark, .4);
         font-weight: 100;
         font-size: 2.5rem;
+
+            @include media('<=large-notebook'){
+                font-size: 2rem;
+            }
     }
 
 
@@ -43,6 +52,11 @@
     border: none;
     padding: 0 2rem;
     border-bottom:2.5px solid $primary-dark;
+
+        @include media('<=large-notebook'){
+            font-size: 2rem;
+            border-bottom: 1px solid $primary-dark;
+        }
 
         &::before{
             content: '';
