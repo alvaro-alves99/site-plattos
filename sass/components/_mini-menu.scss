@@ -13,6 +13,10 @@
             width: 35%;
         }
 
+        @include media('<=xl-phone'){
+            display: none;
+        }  
+
     &__lista{
         display: flex;
         justify-content: space-evenly;
@@ -21,6 +25,10 @@
 
             @include media('<=large-notebook'){
                 font-size: 1.45rem;
+            }
+
+            @include media('<=large-notebook'){
+                font-size: 1.35rem;
             }  
     }
 

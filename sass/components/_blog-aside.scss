@@ -6,129 +6,200 @@
     // top: 33%;
     // left: 66%;
 
-    &__lista-content{
-        margin-bottom: 3rem;
-        position: relative;
-        width: fit-content;
-        background-color: $white;
-        box-shadow: 11px 11px $primary-light;
-        padding: 1.5rem 2.8rem;
-        border-radius: 2rem;
-        border:.5px solid rgba($primary, .5);
-
-            &::after{
-                content: 'Compartilhe';
-                display: inline-block;
-                position: absolute;
-                color: $primary-dark;
-                background-color: $white;
-                top: 0;
-                left: 25%;
-                padding: 0 .71rem;
-                font-size: 1.3rem;
-                font-weight: 100;
-                letter-spacing: .5px;
-                transform: translate(-50%, -50%);
-            }
-    }
-
-    &__lista-item{
-
-        &:not(:last-child){
-            margin-right: 1rem;
+        @include media('<=large-notebook'){
+            width: 15rem;
         }
-    }
 
-    &__lista-link{
-        display: inline-block;
-        font-size: 0;
-        width: 1.9rem;
-        height: 1.9rem;
-        // background-color: $primary;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        vertical-align: middle;
+
+        &__lista-content{
+            margin-bottom: 3rem;
+            position: relative;
+            width: fit-content;
+            background-color: $white;
+            box-shadow: 11px 11px $primary-light;
+            padding: 1.5rem 2.8rem;
+            border-radius: 2rem;
+            border:.5px solid rgba($primary, .5);
+
+                @include media('<=large-notebook'){
+                    padding: 2rem 2.1rem 1.9rem 2.5rem;
+                }
+                                
+
+                &::after{
+                    content: 'Compartilhe';
+                    display: inline-block;
+                    position: absolute;
+                    color: $primary-dark;
+                    background-color: $white;
+                    top: 0;
+                    left: 25%;
+                    padding: 0 .71rem;
+                    font-size: 1.3rem;
+                    font-weight: 100;
+                    letter-spacing: .5px;
+                    transform: translate(-50%, -50%);
+
+                        @include media('<=large-notebook'){
+                            left: 50%;
+                        }
+                }
+        }
+
+        &__lista-ul{
+            @include media('<=large-notebook'){
+                width: 9rem;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        &__lista-item{
+
+            &:not(:last-child){
+                margin-right: 1rem;
+            }
 
             &--whatsapp{
-                background-image: url(../../img/blog/icones-aside/whatsapp.svg);
+                @include media('<=large-notebook'){
+                    margin-bottom: .51rem;
+                }
             }
 
             &--facebook{
-                background-image: url(../../img/blog/icones-aside/facebook.svg);
+                @include media('<=large-notebook'){
+                    margin-bottom: .51rem;
+                }
             }
+
 
             &--instagram{
-                background-image: url(../../img/blog/icones-aside/instagram.svg);
-            }
-
-            &--twitter{
-                background-image: url(../../img/blog/icones-aside/twitter.svg);
-            }
-
-            &--linkedin{
-                background-image: url(../../img/blog/icones-aside/linkedin.svg);
+                @include media('<=large-notebook'){
+                    margin-right: 0 !important;
+                    margin-bottom: .51rem;
+                }
             }
 
             &--link{
-                background-image: url(../../img/blog/icones-aside/link.svg);
+                @include media('<=large-notebook'){
+                    margin-right: 0 !important;
+                }
             }
+        }
 
-    }
+        &__lista-link{
+            display: inline-block;
+            font-size: 0;
+            width: 1.9rem;
+            height: 1.9rem;
+            // background-color: $primary;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            vertical-align: middle;
 
-    & &__btn-navegacao{
-        width: fit-content;
-        padding: 1.2rem 2.3rem;
-        font-size: 1.5rem;
-        border-radius: 2rem;
-    }
-}
+                &--whatsapp{
+                    background-image: url(../../img/blog/icones-aside/whatsapp.svg);
+                }
 
-.secao-compartilhar{
-    padding: 2rem 2.8rem;
-    border-radius: 2.4rem;
+                &--facebook{
+                    background-image: url(../../img/blog/icones-aside/facebook.svg);
+                }
 
-    &__lista-item{
+                &--instagram{
+                    background-image: url(../../img/blog/icones-aside/instagram.svg);
+                }
 
-        &:not(:last-child){
-            margin-right: .7rem;
+                &--twitter{
+                    background-image: url(../../img/blog/icones-aside/twitter.svg);
+                }
+
+                &--linkedin{
+                    background-image: url(../../img/blog/icones-aside/linkedin.svg);
+                }
+
+                &--link{
+                    background-image: url(../../img/blog/icones-aside/link.svg);
+                }
+
+        }
+
+        &__btn-container{
+            @include media('<=large-notebook'){
+                width: 90%;
+            }
+        }
+
+        & &__btn-navegacao{
+            width: fit-content;
+            padding: 1.2rem 2.3rem;
+            font-size: 1.5rem;
+            border-radius: 2rem;
+
+                @include media('<=large-notebook'){
+                    text-align: center;
+                    line-height: 1.4;
+                    padding: 1.5rem 2.3rem;
+                }
+
+                &::after{
+                    @include media('<=large-notebook'){
+                        margin-left: 0;
+                        margin-top: 0.4rem;
+                        width: 5rem;
+                        height: 1.4rem;
+                    }
+                }
+        }
+    
+
+    .secao-compartilhar{
+        padding: 2rem 2.8rem;
+        border-radius: 2.4rem;
+
+        &__lista-item{
+
+            &:not(:last-child){
+                margin-right: .7rem;
+            }
+        }
+
+        &__lista-link{
+            display: inline-block;
+            font-size: 0;
+            width: 2rem;
+            height: 2rem;
+            // background-color: $primary;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+
+                &--whatsapp{
+                    background-image: url(../../img/blog/icones-aside/whatsapp.svg);
+                }
+
+                &--facebook{
+                    background-image: url(../../img/blog/icones-aside/facebook.svg);
+                }
+
+                &--instagram{
+                    background-image: url(../../img/blog/icones-aside/instagram.svg);
+                }
+
+                &--twitter{
+                    background-image: url(../../img/blog/icones-aside/twitter.svg);
+                }
+
+                &--linkedin{
+                    background-image: url(../../img/blog/icones-aside/linkedin.svg);
+                }
+
+                &--link{
+                    background-image: url(../../img/blog/icones-aside/link.svg);
+                }
+
         }
     }
 
-    &__lista-link{
-        display: inline-block;
-        font-size: 0;
-        width: 2rem;
-        height: 2rem;
-        // background-color: $primary;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        vertical-align: middle;
-
-            &--whatsapp{
-                background-image: url(../../img/blog/icones-aside/whatsapp.svg);
-            }
-
-            &--facebook{
-                background-image: url(../../img/blog/icones-aside/facebook.svg);
-            }
-
-            &--instagram{
-                background-image: url(../../img/blog/icones-aside/instagram.svg);
-            }
-
-            &--twitter{
-                background-image: url(../../img/blog/icones-aside/twitter.svg);
-            }
-
-            &--linkedin{
-                background-image: url(../../img/blog/icones-aside/linkedin.svg);
-            }
-
-            &--link{
-                background-image: url(../../img/blog/icones-aside/link.svg);
-            }
-
-    }
 }

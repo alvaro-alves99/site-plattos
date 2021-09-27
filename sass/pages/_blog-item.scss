@@ -10,6 +10,13 @@
             width: 30rem;
             bottom: -2%;
             right: -6%;
+
+                @include media('<=large-notebook'){
+                    height: 15rem;
+                    width: 26rem;
+                    right: -8%;
+                }
+
         }
     // HEADER CONTAINER DO COMECO DA PAGINA
 
@@ -291,6 +298,10 @@
         padding: 1.7rem 3.5rem;
         font-weight: 100;
 
+            @include media('<=large-notebook'){
+                font-size: 1.85rem;
+            }
+
             &::before{
                 @include settings-bg;
                 width: 2.2rem;
@@ -313,11 +324,19 @@
         padding: 2rem 0 2.5rem 0 ;
         justify-content: space-between;
 
+            @include media('<=large-notebook'){
+                padding: 2rem 0 3.5rem 0;
+            }
+
             
     }
 
     &__logo-footer-container{
         width: 26rem;
+
+            @include media('<=large-notebook'){
+                width: 22rem;
+            }
     }
 
     &__logo-footer{
@@ -329,6 +348,10 @@
         padding: 1.2rem 2.6rem;
         box-shadow: 7px 8px #ffeedb;
         border: .5px solid rgba($primary, .3);
+
+            @include media('<=large-notebook'){
+                padding: 1.1rem 2.3rem;
+            }
 
             &:not(:last-child){
                 margin-right: 2rem;

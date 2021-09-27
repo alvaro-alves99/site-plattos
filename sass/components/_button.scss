@@ -83,6 +83,10 @@
             height: 2rem;
             vertical-align: middle;
             margin-left: 1.5rem;
+
+                @include media('<=large-notebook'){
+                    width: 3rem;
+                }
         }
         
         &--back{
@@ -98,6 +102,10 @@
                 vertical-align: middle;
                 margin-right: 1.5rem;
                 transform: rotate(180deg);
+
+                    @include media('<=large-notebook'){
+                        width: 3rem;
+                    }
             }
 
             &::after{
@@ -112,6 +120,10 @@
                 background-position: right;
                 background-size: unset;
                 width: 4rem;
+
+                    @include media('<=large-notebook'){
+                        width: 3rem;
+                    }
             }
         }
     }

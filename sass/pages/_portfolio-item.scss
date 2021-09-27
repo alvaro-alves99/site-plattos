@@ -9,6 +9,10 @@
         align-items: center;
         justify-content: space-between;
         width: 81rem;
+
+            @include media('<=notebook'){
+                width: 74rem;
+            }
     }
 
     &__title-container{
@@ -102,6 +106,10 @@
         font-size: 1.3rem;
         line-height: 1.6;
 
+            @include media('<=notebook'){
+                margin-top: 8rem;
+            }
+
             img{
                 width: 110%;
             }
@@ -118,6 +126,10 @@
     &__post-content{
         margin-right: 4rem;
         width: 65%;
+
+            @include media('<=large-notebook'){
+                width: 73%;
+            }
     }
 
     &__lista-content-tags-item{
@@ -153,6 +165,11 @@
         font-weight: 100;
         margin-bottom: 2rem;
 
+            @include media('<=large-notebook'){
+                margin-bottom: 3rem;
+                font-size: 2.3rem;
+            }
+
     }
 
     &__ver-mais-title{
@@ -167,6 +184,10 @@
                 background-image: url(../../img/pi-quadrado-icon.svg);
                 vertical-align: text-top;
                 margin-right: 1.8rem;
+
+                    @include media('<=large-notebook'){
+                        width: 8rem;
+                    }
             }
     }
 
@@ -180,5 +201,15 @@
         width: 40rem;
         z-index: -2;
         image-rendering: -webkit-optimize-contrast;
+
+            @include media('<=large-notebook'){
+                top: -101%;
+                right: 0;
+                width: 27rem;
+            }
+
+            @include media('<=small-notebook'){
+                top: -88%;
+            } 
     }
 }

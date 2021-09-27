@@ -6,90 +6,108 @@
     padding-bottom: 4rem;
     position: relative;
 
-    &__item{
-        display: inline-block;
-        width: 32rem;
-        background-color: $white;
-
-    }
-
-    &__content{
-        margin: 0 auto;
-        width: fit-content;
-    }
-
-    &__btn-container{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: flex;
-        justify-content: space-between;
-        width: 80%;
-        transform: translate(-50%, -50%);
-    }
-
-    & &__btn{
-        &:link,
-        &:visited,
-        &:active{
-            width: 4.7rem;
-            height: 4.7rem;
+        @include media('<=large-notebook'){
+            padding-bottom: 3rem;
         }
-    }
 
-    & &__btn--next{
-        &:link,
-        &:visited,
-        &:active{
-            background-image: url(../../img/arrow-next.svg);
-            box-shadow: -7px 8px rgba($primary-dark, .2) ;
-        }
-    }
-
-    & &__btn--back{
-        &:link,
-        &:visited,
-        &:active{
-            background-image: url(../../img/arrow-next.svg);
-            transform: rotate(180deg);
-            box-shadow: -7px -8px rgba($primary-dark, .2) ;
+        &__item{
+            display: inline-block;
+            width: 32rem;
+            background-color: $white;
 
         }
-    }
 
-    &__contagem-container{
-        margin-top: 2rem;
-        display: flex;
-        justify-content: center;
-    }
+        &__content{
+            margin: 0 auto;
+            width: fit-content;
+        }
 
-    &__contagem-lista{
-        margin: 0 auto;
-    }
+        &__btn-container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            transform: translate(-50%, -50%);
+        }
 
-    &__contagem-lista-item{
-        position: relative;
-        width: 1.15rem;
-        height: 1.15rem;
-        border-radius: 50%;
-        border: .5px solid rgba($primary, .5);
-        background-color: $white;
+        & &__btn{
+            &:link,
+            &:visited,
+            &:active{
+                width: 4.7rem;
+                height: 4.7rem;
 
-            &--active{
-                &::after{
-                    content: '';
-                    @include align-middle;
-                    top: 51%;
-                    transform: translate(-56%, -56%);
-                    width: 70%;
-                    height: 70%;
-                    background-color: $primary;
-                    border-radius: 50%;
+                    @include media('<=large-notebook'){
+                        width: 4rem;
+                        height: 4rem;
+                    }
+            }
+        }
+
+        & &__btn--next{
+            &:link,
+            &:visited,
+            &:active{
+                background-image: url(../../img/arrow-next.svg);
+                box-shadow: -7px 8px rgba($primary-dark, .2);
+
+                    @include media('<=large-notebook'){
+                        box-shadow: -4px 5px rgba($primary-dark, .2);
+                    }
+
+            }
+        }
+
+        & &__btn--back{
+            &:link,
+            &:visited,
+            &:active{
+                background-image: url(../../img/arrow-next.svg);
+                transform: rotate(180deg);
+                box-shadow: -7px -8px rgba($primary-dark, .2) ;
+
+                @include media('<=large-notebook'){
+                    box-shadow: -4px -5px rgba($primary-dark, .2);
                 }
-            }
 
-            &:not(:last-child){
-                margin-right: .5rem;
             }
-    }
+        }
+
+        &__contagem-container{
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__contagem-lista{
+            margin: 0 auto;
+        }
+
+        &__contagem-lista-item{
+            position: relative;
+            width: 1.15rem;
+            height: 1.15rem;
+            border-radius: 50%;
+            border: .5px solid rgba($primary, .5);
+            background-color: $white;
+
+                &--active{
+                    &::after{
+                        content: '';
+                        @include align-middle;
+                        top: 51%;
+                        transform: translate(-56%, -56%);
+                        width: 70%;
+                        height: 70%;
+                        background-color: $primary;
+                        border-radius: 50%;
+                    }
+                }
+
+                &:not(:last-child){
+                    margin-right: .5rem;
+                }
+        }
 }

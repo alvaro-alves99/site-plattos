@@ -6,6 +6,12 @@
         background-color: $white;
         border-radius: 2rem;
 
+
+            @include media('<=large-notebook'){
+                width: 27rem;
+            }
+
+
         &:not(:last-child){
             margin-right: 2rem;
         }

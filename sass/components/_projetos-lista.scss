@@ -12,22 +12,18 @@
         align-items: center;
         position: relative;
 
-            &:not(:last-child){
-                margin-right: 3rem;
+            @include media('<=large-notebook'){
+                width: 21rem;
             }
 
-            // &::before{
-            //     content: '';
-            //     display: inline-block;
-            //     position: absolute;
-            //     bottom: -11%;
-            //     left: 50%;
-            //     width: 92%;
-            //     height: 4px;
-            //     border-radius: 7rem;
-            //     background-color: $primary-dark;
-            //     transform: translate(-50%, -50%);
-            // }
+            &:not(:last-child){
+                margin-right: 3rem;
+
+                    @include media('<=large-notebook'){
+                        margin-right: 6rem;
+                    }
+            }
+
     }
 
     &__item-text-container{

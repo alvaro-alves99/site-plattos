@@ -8,10 +8,12 @@
     justify-content: start;
     margin-top: 9rem;
     padding-left: 14rem;
-    // background-position: center;
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-image: url(../../img/BG_CREME.jpg);
+    
+
+        @include media('<=large-notebook'){
+            padding-left: 12rem;
+        }
+
 
         &::after{
             @include settings-bg;
@@ -23,6 +25,10 @@
             left: 73%;
             top: 93%;
             z-index: -2;
+
+                @include media('<=large-notebook'){
+                    left: 75%;
+                }
         }
 
         &::before{
@@ -35,6 +41,11 @@
             left: -1%;
             top: 76%;
 
+                @include media('<=large-notebook'){
+                    width: 26rem;
+                    height: 26rem;
+                }
+
         }
 
 
@@ -42,6 +53,14 @@
             width: 26rem;
             margin-right: 50rem;
             position: relative;
+
+                @include media('<=large-notebook'){
+                    margin-right: 41rem;
+                }
+
+                @include media('<=small-notebook'){
+                    margin-right: 30rem;
+                }  
 
                 &::after{
                     content: '';
@@ -52,6 +71,14 @@
                     background-color: rgba($primary, 0.3);
                     top: 50%;
                     left: 109%;
+
+                        @include media('<=large-notebook'){
+                            width: 35rem;
+                        }
+
+                        @include media('<=small-notebook'){
+                            width: 24rem;
+                        } 
                 }
         }
 
@@ -68,6 +95,11 @@
                 padding: 1.2rem 2.6rem;
                 box-shadow: 7px 8px #ffeedb;
                 border: .5px solid rgba($primary, .3);
+
+                    @include media('<=large-notebook'){
+                        font-size: 1.3rem;
+                        padding: 1rem 2.2rem;
+                    }
             }
 
                 &:not(:last-child){

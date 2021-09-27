@@ -6,127 +6,131 @@
         border-radius: 3rem;
         box-shadow: 13px 15px $primary-light;
 
-    &__title-form-description{
-        font-size: 1.8rem;
-        font-weight: 100;
-        display: inline-block;
-        margin-top: .4rem;
-    }
+        @include media('<=large-notebook'){
+            margin-left: 14rem;
+        }
 
-    &__title-form{
-        font-size: 2.3rem;
-        font-weight: 400;
-    }
+        &__title-form-description{
+            font-size: 1.8rem;
+            font-weight: 100;
+            display: inline-block;
+            margin-top: .4rem;
+        }
 
-    & &__form-input{
-        text-align: left;
+        &__title-form{
+            font-size: 2.3rem;
+            font-weight: 400;
+        }
 
-            &::before{
-                @include settings-bg;
-                height: 1.4rem;
-                width: 1.4rem;
-                background-color: $primary;
-            }
-    }
+        & &__form-input{
+            text-align: left;
 
-    &__form-content-container{
-        padding-top: 4rem;
-        display: flex;
-        justify-content: space-between;
-    }
+                &::before{
+                    @include settings-bg;
+                    height: 1.4rem;
+                    width: 1.4rem;
+                    background-color: $primary;
+                }
+        }
 
-    &__input-item-container{
-        position: relative;
-        display: inline-block;
+        &__form-content-container{
+            padding-top: 4rem;
+            display: flex;
+            justify-content: space-between;
+        }
 
-            &::before{
-                @include settings-bg;
-                height: 2rem;
-                width: 2rem;
-                position: absolute;
-                bottom: 1rem;
-                left: .5rem;
-            }        
+        &__input-item-container{
+            position: relative;
+            display: inline-block;
 
-            &--nome{
-                width: 45%;
-                margin-right: 5%;
+                &::before{
+                    @include settings-bg;
+                    height: 2rem;
+                    width: 2rem;
+                    position: absolute;
+                    bottom: 1rem;
+                    left: .5rem;
+                }        
 
-                    &::before{
-                        background-image: url(../../img/icone-nome.svg);
-                    }
-            }
+                &--nome{
+                    width: 45%;
+                    margin-right: 5%;
 
-            &--email{
-                width: 49%;
+                        &::before{
+                            background-image: url(../../img/icone-nome.svg);
+                        }
+                }
 
-                    &::before{
-                        background-image: url(../../img/icone-email.svg);
-                    }
-            }
+                &--email{
+                    width: 49%;
 
-            &--mensagem{
-                margin-top: 2rem;
-                width: 100%;
+                        &::before{
+                            background-image: url(../../img/icone-email.svg);
+                        }
+                }
 
-                    &::before{
-                        background-image: url(../../img/icone-mensagem.svg);
-                    }
-            }
-    }
+                &--mensagem{
+                    margin-top: 2rem;
+                    width: 100%;
 
-    &__label-item{
-        position: absolute;
-        font-size: 1.3rem;
-        padding-left: .5rem;
-        top: -.5rem;
-        font-weight: 100;
-        letter-spacing: 0.5px;
-    }
+                        &::before{
+                            background-image: url(../../img/icone-mensagem.svg);
+                        }
+                }
+        }
 
-    & &__form-input{
-        width: 100%;
-        font-size: 2rem;
-        padding: 1rem 2rem 0 1rem;
-        border-bottom: 1px solid $primary-darker;
-        text-indent: 35px;
-        letter-spacing: 0.5px;
-    }
+        &__label-item{
+            position: absolute;
+            font-size: 1.3rem;
+            padding-left: .5rem;
+            top: -.5rem;
+            font-weight: 100;
+            letter-spacing: 0.5px;
+        }
 
-    &__btns-container{
-        min-width: 19rem;
-        margin-left: 2rem;
-    }
-
-    & &__btn-form{
-        &:link,
-        &:visited,
-        &:active{
-            display: block;
+        & &__form-input{
             width: 100%;
-            text-align: center;
-            padding: 1.35rem 2.7rem;
+            font-size: 2rem;
+            padding: 1rem 2rem 0 1rem;
+            border-bottom: 1px solid $primary-darker;
+            text-indent: 35px;
+            letter-spacing: 0.5px;
+        }
 
-            &:not(:last-child){
-                margin-bottom: 2rem;
+        &__btns-container{
+            min-width: 19rem;
+            margin-left: 2rem;
+        }
+
+        & &__btn-form{
+            &:link,
+            &:visited,
+            &:active{
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 1.35rem 2.7rem;
+
+                &:not(:last-child){
+                    margin-bottom: 2rem;
+                }
             }
         }
-    }
 
-    & &__btn-form--whatsapp{
+        & &__btn-form--whatsapp{
 
-            &::before{
-                @include settings-bg;
-                width: 1.7rem;
-                height: 1.7rem;
-                margin-right: 1rem;
-                background-image: url(../../img/icone-whatsapp.svg);
-                vertical-align: text-top;
+                &::before{
+                    @include settings-bg;
+                    width: 1.7rem;
+                    height: 1.7rem;
+                    margin-right: 1rem;
+                    background-image: url(../../img/icone-whatsapp.svg);
+                    vertical-align: text-top;
 
-            }
-    }
+                }
+        }
 
-    & &__btn-form--enviar{
-        font-weight: 700;
-    }
+        & &__btn-form--enviar{
+            font-weight: 700;
+        }
 }

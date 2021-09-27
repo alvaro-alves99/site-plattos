@@ -16,6 +16,13 @@
             background-position: center;
             background-size: contain;
             transform: rotate(-50deg);
+
+                @include media('<=notebook'){
+                    width: 25rem;
+                    height: 25rem;
+                    right: 8%;
+                    top: 80%;
+                }
         }
 
         // FIM:: SETTINGS MAIN TAG PORTFOLIO ----------------
@@ -40,7 +47,7 @@
             }
 
             @include media('<=notebook'){
-                width: 30rem;
+                width: 28rem;
             }
 
             &:not(:last-child){
@@ -53,6 +60,10 @@
                 @include media('<=notebook'){
                     margin-right: 12rem;
                 }
+
+                @include media('<=small-notebook'){
+                    margin-right: 14rem;
+                } 
             }
         }
 
@@ -149,6 +160,11 @@
                 width: 6rem;
                 height: 6rem;
             }
+
+            @include media('<=small-notebook'){
+                width: 5rem;
+                height: 5rem;
+            }
         }
 
         &__job-item-title-container{
@@ -164,6 +180,10 @@
             font-size: 1.6rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
+
+                @include media('<=small-notebook'){
+                    font-size: 1.4rem;
+                } 
         }
 
         &__job-item-ano{
@@ -181,6 +201,10 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+                @include media('<=small-notebook'){
+                    margin-left: 3rem;
+                }  
         }
 
         &__job-item-categorias-lista-item{
@@ -189,6 +213,10 @@
             text-decoration: none;
             font-weight: 400;
             margin: .8rem 1rem 0 0;
+
+                @include media('<=small-notebook'){
+                    font-size: 1.2rem;
+                }  
 
 
                 &::before{
@@ -203,6 +231,11 @@
                     background-size: contain;
                     transform: translatey(-.2rem);
                     background-image: url('../../img/servico-interno/after-lista-tarefas.svg');
+
+                        @include media('<=small-notebook'){
+                            width: 1.2rem;
+                            height: 1.2rem;
+                        } 
                 }
            
 
@@ -232,8 +265,9 @@
                 }
 
                 @include media('<=notebook'){
-                    width: 9rem;
-                    height: 9rem;
+                    width: 8rem;
+                    height: 8rem;   
+                    font-size: 1.36rem;
                 }
 
                 &::before{
@@ -263,7 +297,7 @@
                         }
 
                         @include media('<=large-notebook'){
-                            height: .91rem;
+                            height: .81rem;
                         }
                 }
         }
@@ -295,8 +329,8 @@
                 }
 
                 @include media('<=notebook'){
-                    width: 26rem;
-                    height: 26rem;
+                    width: 23rem;
+                    height: 23rem;
                 }
 
 
@@ -329,6 +363,15 @@
                 @include media('<=large-notebook'){
                     height: 35rem;
                 }
+
+                @include media('<=notebook'){
+                    height: 31rem;
+                }
+
+                @include media('<=small-notebook'){
+                    height: 31rem;
+                    margin-left: 16rem;
+                }
         }
 
         &__next-page-btn{
@@ -343,6 +386,16 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 box-shadow: 8px 8px $primary-light;
+
+                @include media('<=large-notebook'){
+                    width: 5rem;
+                    height: 5rem;
+                }
+
+                @include media('<=notebook'){
+                    width: 4.5rem;
+                    height: 4.5rem;
+                }
 
             }
         }
@@ -382,6 +435,18 @@
                     left: 66%;
                     width: 40rem;
                 }
+
+                @include media('<=notebook'){
+                    top: -19%;
+                    left: 68%;
+                    width: 34rem;
+                }
+
+                @include media('<=small-notebook'){
+                    top: -19%;
+                    left: 69%;
+                    width: 31rem;
+                }
         }
 
         &__img-homem-canto{
@@ -389,6 +454,18 @@
             width: 35rem;
             left: 80%;
             top: 64%;
+
+                @include media('<=notebook'){
+                    width: 25rem;
+                    left: 81%;
+                    top: 67%;
+                }
+               
+                @include media('<=small-notebook'){
+                    width: 21rem;
+                    left: 83%;
+                    top: 72%;
+                }
         }
 
         &__img-risquinho-sol{
@@ -404,6 +481,15 @@
                     width: 27rem;
                     transform: rotate(-129deg);
                     z-index: -1;
+                }
+
+                @include media('<=notebook'){
+                    left: 63%;
+                }
+
+                @include media('<=small-notebook'){
+                    left: 65%;
+                    width: 23rem;
                 }
         }
 
@@ -422,6 +508,19 @@
                 @include media('<=large-notebook'){
                     top: -36%;
                 }
+
+                @include media('<=notebook'){
+                    width: 37rem;
+                    height: 37rem;
+                    top: -32%;
+                }
+
+                @include media('<=small-notebook'){
+                    width: 34rem;
+                    height: 34rem;
+                    top: -29%;
+                    left: 77%;
+                }
         }
 
         &__img-bg-creme-2{
@@ -435,6 +534,17 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
+                @include media('<=notebook'){
+                    width: 20rem;
+                    height: 20rem;
+                }
+
+                @include media('<=small-notebook'){
+                    bottom: -8%;
+                    right: -6%;
+                }
+
         }
 
          // ----------------- FIM:: IMGS DE FUNDO -------

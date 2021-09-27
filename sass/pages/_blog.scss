@@ -11,6 +11,10 @@
         display: flex;
         align-items: center;
         max-width: 50%;
+
+            @include media('<=large-notebook'){
+                max-width: 60%;
+            }
     }
 
     &__title{
@@ -19,6 +23,11 @@
         min-width: 35rem;
         font-weight: 700;
         letter-spacing: .5px;
+
+            @include media('<=large-notebook'){
+                font-size: 2.5rem;
+                min-width: 30rem;
+            }
 
     }
 
@@ -38,6 +47,10 @@
         border-radius: 3rem;
         padding: 4rem 4rem 3rem 4rem;
 
+            @include media('<=small-notebook'){
+                margin-right: 11rem;
+            }  
+
             &::after{
                 @include settings-bg;
                 position: absolute;
@@ -48,6 +61,12 @@
                 top: -10%;
                 transform: translate(-50%, -50%);
                 z-index: -1;
+
+                    @include media('<=large-notebook'){
+                        width: 18rem;
+                        height: 30rem;
+                        right: -5%;
+                    }
             }
     }
 
@@ -157,6 +176,10 @@
         margin-left: 13rem;
         margin-top: 4rem;
         width: 82%;
+
+            @include media('<=notebook'){
+                width: 77%;
+            }
     }
 
     &__artigos-geral-title-content{
@@ -164,6 +187,10 @@
         color: $primary-dark;
         letter-spacing: .5px;
         margin-bottom: 4rem;
+
+            @include media('<=notebook'){
+                font-size: 1.5rem;
+            }
     }
 
     &__artigos-content{
@@ -214,10 +241,20 @@
         right: 9%;
         width: 45rem;
         height: 45rem;
+
+            @include media('<=large-notebook'){
+                width: 35rem;
+                height: 35rem;
+            }
     }
 
     &__img-risquinho-sol{
         z-index: -2;
+
+            @include media('<=large-notebook'){
+                display: none;
+            }
+
     }
 
 
