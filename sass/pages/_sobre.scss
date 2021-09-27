@@ -2,16 +2,40 @@
     
     // -------  HEADER TEXTO COMECO ------ 
 
+    @include media('<=xl-phone'){
+        padding-top: 21rem;
+        padding-left: 4rem;
+    }
+
     &__header-title-container{
         justify-content: unset;
+        
+
+            @include media('<=xl-phone'){
+                width: 96%;
+                flex-direction: column;
+                align-items: start;
+            }
+    }
+
+    &__paragraph{
+        @include media('<=xl-phone'){
+            min-width: 29rem;
+        }
     }
 
     &__header-title{
         margin-right: 4rem;
+        display: block;
 
             @include media('<=small-notebook'){
                 font-size: 2.8rem;
-            }  
+            }
+
+            @include media('<=xl-phone'){
+                font-size: 3rem;
+                margin-bottom: 2rem;
+            }
 
     }
 
@@ -27,6 +51,12 @@
 
             @include media('<=large-notebook'){
                 justify-content: flex-start;
+            }
+
+            @include media('<=xl-phone'){
+                flex-direction: column;
+                align-items: flex-start;
+                transform: translateX(-15px);
             }
     }
 
@@ -51,7 +81,11 @@
 
             @include media('<=small-notebook'){
                 margin-right: 2rem;
-            } 
+            }
+
+            @include media('<=xl-phone'){
+                margin-right: 0;
+            }
 
        
     }
@@ -60,6 +94,10 @@
         position: relative;
         display: flex;
         max-width: 97rem;
+
+            @include media('<=xl-phone'){
+                flex-direction: column;
+            }
 
     }
     
@@ -86,6 +124,11 @@
                         height: 10rem;
                         width: 9rem;
                     }
+
+                    @include media('<=xl-phone'){
+                        height: 11rem;
+                        width: 10rem;
+                    }
             }
     }
 
@@ -111,6 +154,10 @@
             .bold{
                 background-image: linear-gradient(to top, $primary-light 0%, $primary-light 40%, #ffffff 40%);
             }
+
+            @include media('<=xl-phone'){
+                font-size: 2.1rem;
+            }
         
     }
 
@@ -135,6 +182,10 @@
                 margin-bottom: -1rem;
             }
 
+            @include media('<=xl-phone'){
+                margin: 2rem 1rem 2rem 1rem;
+            }
+
             &::before{
                 content: '';
                 position: absolute;
@@ -156,6 +207,10 @@
                         width: 43rem;
                         height: 34rem;
                     }
+
+                    @include media('<=xl-phone'){
+                        content: unset;
+                    }
             }   
 
             &::after{
@@ -175,6 +230,13 @@
 
                     @include media('<=large-notebook'){
                         content: unset;
+                    }
+
+                    @include media('<=xl-phone'){
+                        content: '';
+                        width: 28rem;
+                        height: 23rem;
+                        bottom: -50%;
                     }
             }
     }
@@ -285,6 +347,10 @@
                 width: 25rem;
                 transform: rotate(235deg);
             }
+
+            @include media('<=xl-phone'){
+                display: none;
+            }
     }
 
     &__img-bg-creme{
@@ -299,6 +365,13 @@
                 width: 30rem;
                 height: 30rem;
             }
+
+            @include media('<=xl-phone'){
+                width: 23rem;
+                height: 23rem;
+                right: -3rem;
+                top: -5rem;
+            } 
     }
 
 }

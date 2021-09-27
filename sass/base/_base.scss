@@ -16,6 +16,14 @@ html{
     @include media ('<=small-notebook'){
         font-size: 62%;
     }
+
+    @include media('<=xl-phone'){
+        font-size: 66%;
+    } 
+
+    @include media('<=m-phone'){
+        font-size: 61%;
+    }
 }
 
 body{

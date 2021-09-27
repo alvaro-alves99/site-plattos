@@ -4,6 +4,10 @@
     float: right;
     min-height: 100vh;
     overflow:hidden;
+
+        @include media('<=xl-phone'){
+            width: 100%;
+        }  
     
         &:after{
             content: '';
@@ -20,6 +24,10 @@
                 @include media('<=large-notebook'){
                     height: 1.4rem
                 }
+
+                @include media('<=xl-phone'){
+                    height: 2.4rem;
+                }
         }
         
         &:before{
@@ -34,6 +42,13 @@
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
+
+                @include media('<=xl-phone'){
+                    width: 23rem;
+                    height: 23rem;
+                    right: -11%;
+                    top: -5%;
+                }  
         }
 
         &__images-container{
@@ -49,6 +64,15 @@
 
                 @include media ('<=small-notebook'){
                     left: 9rem;
+                }
+
+                @include media('<=xl-phone'){
+                    // display: none;
+                    left: 0;
+                    float: unset;
+                    width: 100%;
+                    min-height: 60rem;
+                    margin-top: 3rem;
                 }
         }
 
@@ -66,6 +90,18 @@
                 @include media ('<=small-notebook'){
                     width: 80%;
                 }
+
+                @include media('<=xl-phone'){
+                    left: -18%;
+                    bottom: -4%;
+                    width: 46rem;
+                }
+
+                @include media('<=m-phone'){
+                    left: -45%;
+                    width: 55rem;
+                    bottom: -16%;
+                }
         }
 
         &__img-colunas{
@@ -78,6 +114,10 @@
                 @include media('<=large-notebook'){
                     bottom: -1rem;
                 }     
+
+                @include media('<=xl-phone'){
+                    display: none;
+                }
         }
 
         &__img-pi-quadrado{
@@ -93,7 +133,19 @@
 
                 @include media('<=small-notebook'){
                     display: none;
-                }            
+                }
+                
+                @include media('<=xl-phone'){
+                    width: 3.2rem;
+                    left: 73%;
+                    top: 75%;
+                    z-index: 200;
+                    display: block;
+                }
+
+                @include media('<=l-phone'){
+                    display: none;
+                }
         }
 
 
@@ -107,7 +159,12 @@
                     width: 39rem;
                     top: 59%;
                     left: 35%;
-                }  
+                }
+
+                @include media('<=xl-phone'){
+                    width: 28rem;
+                    left: 38%;
+                }
         }
 
         &__img-circulo{
@@ -120,6 +177,18 @@
             background-color: $primary;
             border-radius: 30rem;
 
+                @include media('<=xl-phone'){
+                    width: 22rem;
+                    height: 22rem;
+                }
+
+                @include media('<=m-phone'){
+                    width: 25rem;
+                    height: 25rem;
+                    top: 26%;
+                    left: -16%
+                }
+
                 &::after{
                     content: '';
                     @include align-middle;
@@ -128,6 +197,12 @@
                     height: 113%;
                     border-radius: 30rem;
                     border: 2px solid $primary;
+
+                        @include media('<=xl-phone'){
+                            width: 114%;
+                            height: 114%;
+                            border: 1px solid $primary;
+                        }
                 }
         }
 
@@ -145,7 +220,12 @@
                 @include media('<=small-notebook'){
                     width: 26rem;
                     height: 26rem;
-                }  
+                }
+
+                @include media('<=xl-phone'){
+                    bottom: 29rem;
+                    z-index: -30;
+                }
         }
 
         &__risquinhos-arco{
@@ -157,7 +237,17 @@
 
                 @include media('<=large-notebook'){
                     top: 87%;
-                }     
+                }
+
+                @include media('<=xl-phone'){
+                    display: none;
+                }
+
+                @include media('<=m-phone'){
+                    width: 28rem;
+                    left: 16%;
+                    top: 65%;
+                }
         }
 
 
@@ -168,7 +258,19 @@
 
                 @include media('<=large-notebook'){
                     top: 24%;
-                }  
+                }
+
+                @include media('<=xl-phone'){
+                    position: relative;
+                    top: 22%;
+                    left: 5rem;
+                }
+
+                @include media('<=l-phone'){
+                    padding: 0 0 0 4rem;
+                    top: unset;
+                    left: unset;
+                }
         }
 
         &__content{
@@ -176,6 +278,12 @@
             top: 0;
             width: 100%;
             min-height: 100vh;
+
+                @include media('<=xl-phone'){
+                    position: relative;
+                    min-height: unset;
+                    margin-top: 19rem;
+                }
         }
 
         &__title{
@@ -183,16 +291,34 @@
             font-weight: 100;
             font-size: 5.3rem;
             line-height: 1;
+
+                @include media('<=xl-phone'){
+                    font-size: 4.3rem;
+                }  
+                
         }
 
         &__title-emphasis{
             color: $primary;
             font-weight: 700;
             font-size: 5.8rem;
+
+                @include media('<=xl-phone'){
+                    font-size: 4.3rem;
+                }
+
+                @include media('<=s-phone'){
+                    font-size: 4.1rem;
+                }
         }
 
         &__paragraph{
             width: 28rem;
+
+                @include media('<=xl-phone'){
+                    margin-top: 3rem;
+                    width: 80%;
+                }
         }
 
         &__btn-primary{

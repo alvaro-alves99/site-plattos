@@ -5,6 +5,12 @@
     min-height: 100vh;
     overflow:hidden;
 
+        @include media('<=xl-phone'){
+            width: 100%;
+            float: unset;
+            padding-bottom: 6rem;
+        }  
+
         &:after{
             content: '';
             display: block;
@@ -21,6 +27,15 @@
                 @include media('<=large-notebook'){
                     height: 1.4rem;
                 }
+        }
+
+        &--no-footer-mobile{
+            &:after{
+                @include media('<=xl-phone'){
+                    content: unset;
+                    display: none;
+                }
+            }
         }
 }
 

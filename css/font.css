@@ -32,6 +32,12 @@
 
 @font-face{
     font-family: Playfair;
-    src: local("fonts/playfair/PlayfairDisplay-BoldItalic.ttf");
+    src: local("fonts/playfair/PlayfairDisplay-SemiBoldItalic.ttf");
     font-weight: 600;
+}
+
+@font-face{
+    font-family: Playfair;
+    src: local("fonts/playfair/PlayfairDisplay-BoldItalic.ttf");
+    font-weight: 700;
 }
