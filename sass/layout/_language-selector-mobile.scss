@@ -1,0 +1,37 @@
+.language-selector-mobile{
+
+    @include media('>=xl-phone'){
+        display: none;
+
+    }
+
+        &__lista-link{
+            color: $primary-dark;
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 0.6px;
+            
+                &--active{
+                    font-weight: 700;
+                }
+
+                @include media('<=large-notebook'){
+                    font-size: 1.5rem;
+                }  
+        }
+
+        &__lista-item{
+
+            &:not(:last-child){
+                border-right: 1px solid rgba($primary-dark, .5);
+                padding-right: .7rem;
+                margin-right: 0.7em;
+
+                    @include media('<=large-notebook'){
+                        padding-right: 1rem;
+                        margin-right: 1em;
+                    } 
+            }
+        }
+    
+}

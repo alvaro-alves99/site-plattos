@@ -3,17 +3,32 @@
     align-items: flex-start;
     margin: 4rem 0;
 
+        @include media('<=xl-phone'){
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 6rem 0;
+        }
+
     &__img-figure{
         margin: 0 !important;
         border-radius: 2rem;
         height: 17rem;
         width: 22rem !important;
         object-fit: cover;
+
+            @include media('<=xl-phone'){
+                width: 100% !important;
+            }
     }
 
     &__figcaption{
         display: inline-block;
         margin-left: 4rem;
+
+            @include media('<=xl-phone'){
+                margin-left: 0;
+                margin-top: 2rem;
+            }
     }
 
     &__titulo{

@@ -44,6 +44,10 @@
         color: $primary-dark;
         font-size: 2.3rem;
         font-weight: 100;
+
+            @include media('<=xl-phone'){
+                border: 1px solid rgba($primary, .3);
+            }
     }
 }
 
@@ -97,6 +101,10 @@
                 @include media('<=large-notebook'){
                     width: 3rem;
                 }
+
+                @include media('<=xl-phone'){
+
+                }
         }
         
         &--back{
@@ -146,4 +154,35 @@
             display: inline-block;
             width: 100%;
         }
+    }
+
+    .btn--inline{
+        &,
+        &:link,
+        &:active,
+        &:visited{
+            text-decoration: none;
+            color: $primary;
+            display: inline-block;
+            width: 100%;
+            font-size: 1.6rem;
+
+                &::after{
+                    content: '';
+                    display: inline-block;
+                    /* background-size: contain; */
+                    background-repeat: no-repeat;
+                    background-position: right;
+                    background-image: url(../../img/seta-laranja-pequena.svg);
+                    height: 2rem;
+                    width: 4rem;
+                    vertical-align: middle;
+                    margin-left: 1rem;
+
+                        @include media('<=large-notebook'){
+                            width: 3rem;
+                        }
+                }
+        }
+
     }

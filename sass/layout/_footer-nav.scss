@@ -46,6 +46,10 @@
                     height: 26rem;
                 }
 
+                @include media('<=xl-phone'){
+                    display: none;
+                }
+
         }
 
 

@@ -1,0 +1,65 @@
+.secao-compartilhar{
+    padding: 2rem 2.8rem;
+    border-radius: 2.4rem;
+
+        @include media('<=xl-phone'){
+            padding: 0;
+        }
+
+        &__lista-item{
+
+            &:not(:last-child){
+                margin-right: .7rem;
+
+                    @include media('<=xl-phone'){
+                        margin-right: 1rem;
+                    }
+            }
+        }
+
+        &__lista-content{
+            min-width: 24rem;
+        }
+
+        &__lista-link{
+            display: inline-block;
+            font-size: 0;
+            width: 2rem;
+            height: 2rem;
+            // background-color: $primary;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+
+                @include media('<=xl-phone'){
+                    width: 2.6rem;
+                    height: 2.6rem;
+                }
+
+                &--whatsapp{
+                    background-image: url(../../img/blog/icones-aside/whatsapp.svg);
+                }
+
+                &--facebook{
+                    background-image: url(../../img/blog/icones-aside/facebook.svg);
+                }
+
+                &--instagram{
+                    background-image: url(../../img/blog/icones-aside/instagram.svg);
+                }
+
+                &--twitter{
+                    background-image: url(../../img/blog/icones-aside/twitter.svg);
+                }
+
+                &--linkedin{
+                    background-image: url(../../img/blog/icones-aside/linkedin.svg);
+                }
+
+                &--link{
+                    background-image: url(../../img/blog/icones-aside/link.svg);
+                }
+
+        }
+}

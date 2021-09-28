@@ -10,6 +10,14 @@
             margin-left: 14rem;
         }
 
+        @include media('<=xl-phone'){
+            margin: 2rem auto 0 auto;
+            width: 100%;
+            box-shadow: unset;
+            border: unset;
+            padding: 5rem 5rem 6rem 5rem;
+        }
+
         &__title-form-description{
             font-size: 1.8rem;
             font-weight: 100;
@@ -20,6 +28,12 @@
         &__title-form{
             font-size: 2.3rem;
             font-weight: 400;
+
+                @include media('<=xl-phone'){
+                    font-size: 2.7rem;
+                    font-weight: 400;
+                    margin-bottom: 2rem;
+                }
         }
 
         & &__form-input{
@@ -37,11 +51,21 @@
             padding-top: 4rem;
             display: flex;
             justify-content: space-between;
+
+                @include media('<=xl-phone'){
+                    flex-direction: column;
+                }
         }
 
         &__input-item-container{
             position: relative;
             display: inline-block;
+
+                &:not(:last-child){
+                    @include media('<=xl-phone'){
+                        margin-bottom: 3rem;
+                    }
+                }
 
                 &::before{
                     @include settings-bg;
@@ -50,19 +74,35 @@
                     position: absolute;
                     bottom: 1rem;
                     left: .5rem;
+
+                        @include media('<=xl-phone'){
+                            width: 2.3rem;
+                            height: 2.3rem;
+                        }
                 }        
 
                 &--nome{
                     width: 45%;
                     margin-right: 5%;
 
+                        @include media('<=xl-phone'){
+                            width: 100%;
+                            margin-right: 0;
+                        }
+
                         &::before{
                             background-image: url(../../img/icone-nome.svg);
                         }
+
                 }
 
                 &--email{
                     width: 49%;
+
+                        @include media('<=xl-phone'){
+                            width: 100%;
+                            margin-right: 0;
+                        }
 
                         &::before{
                             background-image: url(../../img/icone-email.svg);
@@ -72,6 +112,11 @@
                 &--mensagem{
                     margin-top: 2rem;
                     width: 100%;
+
+                        @include media('<=xl-phone'){
+                            width: 100%;
+                            margin-top: 0;
+                        }
 
                         &::before{
                             background-image: url(../../img/icone-mensagem.svg);
@@ -86,6 +131,11 @@
             top: -.5rem;
             font-weight: 100;
             letter-spacing: 0.5px;
+
+                @include media('<=xl-phone'){
+                    top: -.9rem;
+                    font-weight: 400;
+                }
         }
 
         & &__form-input{
@@ -100,6 +150,11 @@
         &__btns-container{
             min-width: 19rem;
             margin-left: 2rem;
+
+                @include media('<=xl-phone'){
+                    margin-left: 0;
+                    margin-top: 4rem;
+                }
         }
 
         & &__btn-form{
@@ -111,9 +166,14 @@
                 text-align: center;
                 padding: 1.35rem 2.7rem;
 
-                &:not(:last-child){
-                    margin-bottom: 2rem;
-                }
+                    @include media('<=xl-phone'){
+                        padding: 1.65rem 2rem;
+                        font-size: 1.7rem;
+                    }
+
+                    &:not(:last-child){
+                        margin-bottom: 2rem;
+                    }
             }
         }
 

@@ -10,6 +10,14 @@
             width: 15rem;
         }
 
+        @include media('<=xl-phone'){
+            width: 100%;
+            margin-top: 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
 
         &__lista-content{
             margin-bottom: 3rem;
@@ -23,6 +31,10 @@
 
                 @include media('<=large-notebook'){
                     padding: 2rem 2.1rem 1.9rem 2.5rem;
+                }
+
+                @include media('<=xl-phone'){
+                    width: 100%;
                 }
                                 
 
@@ -43,6 +55,11 @@
                         @include media('<=large-notebook'){
                             left: 50%;
                         }
+
+                        @include media('<=xl-phone'){
+                            font-size: 1.5rem;
+                            left: 50%;
+                        }
                 }
         }
 
@@ -52,17 +69,30 @@
                 display: block;
                 margin: 0 auto;
             }
+
+            @include media('<=xl-phone'){
+                width: 100%;
+                text-align: center;
+            }
         }
 
         &__lista-item{
 
             &:not(:last-child){
                 margin-right: 1rem;
-            }
+
+                    @include media('<=xl-phone'){
+                        margin-right: 1.4rem;         
+                    }
+            }   
 
             &--whatsapp{
                 @include media('<=large-notebook'){
                     margin-bottom: .51rem;
+                }
+
+                @include media('<=xl-phone'){
+                    margin-bottom: 0;
                 }
             }
 
@@ -70,19 +100,33 @@
                 @include media('<=large-notebook'){
                     margin-bottom: .51rem;
                 }
+
+                @include media('<=xl-phone'){
+                    margin-bottom: 0;
+                }
             }
 
 
             &--instagram{
-                @include media('<=large-notebook'){
+                @include media('>=xl-phone', '<=large-notebook'){
                     margin-right: 0 !important;
                     margin-bottom: .51rem;
+                }
+
+                @include media('<=xl-phone'){
+                    margin-right: 1rem;
+                    margin-bottom: 0;
                 }
             }
 
             &--link{
-                @include media('<=large-notebook'){
+                @include media('>=xl-phone', '<=large-notebook'){
                     margin-right: 0 !important;
+                }
+
+                @include media('<=xl-phone'){
+                    margin-right: 0;
+                    margin-bottom: 0;
                 }
             }
         }
@@ -97,6 +141,16 @@
             background-position: center;
             background-repeat: no-repeat;
             vertical-align: middle;
+
+                @include media('<=xl-phone'){
+                    width: 2.6rem;
+                    height: 2.6rem;
+                }
+
+                @include media('<=m-phone'){
+                    width: 2.2rem;
+                    height: 2.2rem;
+                }
 
                 &--whatsapp{
                     background-image: url(../../img/blog/icones-aside/whatsapp.svg);
@@ -128,6 +182,10 @@
             @include media('<=large-notebook'){
                 width: 90%;
             }
+
+            @include media('<=xl-phone'){
+                width: 100%;
+            }
         }
 
         & &__btn-navegacao{
@@ -142,6 +200,13 @@
                     padding: 1.5rem 2.3rem;
                 }
 
+                @include media('<=xl-phone'){
+                    text-align: center;
+                    width: 100%;
+                    padding: 1.6rem 2.3rem;
+                    font-size: 1.8rem;
+                }
+
                 &::after{
                     @include media('<=large-notebook'){
                         margin-left: 0;
@@ -149,57 +214,15 @@
                         width: 5rem;
                         height: 1.4rem;
                     }
+
+                    @include media('<=xl-phone'){
+                        display: inline-block;
+                        margin-left: 1.3rem;
+                        vertical-align: middle;
+                        margin-top: 0;
+                    }
                 }
         }
     
-
-    .secao-compartilhar{
-        padding: 2rem 2.8rem;
-        border-radius: 2.4rem;
-
-        &__lista-item{
-
-            &:not(:last-child){
-                margin-right: .7rem;
-            }
-        }
-
-        &__lista-link{
-            display: inline-block;
-            font-size: 0;
-            width: 2rem;
-            height: 2rem;
-            // background-color: $primary;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            vertical-align: middle;
-
-                &--whatsapp{
-                    background-image: url(../../img/blog/icones-aside/whatsapp.svg);
-                }
-
-                &--facebook{
-                    background-image: url(../../img/blog/icones-aside/facebook.svg);
-                }
-
-                &--instagram{
-                    background-image: url(../../img/blog/icones-aside/instagram.svg);
-                }
-
-                &--twitter{
-                    background-image: url(../../img/blog/icones-aside/twitter.svg);
-                }
-
-                &--linkedin{
-                    background-image: url(../../img/blog/icones-aside/linkedin.svg);
-                }
-
-                &--link{
-                    background-image: url(../../img/blog/icones-aside/link.svg);
-                }
-
-        }
-    }
 
 }

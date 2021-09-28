@@ -448,6 +448,10 @@
                 width: 29rem;
                 transform: rotate(12deg);
             }
+
+            @include media('<=xl-phone'){
+                display: none;
+            }
     }
 
     &__img-risquinho-sol{
@@ -459,6 +463,10 @@
                 left: 74%;
                 width: 21rem;
                 z-index: -2;
+            }
+
+            @include media('<=xl-phone'){
+                display: none;
             }
     }
 }

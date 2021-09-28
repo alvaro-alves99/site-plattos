@@ -13,6 +13,13 @@
             @include media('<=notebook'){
                 width: 74rem;
             }
+
+            @include media('<=xl-phone'){
+                width: 80%;
+                margin: 21rem auto 2rem auto;
+                flex-direction: column;
+                align-items: flex-start;
+            }
     }
 
     &__title-container{
@@ -23,6 +30,10 @@
     &__img-cliente-title{
         margin-right: .4rem;
         max-width: 8rem;
+
+            @include media('<=xl-phone'){
+                width: 6rem;
+            }
     }
 
     &__item-tag{
@@ -83,6 +94,10 @@
         display: flex;
         align-items: center;
 
+            @include media('<=xl-phone'){
+                font-size: 4rem;
+            }
+
             &::before{
                 content: '';
                 display: inline-block;
@@ -91,12 +106,19 @@
                 background-color: rgba($primary-darker, .5);
                 vertical-align: middle;
                 margin: 0 2rem 0 0;
+
+                    @include media('<=xl-phone'){
+                       height: 6rem;
+                       background-color: rgba($primary-darker, .3);
+                       line-height: 1.1;
+                    }
             }
     }
 
     // POST CONTENT 
 
     &__post-content-container{
+        position: relative;
         margin-top: 6rem;
         margin-left: 14rem;
         margin-bottom: 6rem;
@@ -106,12 +128,40 @@
         font-size: 1.3rem;
         line-height: 1.6;
 
+            &::before{
+                @include media('<=xl-phone'){
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: rgba($primary-dark, .2);
+                }
+            }
+
             @include media('<=notebook'){
                 margin-top: 8rem;
             }
 
+            @include media('<=xl-phone'){
+                width: 80%;
+                margin: 3rem auto 2rem auto;
+                padding-top: 3rem;
+                flex-direction: column;
+                align-items: flex-start;
+                font-size: 1.7rem;
+            }
+
             img{
                 width: 110%;
+
+                    @include media('<=xl-phone'){
+                        width: 100vw;
+                        margin-left: -10vw;
+                    }
             }
     }
 
@@ -120,7 +170,8 @@
         margin-top: 3rem;
         margin-bottom: 2rem;
         font-size: 2.8rem;
-        font-weight: 700;
+        font-weight: 600;
+        line-height: 1.2;
     }
 
     &__post-content{
@@ -130,6 +181,17 @@
             @include media('<=large-notebook'){
                 width: 73%;
             }
+
+            @include media('<=xl-phone'){
+                width: 100%;
+            }
+    }
+
+    &__tags-container{
+       @include media('<=xl-phone'){
+           margin-top: 3rem;
+           margin-left: 1rem;
+       }
     }
 
     &__lista-content-tags-item{
@@ -158,6 +220,10 @@
     &__ver-mais-projetos{
         margin-top: 8rem;
         margin-left: 14rem;
+
+            @include media('<=xl-phone'){
+                margin: 2rem auto 1rem auto;
+            }
     }
 
     &__ver-mais-title-container{
@@ -165,9 +231,28 @@
         font-weight: 100;
         margin-bottom: 2rem;
 
+            &::before{
+                @include media('<=xl-phone'){
+                    content: '';
+                    height: 10rem;
+                    width: 4rem;
+                    display: inline-block;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-image: url(../../img/_logos/pi-quadrado-vertical.svg);
+                }
+            }
+
             @include media('<=large-notebook'){
                 margin-bottom: 3rem;
                 font-size: 2.3rem;
+            }
+
+            @include media('<=xl-phone'){
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
     }
@@ -176,6 +261,15 @@
         position: relative;
         display: flex;
         align-items: center;
+
+            @include media('<=xl-phone'){
+                display: block;
+                width: 22rem;
+                font-size: 2.3rem;
+                font-weight: 100;
+                margin-left: 2rem;
+                line-height: 1.3;
+            }
 
             &::before{
                 @include settings-bg;
@@ -188,9 +282,33 @@
                     @include media('<=large-notebook'){
                         width: 8rem;
                     }
+
+                    @include media('<=xl-phone'){
+                        content: unset;
+                    }
             }
     }
 
+
+    &__img-bg-creme{
+        position: absolute;
+        top: -26%;
+        right: -2%;
+        width: 45rem;
+        height: 45rem;
+        z-index: -1;
+        background-image: url(../../img/bg-creme.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+            @include media('<=xl-phone'){
+                width: 23rem;
+                height: 23rem;
+                right: -3rem;
+                top: -5rem;
+            } 
+    }
 
     // IMAGEM CANTO 
 
@@ -210,6 +328,10 @@
 
             @include media('<=small-notebook'){
                 top: -88%;
-            } 
+            }
+
+            @include media('<=xl-phone'){
+                display: none;
+            }
     }
 }

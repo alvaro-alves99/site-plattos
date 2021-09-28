@@ -15,6 +15,11 @@
             width: 88vw;
         }
 
+        @include media('<=xl-phone'){
+            width: 100vw;
+            background-color: $primary;
+        }
+
         &::after{
             content: '';
             position: fixed;
@@ -28,11 +33,39 @@
                 @include media('<=large-notebook'){
                     width: 12vw;
                 }
+
+                @include media('<=xl-phone'){
+                    content: unset;
+                }
         }
 
         &__content-container{
             position: relative;
             height: 100vh;
+
+                &::after{
+                    @include media('<=xl-phone'){
+                        content: '';
+                        display: inline-block;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100vh;
+                        width: 14rem;
+                        background-image: url(../../img/BG_CREME-vertical.jpg);
+                        z-index: -1;
+                        border-radius: 0 7rem 0 0;
+                    }
+
+                    @include media('<=m-phone'){
+                        width: 13rem;
+                        height: 25vh;
+                        border-radius: 0 7rem 12rem 0;
+                    }
+                }
         }
 
         // HEADER
@@ -40,17 +73,45 @@
         &__header-img{
             margin-right: 7rem;
             width: 26rem;
+
+                @include media('<=xl-phone'){
+                    margin-right: 0;
+                    width: 6rem;
+                    height: 9rem;
+                    object-fit: cover;
+                    object-position: left;
+                }
         }
 
         &__header-img-container{
             display: flex;
             align-items: center;
+
+                &::after{
+                    @include media('<=xl-phone'){
+                        content: '';
+                        display: inline-block;
+                        width: 36vw;
+                        height: 1px;
+                        left: 271%;
+                        top: 50%;
+                        z-index: 4000;
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                        background-color: $white;
+                    }
+                }
         }
 
         &__content-header-container{
             position: absolute;
             top: 11rem;
             left: 38rem;
+
+                @include media('<=xl-phone'){
+                    top: 5rem;
+                    left: 3.4rem;
+                }
         }
 
         & &__header-btn-zap{
@@ -63,6 +124,10 @@
                 font-size: 1.6rem;
                 box-shadow: 5px 6px #ffeedb;
                 font-weight: 400;
+
+                    @include media('<=xl-phone'){
+                        display: none;
+                    }
             }
         }
 
@@ -91,10 +156,16 @@
             border-radius: 1rem;
             transform: translate(-50%, -50%);
             background-color: $primary;
+
+                @include media('<=xl-phone'){
+                    top: 9rem;
+                    right: 6%;
+                }
         }
 
         &__btn-close{
             display: inline-block;
+            position: relative;
             width: 5.4rem;
             height: 4.5rem;
             border-radius: 1rem;
@@ -103,6 +174,30 @@
             background-repeat: no-repeat;
             background-position: center;
             background-image: url(../../img/_logos/arrow-branca-botao.svg);
+
+                @include media('<=xl-phone'){
+                    background-color: $white;
+                    box-shadow: 8px 8px $primary;
+                    background-image: url(../../img/_logos/icone-close-menu.svg);
+                    background-size: 35%;
+                    width: 5rem;
+                    height: 4.4rem;
+                }
+
+            &::after{
+                    @include media('<=xl-phone'){
+                        @include settings-bg;
+                        width: 22rem;
+                        height: 22rem;
+                        z-index: -2;
+                        position: absolute;
+                        left: 68%;
+                        top: 19%;
+                        transform: translate(-50%, -50%);
+                        background-image: url(../../img/fundo-bg-laranja-menu/bg_tangerina_saturado.png);
+
+                    }
+            }
         }
 
         // MAIN CONTENT NAV
@@ -112,6 +207,21 @@
             top: 40%;
             left: 38rem;
             display: flex;
+
+                @include media('<=xl-phone'){
+                    top: 24rem;
+                    left: 52%;
+                }
+
+                @include media('<=m-phone'){
+                    top: 24rem;
+                    left: 48%;
+                    z-index: 3000;
+                }
+
+                @media screen and (max-height:800px) {
+                    top: 20rem;
+                }
         }
 
         &__nav-container{
@@ -136,12 +246,26 @@
             text-decoration: none;
             font-weight: 400;
 
+                @include media('<=xl-phone'){
+                    color: $white;
+                    font-weight: 100;
+                    
+                }
+
             &--active{
+                position: relative;
                 background-color: $primary;
                 color: $white;
                 border-radius: 1rem;
                 font-weight: 700;
                 padding: 1rem 2rem;
+
+                    @include media('<=xl-phone'){
+                        padding: 0;
+                        background-color: unset;
+                        margin-left: -2rem;
+                        font-size: 3rem;
+                    }
 
                     &::before{
                         content: '';
@@ -152,6 +276,24 @@
                         border-radius: 50%;
                         transform: translateY(-.5rem);
                         margin-right: 1rem;
+
+                            @include media('<=xl-phone'){
+                                width: 0.8rem;
+                                height: 0.8rem;
+                            }
+                    }
+
+                    &::after{
+                        @include media('<=xl-phone'){
+                            content: '';
+                            display: inline-block;
+                            width: 82%;
+                            height: 1px;
+                            position: absolute;
+                            bottom: -.5rem;
+                            background-color: $white;
+                            left: 19%;
+                        }
                     }
             }
         }
@@ -159,6 +301,10 @@
         &__ultimos-posts-container{
             margin-left: 20rem;
             position: relative;
+
+                @include media('<=xl-phone'){
+                    display: none;
+                }
 
                 &::before{
                     content: '';
@@ -229,6 +375,10 @@
             width: 36rem;
             transform: rotate(15deg);
             image-rendering: -webkit-optimize-contrast;
+
+                @include media('<=xl-phone'){
+                    display: none;
+                }
         }
 
         &__img-colunas{
@@ -238,6 +388,26 @@
             width: 60rem;
             z-index: 1;
             image-rendering: -webkit-optimize-contrast;
+
+                @include media('<=xl-phone'){
+                    left: -28rem;
+                    bottom: 2%;
+                    width: 50rem;
+                }
+
+                @include media('<=m-phone'){
+                    left: -37rem;
+                    bottom: 2%;
+                    width: 55rem;
+                    opacity: .3;
+                    z-index: -1;
+                }
+
+                @media screen and (max-height:800px) {
+                    left: -31rem;
+                    bottom: -8%;
+                    width: 49rem;
+                }
         }
 
         &__arco-risquinhos{
@@ -247,6 +417,27 @@
             width: 26rem;
             transform: rotate(216deg);
             z-index: -1;
+
+                @include media('<=xl-phone'){
+                    position: absolute;
+                    top: unset;
+                    right: 5%;
+                    bottom: -1.3rem;
+                    width: 35rem;
+                    transform: rotate(46deg);
+                    z-index: -1;
+                    filter: brightness(9.5);
+                }
+
+                @include media('<=m-phone'){
+                    display: none;
+                }
+
+                @media screen and (max-height:800px) {
+                    right: 23%;
+                    bottom: -2.3rem;
+                    width: 27rem;
+                }
         }
 
         &__arco-risquinhos2{
@@ -256,6 +447,10 @@
             width: 29rem;
             transform: rotate(33deg);
             z-index: -1;
+
+                @include media('<=xl-phone'){
+                    display: none;
+                }
         }
 
         &__bg-circulo-creme{
@@ -264,6 +459,9 @@
             top: -24rem;
             left: -19rem;
             z-index: -1;
+                @include media('<=xl-phone'){
+                    display: none;
+                }
         }
 
 
@@ -277,7 +475,14 @@
             align-items: center;
             justify-content: flex-end;
             background-color: $primary;
-            padding: 1.2rem 8rem;
+            padding: 1.5rem 4rem;
+
+                @include media('<=xl-phone'){
+                    background-color: $white;
+                    color: $primary-dark;
+                    justify-content: space-between;
+                    z-index: 30;
+                }
         }
 
         &__social-icons-container{
@@ -293,17 +498,34 @@
             background-size: 90%;
             background-repeat: no-repeat;
 
+                @include media('<=xl-phone'){
+                    width: 3rem;
+                    height: 3rem;
+                }
+
                 &:not(:last-child){
                     margin-right: .7rem;
+
+                        @include media('<=xl-phone'){
+                            margin-right: 1.3rem;
+                        }
                 }
             
             
                 &--instagram{
                     background-image: url(../../img/_logos/instagram-white.svg);
+
+                        @include media('<=xl-phone'){
+                            background-image: url(../../img/_logos/instagram-marrom.svg);
+                        }
                 }
 
                 &--linkedin{
                     background-image: url(../../img/_logos/linkedin-white.svg);
+
+                        @include media('<=xl-phone'){
+                            background-image: url(../../img/_logos/linkedin-marrom.svg);
+                        }
                 }
         }
 
@@ -316,6 +538,16 @@
                 @include media('<=large-notebook'){
                     width: 26rem;
                 }
+
+                @include media('<=xl-phone'){
+                    display: none;
+                }
+        }
+
+        &__footer-contato-container{
+            @include media('<=xl-phone'){
+                display: none;
+            }
         }
 
         &__footer-contato-lista-item{

@@ -8,6 +8,11 @@
         &:visited{
             font-size: 1.2rem;
 
+                @include media('<=xl-phone'){
+                    padding: 1.6rem 3rem;
+                    width: 100%;
+                }
+
             &::before{
                 content: '';
                 width: 6rem;
@@ -18,10 +23,22 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-image: url(../../img/portfolio/seta-nav.svg);
+
+                    @include media('<=xl-phone'){
+                        // width: 3rem;
+                        // height: 1.4rem;
+                        // background-size: cover;
+                        // background-position: left;
+                    }
             }
 
             &:not(:last-child){
                 margin-right: 4rem;
+
+                    @include media('<=xl-phone'){
+                        margin-right: 0;
+                        margin-bottom: 3rem;
+                    }
             }
 
         }
