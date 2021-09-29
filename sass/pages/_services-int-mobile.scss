@@ -1,0 +1,37 @@
+.services-int-mobile-ly{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+        &::after{
+            @include settings-bg;
+            background-size: cover;
+            position: absolute;
+            height: 23rem;
+            width: 23rem;
+            right: -5vw;
+            top: -3vh;
+            border-radius: 50%;
+            background-image: url(../../img/BG_CREME.jpg);
+            image-rendering: initial;
+        }
+    
+
+        &__title-container{
+            margin: 21rem auto 2rem auto;
+            width: 74%;
+        }
+
+        &__title{
+            font-size: 8vw;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            margin-top: 3rem;
+        }
+
+        &__texto-descricao{
+            
+
+        }
+}

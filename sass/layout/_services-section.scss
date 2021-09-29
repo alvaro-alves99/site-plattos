@@ -1,0 +1,118 @@
+.services-section{
+    margin: 5rem auto 4rem auto;
+    width: 100%;
+
+        &__item{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            padding: 4rem 0 4rem 0;
+
+                &:nth-child(odd){
+                    background-image: url(../../img/FUNDOS/bg_tangerina_saturado.jpg);
+                }
+
+                &:nth-child(even){
+                    background-image: url(../../img/BG_CREME.jpg);
+                }
+
+                &:not(:last-of-type){
+                    margin-bottom: 2rem;
+                }
+        }
+
+        &__item-title-container{
+            display: inline-block;
+            background-color: $white;
+            display: flex;
+            align-items: center;
+            padding: 1.7rem 2rem;
+            border-radius: 2.5rem;
+            border: .5px solid rgba($primary, .5);
+            transform: translate(-1.5rem, -1.5rem);
+        }
+
+        &__item-content{
+            display: flex;
+            flex-direction: column;
+            background-color: #fff2e6;
+            width: 80%;
+            border-radius: 2.5rem;
+        }
+        
+        &__title-group{
+            margin-left: 1.5rem;
+        }
+
+        &__title{
+            color: $primary;
+            font-weight: 700;
+            font-size: 9vw;
+        }
+
+        &__title-descricao{
+            font-family: 'playfair', serif;
+            font-style: italic;
+            font-size: 1.4rem;
+        }
+
+        &__trabalhos-content{
+            
+            &--disabled{
+                height: 0;
+                overflow: hidden;
+                }
+        }
+
+        &__btns-container{
+            margin-top: -.8rem;
+            padding-bottom: .8rem;
+        }
+
+        &__btn{
+            display: flex;
+            align-items: center;
+            color: $primary-dark;
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight: 600;
+            vertical-align: text-top;
+            padding: 1.2rem 2rem;
+
+                &::before{
+                    @include settings-bg;
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    margin-right: .8rem;
+                }
+
+                &::after{
+                    @include settings-bg;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    background-image: url(../../img/_logos/icon-seta-baixo.svg);
+                    margin-left: 1rem;
+                }
+
+                &--trabalhos{
+                    &::before{
+                        background-image: url(../../img/_logos/icon-trabalho-laranja.svg);
+                    }
+                }
+
+                &--tarefas{
+                    &::before{
+                        background-image: url(../../img/_logos/icon-gear-laranja.svg);
+                    }
+                }
+
+                &:not(:last-of-type){
+                    border-bottom: 3px solid $white;
+                }
+        }
+
+}
