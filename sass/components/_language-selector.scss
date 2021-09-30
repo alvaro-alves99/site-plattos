@@ -17,6 +17,10 @@
 
         &__lista{
             padding: 1.1rem 1.2rem 1.1rem 1.6rem;
+
+                @include media('<=xl-tablet'){
+                    padding: 1.1rem 2.1rem 1.1rem 2.1rem;
+                }
         }
 
         &__lista-link{
@@ -31,7 +35,11 @@
 
                 @include media('<=large-notebook'){
                     font-size: 1.1rem;
-                }  
+                }
+                
+                @include media('<=xl-tablet'){
+                    font-size: 1.3rem;
+                }
         }
 
         &__lista-item{
@@ -42,8 +50,8 @@
                 margin-right: 0.5em;
 
                     @include media('<=large-notebook'){
-                        padding-right: .7rem;
-                        margin-right: .7em;
+                        padding-right: 1rem;
+                        margin-right: 1em;
                     } 
             }
         }

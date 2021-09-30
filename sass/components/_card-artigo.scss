@@ -9,6 +9,17 @@
             min-width: 28rem;
         }
 
+        @include media('<=xl-tablet', '>=xl-phone'){
+            min-width: 47rem;
+        }
+
+        @include media('<=l-tablet', '>=xl-phone'){
+            width: 46%;
+            flex-direction: column;
+            height: 20rem;
+            min-width: unset;
+        }
+
         @include media('<=xl-phone'){
             flex-direction: column;
             height: 19rem;
@@ -16,6 +27,10 @@
         }
 
         &:not(:last-of-type){
+            @include media('<=xl-tablet', '>=xl-phone'){
+                margin-bottom: 3rem;
+            }
+
             @include media('<=xl-phone'){
                 margin-bottom: 2rem;
                 
@@ -36,6 +51,19 @@
                     font-size: 1.5rem;
                 }
 
+                @include media('<=xl-tablet', '>=xl-phone'){
+                    font-size: 1.9rem;
+                    margin-bottom: 1.3rem;
+                }
+
+                @include media('<=l-tablet', '>=xl-phone'){
+                    font-size: 2.2rem;
+                }
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    font-size: 2rem;
+                }
+
                 @include media('<=xl-phone'){
                     font-size: 2rem;
                     margin-bottom: 1.2rem;
@@ -47,6 +75,10 @@
             object-position: left;
             width: 100%;
             height: 9rem;
+
+                @include media('<=l-tablet', '>=xl-phone'){
+                    height: 13rem;
+                }
         }
 
         &__img-container{
@@ -55,6 +87,11 @@
             overflow: hidden;
             border-radius: 1rem;
             height: 9rem;
+
+                @include media('<=l-tablet', '>=xl-phone'){
+                    width: 100%;
+                    height: 13rem;
+                }
 
                 @include media('<=xl-phone'){
                     width: 100%;
@@ -86,6 +123,10 @@
 
         &__item-dado{
 
+            @include media('<=xl-tablet', '>=xl-phone'){
+                font-size: 1.5rem;
+            }
+
             &:not(:last-child){
                 margin-right: .5rem;
             }
@@ -97,6 +138,11 @@
                 vertical-align: text-bottom;
                 margin-right: .51rem;
                 transform: translatey(-.2rem);
+
+                    @include media('<=xl-tablet', '>=xl-phone'){
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
 
                     @include media('<=xl-phone'){
                         width: 1.8rem;

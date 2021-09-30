@@ -11,9 +11,26 @@
                 width: 27rem;
             }
 
+            
+            @include media('<=l-tablet', '>=xl-phone'){
+                width: 24rem;
+            }
+            
+            @include media('<=m-tablet', '>=xl-phone'){
+                width: 21rem;
+            }
+
+            @include media('<=s-tablet', '>=xl-phone'){
+                width: 60%;
+            }
 
         &:not(:last-child){
             margin-right: 2rem;
+
+            @include media('<=s-tablet', '>=xl-phone'){
+                margin-right: 0;
+                margin-bottom: 3rem;
+            }
         }
     }
 
@@ -80,5 +97,9 @@
         margin-bottom: .5rem;
         text-decoration: none;
         font-weight: 400;
+
+            @include media('<=s-tablet', '>=xl-phone'){
+                font-size: 2.29rem;
+            }
     }
 }

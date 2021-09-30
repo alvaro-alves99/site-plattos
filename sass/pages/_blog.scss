@@ -5,6 +5,12 @@
             display: none;
         }
 
+        @include media('<=m-tablet', '>=xl-phone'){
+            .mini-menu{
+                display: none;
+            }
+        }
+
         @include media('<=xl-phone'){
             padding-bottom: 3rem;
         }
@@ -18,6 +24,16 @@
 
             @include media('<=large-notebook'){
                 max-width: 60%;
+            }
+
+            @include media('<=l-tablet', '>=xl-phone'){
+                max-width: 73%;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 13rem;
             }
 
             @include media('<=xl-phone'){
@@ -42,6 +58,15 @@
                 min-width: 30rem;
             }
 
+            @include media('<=xl-tablet', '>=xl-phone'){
+                font-size: 3.2rem;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                font-size: 3.6rem;
+                margin-bottom: 1.8rem;
+            }
+
             @include media('<=xl-phone'){
                 min-width: 31rem;
                 margin-bottom: 3rem;
@@ -58,6 +83,15 @@
 
     &__paragraph{
         margin-left: 4rem;
+            @include media('<=xl-tablet', '>=xl-phone'){
+                max-width: 25vw;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                max-width: unset;
+                margin-left: 0;
+            }
+
             @include media('<=xl-phone'){
                 margin-left: 0;
             }
@@ -77,6 +111,11 @@
 
             @include media('<=small-notebook'){
                 margin-right: 11rem;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                width: 75vw;
+                margin-top: 9rem;
             }
 
             @include media('<=xl-phone'){
@@ -104,6 +143,10 @@
                         right: -5%;
                     }
 
+                    @include media('<=l-tablet', '>=xl-phone'){
+                        content: unset;
+                    }
+
                     @include media('<=xl-phone'){
                         content: unset;
                     }
@@ -114,6 +157,10 @@
         display: flex;
         width: fit-content;
         // justify-content: space-between;
+
+            @include media('<=l-tablet', '>=xl-phone'){
+                flex-wrap: wrap;
+            }
 
             @include media('<=xl-phone'){
                 flex-direction: column;
@@ -147,12 +194,30 @@
         background-color: $white;
         border-radius: 2rem;
 
+            @include media('<=l-tablet', '>=xl-phone'){
+                width: 47%;
+                margin-bottom: 2rem;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                width: 45%;
+            }
+
+
             @include media('<=xl-phone'){
                 width: 100%;
             }
 
         &:not(:last-child){
-            margin-bottom: 3rem;
+            margin-right: 3rem;
+            
+            @include media('<=xl-tablet', '>=xl-phone'){
+                margin-right: 1.8rem;
+            }
+
+            @include media('<=xl-phone'){
+                margin-bottom: 3rem;
+            }
         }
     }
 
@@ -232,6 +297,10 @@
         text-decoration: none;
         font-weight: 600;
 
+            @include media('<=xl-tablet', '>=xl-phone'){
+                font-size: 2rem;
+            }
+
             @include media('<=xl-phone'){
                 font-size: 2rem;
             }
@@ -254,6 +323,12 @@
                 display: flex;
                 flex-direction: column;
             }
+    }
+
+    &__artigos-geral-title{
+        @include media('<=xl-tablet', '>=xl-phone'){
+            font-size: 2.1rem;
+        }
     }
 
     &__artigos-geral-title-content{
@@ -292,6 +367,10 @@
         margin-top: 6rem;
         margin-bottom: 10rem;
 
+            @include media('<=m-tablet', '>=xl-phone'){
+                width: 71%;
+            }
+
             @include media('<=xl-phone'){
                 margin: 6rem auto 0 auto;
                 width: 74%;
@@ -309,6 +388,10 @@
 
             .btn{
                 font-size: 1.52rem;
+
+                    @include media('<=xl-tablet', '>=xl-phone'){
+                        font-size: 1.65rem;
+                    }
 
                     @include media('<=xl-phone'){
                         font-size: 1.72rem;
@@ -337,6 +420,10 @@
                 z-index: -1;
                 background-color: rgba($primary, .4);
 
+                    @include media('<=xl-tablet', '>=xl-phone'){
+                        width: 66%;
+                    }
+
                     @include media('<=xl-phone'){
                         content: unset;
                     }
@@ -345,8 +432,11 @@
 
     &__botoes-navegacao-content{
         display: flex;
-        flex-direction: column;
-        align-items: center;
+
+            @include media('<=xl-phone'){
+                flex-direction: column;
+                align-items: center;
+            }
     }
 
     & &__botao-prox-pagina{

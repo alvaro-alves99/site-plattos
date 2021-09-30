@@ -6,14 +6,19 @@
     position: fixed;
     height: 100vh;
     box-shadow: 7px 2px 70px rgba($primary-dark, .2);
-
+    
+        @include media('<=m-tablet'){
+            width: 10%;
+        }
+        
         @include media('<=xl-phone'){
             height: unset;
             background-color: unset;
             width: 100vw;
             box-shadow: unset;
             margin-top: 2rem;
-        }  
+        }
+
 
         &__container{
             position: relative;
@@ -91,6 +96,10 @@
                     width: 4.4rem;
                 }
 
+                @include media('<=m-tablet'){
+                    width: 5.8rem;
+                }
+
                 @include media('<=xl-phone'){
                     width: 5.8rem;
                 }  
@@ -111,6 +120,11 @@
                 @include media('<=large-notebook'){
                     width: 4.5rem;
                     height: 4rem
+                }
+
+                @include media('<=m-tablet'){
+                    width: 5.5rem;
+                    height: 5rem;
                 }
 
                 @include media('<=xl-phone'){

@@ -2,9 +2,16 @@
     padding-top: 13rem;
     padding-left: 10rem;
     position: relative;
+
         @include media('<=xl-phone'){
             padding-left: 0;
             padding-bottom: 2rem;
+        }
+
+        @include media('<=m-tablet', '>=xl-phone'){
+            .mini-menu{
+                display: none;
+            }
         }
 
         &:before{
@@ -28,6 +35,10 @@
                     top: 80%;
                 }
 
+                @include media('<=m-tablet', '>=xl-phone'){
+                    content: unset;
+                }
+
                 @include media('<=xl-phone'){
                     content: unset;
                 }
@@ -46,6 +57,15 @@
             margin-top: 9rem;
             margin-left: 3rem;
             display: flex;
+
+                @include media('<=xl-tablet', '>=xl-phone'){
+                    margin-top: 14rem;
+                }
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    margin-top: 7rem;
+                    margin-left: 9rem;
+                }
 
                 @include media('<=xl-phone'){
                     margin:5rem auto 1rem auto;
@@ -70,6 +90,18 @@
                 width: 28rem;
             }
 
+            @include media('<=xl-tablet', '>=xl-phone'){
+                width: 36rem;
+            }
+
+            @include media('<=l-tablet', '>=xl-phone'){
+                width: 24vw;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                width: 54vw;
+            }
+
             @include media('<=xl-phone'){
                 width: 31rem;
             }
@@ -91,6 +123,11 @@
 
                 @include media('<=small-notebook'){
                     margin-right: 14rem;
+                }
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    margin-right: unset;
+                    margin-bottom: 15rem;
                 }
 
                 @include media('<=xl-phone'){
@@ -213,6 +250,11 @@
                 height: 5rem;
             }
 
+            @include media('<=xl-tablet', '>=xl-phone'){
+                width: 6rem;
+                height: 6rem;
+            }
+
             @include media('<=xl-phone'){
                 width: 6.3rem;
                 height: 6.3rem;
@@ -240,6 +282,10 @@
                 @include media('<=small-notebook'){
                     font-size: 1.4rem;
                 } 
+
+                @include media('<=xl-tablet', '>=xl-phone'){
+                    font-size: 1.82rem;
+                }
 
                 @include media('<=xl-phone'){
                     white-space: nowrap;
@@ -271,7 +317,11 @@
 
                 @include media('<=small-notebook'){
                     margin-left: 3rem;
-                }  
+                }
+
+                @include media('<=l-tablet', '>=xl-phone'){
+                    display: none;
+                }
 
                 @include media('<=xl-phone'){
                     display: none;
@@ -287,7 +337,11 @@
 
                 @include media('<=small-notebook'){
                     font-size: 1.2rem;
-                }  
+                }
+                
+                @include media('<=xl-tablet', '>=xl-phone'){
+                    font-size: 1.6rem;
+                }
 
 
                 &::before{
@@ -341,6 +395,18 @@
                     font-size: 1.36rem;
                 }
 
+                @include media('<=xl-tablet', '>=xl-phone'){
+                    width: 10rem;
+                    height: 10rem;
+                    font-size: 1.56rem;
+                }
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    width: 12rem;
+                    height: 12rem;
+                    font-size: 1.86rem;
+                }
+
                 &::before{
                     content:'';
                     @include align-middle;
@@ -377,6 +443,19 @@
             background-color: unset;
         }
 
+        &__job-item-info-container{
+            @include media('<=xl-tablet', '>=xl-phone'){
+                margin-top: 11rem;
+            }
+
+
+            @include media('>=xl-phone'){
+                .btn--inline{
+                    display: none;
+                }
+            }
+        }
+
         &__job-item-info-container--inloco-arquitetura{
             .portfolio-layout__job-item-title-container{
                 left: 90%;
@@ -404,6 +483,21 @@
                     height: 23rem;
                 }
 
+                @include media('<=xl-tablet', '>=xl-phone'){
+                    width: 31rem;
+                    height: 31rem;
+                }
+
+                @include media('<=l-tablet', '>=xl-phone'){
+                    width: 21vw;
+                    height: 21vw;
+                }
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    width: 41vw;
+                    height: 41vw;
+                }
+
                 @include media('<=xl-phone'){
                     width: 25rem;
                     height: 25rem;
@@ -424,6 +518,10 @@
         }
 
         &__jobs-container{
+            @include media('<=m-tablet', '>=xl-phone'){
+                padding-bottom: 12rem;
+            }
+
             @include media('<=xl-phone'){
                 display: flex;
                 flex-direction: column;
@@ -457,6 +555,15 @@
                 @include media('<=small-notebook'){
                     height: 31rem;
                     margin-left: 16rem;
+                }
+
+                @include media('<=l-tablet', '>=xl-phone'){
+                    height: 31rem;
+                    margin-left: 14rem;
+                }
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    display: none;
                 }
 
                 @include media('<=xl-phone'){
@@ -512,6 +619,10 @@
 
         &__images-container{
             z-index: -1;
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                display: none;
+            }
         }
 
         &__img-estatua-masculina{
@@ -561,6 +672,12 @@
                     top: 72%;
                 }
 
+                @include media('<=xl-tablet', '>=xl-phone'){
+                    width: 25rem;
+                    left: 81%;
+                    top: 76%;
+                }
+
                 @include media('<=xl-phone'){
                     display: none;
                 }
@@ -587,6 +704,11 @@
 
                 @include media('<=small-notebook'){
                     left: 65%;
+                    width: 23rem;
+                }
+
+                @include media('<=xl-tablet', '>=xl-phone'){
+                    left: 68%;
                     width: 23rem;
                 }
 

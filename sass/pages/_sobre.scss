@@ -7,20 +7,38 @@
         padding-left: 4rem;
     }
 
+    @include media('<=m-tablet', '>=xl-phone'){
+        .mini-menu{
+            display: none;
+        }
+    }
+
     &__header-title-container{
         justify-content: unset;
         
+            @include media('<=l-tablet', '>=xl-phone'){
+                width: 80%;
+            }
 
             @include media('<=xl-phone'){
                 width: 96%;
                 flex-direction: column;
                 align-items: start;
             }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                flex-direction: column;
+                align-items: flex-start;
+            }
     }
 
     &__paragraph{
         @include media('<=xl-phone'){
             min-width: 29rem;
+        }
+
+        @include media('<=m-tablet', '>=xl-phone'){
+            width: unset;
         }
     }
 
@@ -32,8 +50,21 @@
                 font-size: 2.8rem;
             }
 
+            @include media('<=l-tablet', '>=xl-phone'){
+                font-size: 3.4rem;
+                margin-right: 5rem;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                font-size: 4rem;
+            }
+
             @include media('<=xl-phone'){
                 font-size: 3rem;
+                margin-bottom: 2rem;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
                 margin-bottom: 2rem;
             }
 
@@ -51,6 +82,12 @@
 
             @include media('<=large-notebook'){
                 justify-content: flex-start;
+            }
+
+            @include media('<=l-tablet', '>=xl-phone'){
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 12rem;
             }
 
             @include media('<=xl-phone'){
@@ -125,6 +162,11 @@
                         width: 9rem;
                     }
 
+                    @include media('<=l-tablet', '>=xl-phone'){
+                        height: 12rem;
+                        width: 10rem;
+                    }
+
                     @include media('<=xl-phone'){
                         height: 11rem;
                         width: 10rem;
@@ -155,6 +197,18 @@
                 background-image: linear-gradient(to top, $primary-light 0%, $primary-light 40%, #ffffff 40%);
             }
 
+            @include media('<=l-tablet', '>=xl-phone'){
+                font-size: 2.3rem;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                font-size: 2rem;
+            }
+
+            @include media('<=s-tablet', '>=xl-phone'){
+                font-size: 1.8rem;
+            }
+
             @include media('<=xl-phone'){
                 font-size: 2.1rem;
             }
@@ -182,6 +236,19 @@
                 margin-bottom: -1rem;
             }
 
+            @include media('<=l-tablet', '>=xl-phone'){
+                max-width: unset;
+                display: flex;
+                width: 70vw;
+                align-items: center;
+                padding: 2rem 2rem;
+                margin: 5rem 0 5rem 0;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                width: 77vw;
+            }
+
             @include media('<=xl-phone'){
                 margin: 2rem 1rem 2rem 1rem;
             }
@@ -206,6 +273,10 @@
                         left: 54%;
                         width: 43rem;
                         height: 34rem;
+                    }
+
+                    @include media('<=l-tablet', '>=xl-phone'){
+                        content: unset;
                     }
 
                     @include media('<=xl-phone'){
@@ -258,15 +329,23 @@
                 padding: 0 2rem 0 0;
                 overflow: hidden;
             }
-
             
             @include media('<=notebook'){
                 height: 18.5rem;
+            }
+            
+            @include media('<=l-tablet', '>=xl-phone'){
+                margin:0;
+                height: 23.5rem;
             }
 
 
             &:not(:first-child){
                 margin-top: 0;
+
+                    @include media('<=l-tablet', '>=xl-phone'){
+                        margin-left: 2rem;
+                    }
             }
     }
 
@@ -274,6 +353,10 @@
         color: $primary-dark;
         font-size: 2.3rem;
         font-weight: 600;
+
+            @include media('<=l-tablet', '>=xl-phone'){
+                font-size: 2.5rem;
+            }
     }
 
     &__descricao-box-img-container{
@@ -314,6 +397,10 @@
         @include media('<=large-notebook'){
             font-weight: 400;
         }
+
+        @include media('<=l-tablet', '>=xl-phone'){
+            font-size: 1.3rem;
+        }
     }
 
     &__descricao-box_social-media-link{
@@ -321,6 +408,10 @@
         text-decoration: none;
         vertical-align: middle;
         display: inline-block;
+
+            @include media('<=l-tablet', '>=xl-phone'){
+
+            }
 
             &:not(:last-child){
                 margin-right: .5rem;
@@ -348,6 +439,21 @@
                 transform: rotate(235deg);
             }
 
+            @include media('<=l-tablet', '>=xl-phone'){
+                top: -1%;
+                left: 55%;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                top: -1%;
+                left: 45%;
+                transform: rotate(216deg);
+            }
+
+            @include media('<=s-tablet', '>=xl-phone'){
+                width: 22rem;
+            }
+
             @include media('<=xl-phone'){
                 display: none;
             }
@@ -364,6 +470,13 @@
                 right: 6%;
                 width: 30rem;
                 height: 30rem;
+            }
+
+            @include media('<=s-tablet', '>=xl-phone'){
+                top: -9%;
+                right: 10%;
+                width: 23rem;
+                height: 23rem;
             }
 
             @include media('<=xl-phone'){

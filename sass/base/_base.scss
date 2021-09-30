@@ -17,6 +17,14 @@ html{
         font-size: 62%;
     }
 
+    @include media('<=xl-tablet'){
+        font-size: 56%;
+    }
+
+    @include media('<=m-tablet'){
+        font-size: 63%;
+    }
+
     @include media('<=xl-phone'){
         font-size: 66%;
     } 

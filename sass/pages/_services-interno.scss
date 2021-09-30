@@ -454,6 +454,12 @@
                 transform: rotate(12deg);
             }
 
+            @include media('<=m-tablet', '>=xl-phone'){
+                left: 59%;
+                top: -14%;
+                width: 37rem;
+            }
+
             @include media('<=xl-phone'){
                 display: none;
             }

@@ -3,6 +3,10 @@
     margin: 1rem auto 0 auto;
     width: 75%;
 
+    @include media('>=m-tablet'){
+        display: none;
+    }
+
     &__title-form-description{
         font-size: 1.8rem;
         font-weight: 100;

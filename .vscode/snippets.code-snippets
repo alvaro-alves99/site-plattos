@@ -16,34 +16,34 @@
 	// 	"description": "Log output to console"
 	// }
 
-		"phone-xl": {
+		"tablet-xl": {
 			"prefix": "xl",
 			"body": [
-			  "@include media('<=xl-phone')"
+			  "@include media('<=xl-tablet', '>=xl-phone')"
 			],
 			"description": "tag-responsiva"
 		  },
 
-		  "phone-l": {
+		  "tablet-l": {
 			"prefix": "l",
 			"body": [
-			  "@include media('<=l-phone')"
+			  "@include media('<=l-tablet', '>=xl-phone')"
 			],
 			"description": "tag-responsiva"
 		  },
 
-		  "phone-m": {
+		  "tablet-m": {
 			"prefix": "m",
 			"body": [
-			  "@include media('<=m-phone')"
+			  "@include media('<=m-tablet', '>=xl-phone')"
 			],
 			"description": "tag-responsiva"
 		  },
 
-		  "phone-s": {
+		  "tablet-s": {
 			"prefix": "s",
 			"body": [
-			  "@include media('<=s-phone')"
+			  "@include media('<=s-tablet', '>=xl-phone')"
 			],
 			"description": "tag-responsiva"
 		  }

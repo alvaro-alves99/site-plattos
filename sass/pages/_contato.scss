@@ -1,7 +1,18 @@
 .contato-layout{
 
+        @include media('<=m-tablet', '>=xl-phone'){
+            padding-bottom: 19rem;
+        }
+
         @include media('<=xl-phone'){
             padding-bottom: 3rem;
+        }
+
+        .mini-menu{
+            @include media('<=m-tablet', '>=xl-phone'){
+                top: 9.5rem;
+                left: 14%;
+            }
         }
     // TITULO NO COMECO E TEXTOS/CONTAINERS
 
@@ -13,6 +24,19 @@
             @include media('<=large-notebook'){
                 margin-top: 17rem;
                 margin-left: 11rem;
+            }
+
+            @include media('<=xl-tablet', '>=xl-phone'){
+                margin-top: 21rem;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                flex-direction: column;
+            }
+
+            @include media('<=s-tablet', '>=xl-phone'){
+                margin-top: 12rem;
+                margin-left: 10rem;
             }
 
             @include media('<=xl-phone'){
@@ -32,6 +56,14 @@
                 font-size: 3.5rem;
             }
 
+            @include media('<=xl-tablet', '>=xl-phone'){
+                font-size: 3.9rem;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                margin-bottom: 1.5rem;
+            }
+
             @include media('<=xl-phone'){
                 font-size: 3.6rem;
                 display: inline-block;
@@ -42,8 +74,14 @@
     }
 
     &__paragraph{
-        width: 40rem;
+        max-width: 40rem;
         margin-left: 4rem;
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                margin-left: 0;
+                max-width: unset;
+                width: unset;
+            }
 
             @include media('<=xl-phone'){
                 margin-left: 0;
@@ -64,6 +102,10 @@
                 margin-top: 5rem;
             }
 
+            @include media('<=m-tablet', '>=xl-phone'){
+                display: none;
+            }
+
             @include media('<=xl-phone'){
                 display: none;
             }
@@ -78,6 +120,10 @@
 
             @include media('<=large-notebook'){
                 font-size: 2.2rem;
+            }
+
+            @include media('<=xl-tablet', '>=xl-phone'){
+                font-size: 2.7rem;
             }
     }
 
@@ -95,6 +141,11 @@
                     padding: 1.1rem 2.1rem;
                 }
 
+                @include media('<=xl-tablet', '>=xl-phone'){
+                    font-size: 1.7rem;
+                    padding: 1.1rem 2.4rem;
+                }
+
         }
     }
 
@@ -105,6 +156,13 @@
     &__shortcuts-contato-container{
         margin-left: 13rem;
         margin-top: 5rem;
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                margin-left: 10rem;
+                margin-top: 8rem;
+                display: flex;
+                flex-direction: column;
+            }
 
             @include media('<=xl-phone'){
                 display: flex;
@@ -123,6 +181,15 @@
 
             @include media('<=large-notebook'){
                 font-size: 1.7rem;
+            }
+
+            @include media('<=xl-tablet', '>=xl-phone'){
+                font-size: 1.6vw;
+            }
+
+            @include media('<=m-tablet', '>=xl-phone'){
+                font-size: 2.5rem;
+                display: inline-block;
             }
 
             @include media('<=xl-phone'){
@@ -152,6 +219,11 @@
                         margin-right: 1.1rem;
                     }
 
+                    @include media('<=m-tablet', '>=xl-phone'){
+                        width: 3.5rem;
+                        height: 3.5rem;
+                    }
+
                     @include media('<=xl-phone'){
                         width: 3.3rem;
                         height: 3.3rem;
@@ -170,6 +242,18 @@
                     bottom: -27%;
                     right: 0;
                     background-color: $primary;
+
+                        @include media('<=xl-tablet', '>=xl-phone'){
+                            bottom: -29%;
+                            right: 0;
+                            left: 4rem;
+                        }
+
+                        @include media('<=m-tablet', '>=xl-phone'){
+                            width: 24%;
+                            right: unset;
+                            left: 5rem;
+                        }
 
                         @include media('<=xl-phone'){
                             right: unset;
@@ -202,6 +286,11 @@
 
             &:not(:last-child){
                 margin-right: 4rem;
+
+                    @include media('<=m-tablet', '>=xl-phone'){
+                        margin-right: 0;
+                        margin-bottom: 5rem;
+                    }
 
                     @include media('<=xl-phone'){
                         margin-right: 0;
@@ -237,6 +326,12 @@
                     padding: 1.2rem 2.4rem;
                 }
 
+                @include media('<=xl-tablet', '>=xl-phone'){
+                    font-size: 1.82rem;
+                    padding: 1.6rem 2.7rem;
+                    text-align: center;
+                }
+
                 @include media('<=xl-phone'){
                     padding: 1.6rem 2.3rem;
                     width: 95%;
@@ -247,12 +342,25 @@
 
     // IMAGENS NA PAGINA 
 
+    &__images-container{
+        @include media('<=m-tablet', '>=xl-phone'){
+            display: none;
+        }
+    }
+
 
     &__img-risquinho-sol-2{
         position: absolute;
         top: 82%;
         left: 58%;
         width: 41rem;
+
+            @include media('<=l-tablet', '>=xl-phone'){
+                position: absolute;
+                top: 90%;
+                left: 68%;
+                width: 21rem;
+            }
 
             @include media('<=xl-phone'){
                 display: none;
@@ -265,11 +373,19 @@
         width: 40rem;
         height: 40rem;
 
+        
             @include media('<=large-notebook'){
                 top: -18%;
                 right: -3%;
                 width: 26rem;
                 height: 26rem;
+            }
+            
+            @include media('<=xl-tablet', '>=xl-phone'){
+                top: -15%;
+                right: -3%;
+                width: 30rem;
+                height: 30rem;
             }
     }
 
@@ -293,10 +409,24 @@
                 top: 33%;
             }
 
+            
             @include media('<=notebook'){
                 width: 36rem;
                 left: 68%;
                 top: 35%;
+            }
+            
+            
+            @include media('<=xl-tablet', '>=xl-phone'){
+                width: 38rem;
+                left: 70%;
+                top: 49%;
+            }
+            
+            @include media('<=l-tablet', '>=xl-phone'){
+                width: 26rem;
+                left: 77%;
+                top: 64%;
             }
 
             @include media('<=xl-phone'){

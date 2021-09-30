@@ -10,6 +10,10 @@
             width: 15rem;
         }
 
+        @include media('<=xl-tablet', '>=xl-phone'){
+            display: none;
+        }
+
         @include media('<=xl-phone'){
             width: 100%;
             margin-top: 5rem;

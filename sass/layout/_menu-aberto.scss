@@ -15,6 +15,10 @@
             width: 88vw;
         }
 
+        @include media('<=xl-tablet'){
+            width: 91vw;
+        }
+
         @include media('<=xl-phone'){
             width: 100vw;
             background-color: $primary;
@@ -32,6 +36,10 @@
 
                 @include media('<=large-notebook'){
                     width: 12vw;
+                }
+
+                @include media('<=xl-tablet'){
+                    width: 9vw;
                 }
 
                 @include media('<=xl-phone'){
@@ -107,6 +115,14 @@
             position: absolute;
             top: 11rem;
             left: 38rem;
+
+                @include media('<=l-tablet', '>=xl-phone'){
+                    left: 20vw;
+                }
+
+                @include media('<=s-tablet', '>=xl-phone'){
+                    left: 15vw;
+                }
 
                 @include media('<=xl-phone'){
                     top: 5rem;
@@ -208,6 +224,11 @@
             left: 38rem;
             display: flex;
 
+                @include media('<=m-tablet', '>=xl-phone'){
+                    flex-direction: column;
+                }
+
+
                 @include media('<=xl-phone'){
                     top: 24rem;
                     left: 52%;
@@ -222,20 +243,49 @@
                 @media screen and (max-height:800px) {
                     top: 20rem;
                 }
+
+                @include media('<=l-tablet', '>=xl-phone'){
+                    top: 37vh;
+                    left: 20vw;
+                }
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    top: 29vh;
+                }
+
+                @include media('<=s-tablet', '>=xl-phone'){
+                    left: 15vw;
+                }
         }
 
         &__nav-container{
             width: 15rem;
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    width: 49rem;
+                }
         }
 
         &__lista-nav{
             display: flex;
             flex-direction: column;
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
         }
 
         &__lista-nav-item{
+
+
             &:not(:last-child){
                 margin-bottom: 2.9rem;
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    margin-right: 2rem;
+                    align-self: center;
+                }
             }
         }
 
@@ -302,6 +352,19 @@
             margin-left: 20rem;
             position: relative;
 
+                @include media('<=xl-tablet'){
+                    margin-left: 14rem;
+                }
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    margin-left: 0;
+                    margin-top: 5rem;
+                }
+
+                @include media('<=s-tablet', '>=xl-phone'){
+                    margin-top: 3rem;
+                }
+
                 @include media('<=xl-phone'){
                     display: none;
                 }
@@ -316,6 +379,14 @@
                     left: -15%;
                     top: 50%;
                     background-color: rgba($primary-dark, .25);
+
+                        @include media('<=xl-tablet'){
+                            left: -13%;
+                        }
+
+                        @include media('<=m-tablet', '>=xl-phone'){
+                            content: unset;
+                        }
                 }
 
 
@@ -328,6 +399,11 @@
         &__post-title{
             font-size: 1.7rem;
             margin-bottom: 1.5rem;
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    font-size: 2.1rem;
+                    margin-bottom: 3.5rem;
+                }
         }
 
 
@@ -376,6 +452,14 @@
             transform: rotate(15deg);
             image-rendering: -webkit-optimize-contrast;
 
+                @include media('<=xl-tablet'){
+                    right: -5%;
+                }
+
+                @include media('<=l-tablet', '>=xl-phone'){
+                    display: none;
+                }
+
                 @include media('<=xl-phone'){
                     display: none;
                 }
@@ -388,6 +472,10 @@
             width: 60rem;
             z-index: 1;
             image-rendering: -webkit-optimize-contrast;
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    display: none;
+                }
 
                 @include media('<=xl-phone'){
                     left: -28rem;
@@ -418,6 +506,7 @@
             transform: rotate(216deg);
             z-index: -1;
 
+
                 @include media('<=xl-phone'){
                     position: absolute;
                     top: unset;
@@ -438,6 +527,12 @@
                     bottom: -2.3rem;
                     width: 27rem;
                 }
+
+                @include media('<=l-tablet', '>=xl-phone'){
+                    width: 32rem;
+                    right: -13%;
+                    transform: rotate(257deg);
+               }
         }
 
         &__arco-risquinhos2{
@@ -447,6 +542,10 @@
             width: 29rem;
             transform: rotate(33deg);
             z-index: -1;
+
+                @include media('<=l-tablet', '>=xl-phone'){
+                    display: none;
+                }
 
                 @include media('<=xl-phone'){
                     display: none;
@@ -459,6 +558,19 @@
             top: -24rem;
             left: -19rem;
             z-index: -1;
+
+                @include media('<=l-tablet', '>=xl-phone'){
+                    left: -31rem;
+                    top: -9rem;
+                }
+
+                @include media('<=s-tablet', '>=xl-phone'){
+                    width: 38rem;
+                    left: -31rem;
+                    top: 6rem;
+
+                }
+
                 @include media('<=xl-phone'){
                     display: none;
                 }
@@ -476,6 +588,10 @@
             justify-content: flex-end;
             background-color: $primary;
             padding: 1.5rem 4rem;
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    justify-content: space-evenly;
+                }
 
                 @include media('<=xl-phone'){
                     background-color: $white;
@@ -537,6 +653,10 @@
 
                 @include media('<=large-notebook'){
                     width: 26rem;
+                }
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    display: none;
                 }
 
                 @include media('<=xl-phone'){

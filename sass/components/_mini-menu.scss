@@ -13,6 +13,21 @@
             width: 35%;
         }
 
+        @include media('<=xl-tablet'){
+            width: 39%;
+            min-width: 44rem;
+            top: 7.5rem;
+            left: 9%;
+        }
+
+        @include media('<=m-tablet'){
+            width: 67%;
+        }
+
+        @include media('<=s-tablet'){
+            display: none;
+        }
+
         @include media('<=xl-phone'){
             display: none;
         }  
@@ -24,12 +39,16 @@
         font-size: 1.3rem;
 
             @include media('<=large-notebook'){
-                font-size: 1.45rem;
+                font-size: 1.35rem;
             }
 
-            @include media('<=large-notebook'){
-                font-size: 1.35rem;
-            }  
+            @include media('<=xl-tablet'){
+                font-size: 1.5rem;
+            }
+
+            @include media('<=m-tablet'){
+                font-size: 1.7rem;
+            }
     }
 
     &__lista-item{

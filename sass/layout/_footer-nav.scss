@@ -80,6 +80,14 @@
                 @include media('<=small-notebook'){
                     margin-right: 30rem;
                 }
+
+                @include media('<=l-tablet', '>=xl-phone'){
+                    margin-right: 14rem;
+                }
+
+                @include media('<=m-tablet', '>=xl-phone'){
+                    display: none;
+                }
                 
                 @include media('<=xl-phone'){
                     margin-right: 0;
@@ -104,6 +112,10 @@
                         @include media('<=small-notebook'){
                             width: 24rem;
                         } 
+
+                        @include media('<=l-tablet', '>=xl-phone'){
+                            content: unset;
+                        }
 
                         @include media('<=xl-phone'){
                             content: unset;
@@ -137,6 +149,11 @@
                     @include media('<=large-notebook'){
                         font-size: 1.3rem;
                         padding: 1rem 2.2rem;
+                    }
+
+                    @include media('<=l-tablet', '>=xl-phone'){
+                        font-size: 1.53rem;
+                        padding: 1.3rem 2.5rem;
                     }
 
                     @include media('<=xl-phone'){
