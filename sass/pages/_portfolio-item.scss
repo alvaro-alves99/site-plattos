@@ -280,6 +280,10 @@
                 margin-left: 11rem;
             }
 
+            @include media('<=s-tablet', '>=xl-phone'){
+                margin-left: 9rem;
+            }
+
             @include media('<=xl-phone'){
                 margin: 2rem auto 1rem auto;
             }
@@ -323,6 +327,12 @@
 
             @include media('<=xl-tablet', '>=xl-phone'){
                 font-size: 2.4rem;
+            }
+
+            @include media('<=s-tablet', '>=xl-phone'){
+                display: block;
+                width: 50vw;
+                font-size: 2.7rem;
             }
 
 

@@ -47,6 +47,7 @@
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
+            animation: moverBolinhas 1s .5s backwards;
 
                 @include media('<=xl-tablet'){
                     width: 55rem;
@@ -89,7 +90,9 @@
             float: right;
             width: 65%;
             min-height: 100vh;
-            left: 2rem;
+            left: 6rem;
+            animation: slideUp 1s .5s;
+            animation-fill-mode: backwards;
 
                 @include media('<=large-notebook'){
                     left: 6rem;
@@ -124,8 +127,8 @@
         &__img-estatua{
             position: absolute;
             left: 4%;
-            bottom: -7%;
-            width: 73%;
+            bottom: -4%;
+            width: 70%;
             z-index: 50;
 
                 @include media('<=large-notebook'){
@@ -313,6 +316,7 @@
             background-image: url(../../img/bg-creme.png);
             background-size: cover;
             background-position: center;
+            animation: moverBolinhasUp 1s .5s backwards;
 
                 @include media('<=small-notebook'){
                     width: 26rem;
@@ -331,6 +335,7 @@
             left: -6%;
             z-index: -1;
             width: 41rem;
+            animation: slideUp 1s 1.3s backwards;
 
                 @include media('<=large-notebook'){
                     top: 87%;
@@ -354,8 +359,10 @@
 
         &__title-container{
             position: absolute;
-            top: 22%;
+            top: 23%;
             left: 7.5%;
+            animation: slideUp 1s 1s backwards;
+            backface-visibility: hidden;
 
                 @include media('<=large-notebook'){
                     top: 24%;
@@ -412,8 +419,9 @@
         &__title{
             color: $primary-dark;
             font-weight: 100;
-            font-size: 5.3rem;
+            font-size: 4.8rem;
             line-height: 1;
+            animation: titleAnimation 1s 1s;
 
                 @include media('<=xl-tablet'){
                     font-size: 5.5rem;
@@ -432,7 +440,7 @@
         &__title-emphasis{
             color: $primary;
             font-weight: 700;
-            font-size: 5.8rem;
+            font-size: 5.3rem;
 
                 @include media('<=xl-tablet'){
                     font-size: 6.1rem;
@@ -451,8 +459,11 @@
                 }
         }
 
-        &__paragraph{
-            width: 28rem;
+        & &__paragraph{
+            width: 36rem;
+            font-size: 1.33rem;
+            line-height: 1.7;
+            color: $primary-dark;
 
                 @include media('<=xl-phone'){
                     margin-top: 3rem;
@@ -466,6 +477,14 @@
                 font-weight: 400;
                 padding-bottom: 1.5rem;
                 margin-left: -1rem;
+                font-size: 1.6rem;
+                padding: 1.5rem 3rem;
+                transition: .5s;
+
+                &:hover{
+                    
+                    transform: translatey(-9px);
+                }
 
             }
 

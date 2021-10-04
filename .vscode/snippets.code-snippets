@@ -19,7 +19,7 @@
 		"tablet-xl": {
 			"prefix": "xl",
 			"body": [
-			  "@include media('<=xl-tablet', '>=xl-phone')"
+			  "@include media('>=xl-tablet', '<=small-notebook')"
 			],
 			"description": "tag-responsiva"
 		  },
@@ -27,7 +27,7 @@
 		  "tablet-l": {
 			"prefix": "l",
 			"body": [
-			  "@include media('<=l-tablet', '>=xl-phone')"
+			  "@include media('>=l-tablet', '<=small-notebook')"
 			],
 			"description": "tag-responsiva"
 		  },
@@ -35,7 +35,7 @@
 		  "tablet-m": {
 			"prefix": "m",
 			"body": [
-			  "@include media('<=m-tablet', '>=xl-phone')"
+			  "@include media('>=m-tablet', '<=small-notebook')"
 			],
 			"description": "tag-responsiva"
 		  },
@@ -43,7 +43,7 @@
 		  "tablet-s": {
 			"prefix": "s",
 			"body": [
-			  "@include media('<=s-tablet', '>=xl-phone')"
+			  "@include media('>=s-tablet', '<=small-notebook')"
 			],
 			"description": "tag-responsiva"
 		  }

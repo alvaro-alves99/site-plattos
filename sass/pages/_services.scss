@@ -129,6 +129,7 @@
             justify-content: space-between;
             align-items: center;
             width: 63%;
+            margin-top: 3rem;
 
                 @include media('<=large-notebook'){
                     width: 68%;

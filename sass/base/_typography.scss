@@ -18,14 +18,19 @@ h1, h2, h3, h4, h5{
             font-size: 1.2rem;
         }
 
+        
         @include media('<=xl-tablet'){
             font-size: 1.4rem;
         }
-
+        
         @include media('<=xl-phone'){
             font-size: 1.4rem;
         }
-}
+
+        @include media('>=s-tablet', '<=l-tablet'){
+            font-size: 1.7rem;
+        }
+    }
 
 .paragraph-peq{
     color: $primary-darker;
@@ -96,7 +101,8 @@ h1, h2, h3, h4, h5{
     font-weight: 600;
     margin-bottom: 1.5rem;
 
-        @include media('>=xl-phone'){
+        @include media('>=xl-tablet'){
             display: none;
         }
+
 }

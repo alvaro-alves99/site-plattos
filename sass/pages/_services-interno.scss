@@ -1,6 +1,6 @@
 .services-int-layout{
 
-    @include media('<=xl-phone'){
+    @include media('<=xl-tablet'){
         display: none;
     }
 
@@ -283,6 +283,9 @@
     }
     
     &__services-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 33rem;
 
             @include media('<=large-notebook'){
@@ -329,6 +332,7 @@
         &,
         &:link,
         &:visited{
+            margin-top: -3rem;
             font-size: 1.8rem !important;
             padding: 1.2rem 2.8rem 1.2rem 2.8rem;
 

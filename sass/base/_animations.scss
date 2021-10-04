@@ -1,0 +1,153 @@
+.menu-abrindo{
+    animation-name: abrirMenu;
+    animation-duration: 1s;
+    // animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+.menu-fechado{
+    animation-name:fecharMenu;
+    animation-duration:1s;
+}
+
+.fundo-invertido{
+    animation-name: inverterFundo;
+    animation-duration: .5s;
+}
+
+.fechar-menu-animation{
+    animation-name: inverterFundo;
+    animation-duration: .5s;
+}
+
+.fundo-invertido-processo{
+    filter: invert(1);
+    background: white;
+}
+
+.tirar-fundo-invertido{
+    animation-name: inverterFundo;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+.animacao-fundo-original{
+    animation-name: fundoOriginal;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes abrirMenu{
+    0%{
+        opacity: 0;
+        clip-path: polygon(0% 0%, 10% 0%, 0% 100%, 0% 100%);
+    }
+
+    100%{
+        opacity: 1;
+        clip-path: polygon(0 0, 130% 0%, 130% 130%, 0 130%);
+
+    }
+}
+
+@keyframes fecharMenu{
+    
+    0%{
+        opacity: 1;
+        clip-path: polygon(0 0, 130% 0%, 130% 130%, 0 130%);
+
+    }
+
+    100%{
+        opacity: 0;
+        clip-path: polygon(0% 0%, 25% 0%, 0% 100%, 0% 100%);
+    }
+}
+
+@keyframes inverterFundo{
+    0%{
+        filter: invert(0) blur(0);
+        background: white;
+    }
+
+    10%{
+        filter:invert(.6)
+    }
+
+    20%{
+        filter: invert(0);
+    }
+
+    30%{
+        filter: invert(.6);
+    }
+
+    40%{
+        filter:invert(0);
+    }
+
+    100%{
+        filter: invert(1);
+        background: white;
+    }
+}
+
+@keyframes fundoOriginal{
+
+    0%{
+        filter: invert(1);
+        background: white;
+    }
+
+    100%{
+        filter: invert(0) blur(0);
+        background: white;
+    }
+
+}
+
+@keyframes slideUp {
+    0% {
+      transform: translateY(50vh);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes moverBolinhas{
+      0%{
+        transform: translate(36rem, -28rem) scale(.6);
+      }
+
+      100%{
+          transform: translate(0, 0) scale(1);
+      }
+  }
+
+  @keyframes moverBolinhasUp{
+    0%{
+      transform: translate(-36rem, 28rem) scale(.6);
+    }
+
+    100%{
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }

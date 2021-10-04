@@ -1,6 +1,26 @@
 .services-section{
-    margin: 5rem auto 4rem auto;
+    margin: 5rem auto 3rem auto;
     width: 100%;
+
+        @include media('>=s-tablet', '<=small-notebook'){
+            width: 76%;
+        }
+
+        @include media('>=l-tablet', '<=small-notebook'){
+            width: 83%;
+        }
+
+        @include media('>=xl-tablet', '<=small-notebook'){
+            margin-top: 0;
+            width: 86%;
+        }
+
+        &__container{
+                @include media('>=l-tablet', '<=small-notebook'){
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+        }
 
         &__item{
             display: flex;
@@ -12,6 +32,14 @@
             width: 100%;
             padding: 4rem 0 4rem 0;
 
+                @include media('>=s-tablet', '<=small-notebook'){
+                    border-radius: 3rem;
+                }
+
+                @include media('>=l-tablet', '<=small-notebook'){
+                    width: 47%;
+                }
+
                 &:nth-child(odd){
                     background-image: url(../../img/FUNDOS/bg_tangerina_saturado.jpg);
                 }
@@ -22,6 +50,15 @@
 
                 &:not(:last-of-type){
                     margin-bottom: 2rem;
+
+                        @include media('>=s-tablet', '<=small-notebook'){
+                            margin-bottom: 4rem;
+                        }
+
+                        @include media('>=l-tablet', '<=small-notebook'){
+                            margin-bottom: 0;
+                            margin-right: 2rem;
+                        }
                 }
         }
 
@@ -34,6 +71,21 @@
             border-radius: 2.5rem;
             border: .5px solid rgba($primary, .5);
             transform: translate(-1.5rem, -1.5rem);
+
+                @include media('>=s-tablet', '<=small-notebook'){
+                    padding: 2.83rem 3rem;
+                }
+
+                @include media('>=l-tablet', '<=small-notebook'){
+                    flex-direction: column;
+                    align-items: center;
+                }
+        }
+
+        &__item-icon{
+            @include media('>=s-tablet', '<=small-notebook'){
+                width: 10rem;
+            }
         }
 
         &__item-content{
@@ -46,18 +98,35 @@
         
         &__title-group{
             margin-left: 1.5rem;
+
+                @include media('>=l-tablet', '<=small-notebook'){
+                    margin-left: 0;
+                    text-align: center;
+                }
         }
 
         &__title{
             color: $primary;
             font-weight: 700;
             font-size: 9vw;
+
+                @include media('>=s-tablet', '<=small-notebook'){
+                    font-size: 5rem;
+                }
+
+                @include media('>=l-tablet', '<=small-notebook'){
+                    font-size: 4.5rem;
+                }
         }
 
         &__title-descricao{
             font-family: 'playfair', serif;
             font-style: italic;
             font-size: 1.4rem;
+
+                @include media('>=s-tablet', '<=small-notebook'){
+                    font-size: 1.64rem;
+                }
         }
 
         &__trabalhos-content{
@@ -83,11 +152,20 @@
             vertical-align: text-top;
             padding: 1.2rem 2rem;
 
+                @include media('>=s-tablet', '<=small-notebook'){
+                    font-size: 2rem;
+                    padding: 1.7rem 3rem;
+                }
+
                 &::before{
                     @include settings-bg;
                     height: 2.5rem;
                     width: 2.5rem;
                     margin-right: .8rem;
+
+                        @include media('>=s-tablet', '<=small-notebook'){
+                            margin-right: 1.3rem;
+                        }
                 }
 
                 &::after{

@@ -28,6 +28,10 @@
                 width: 24rem;
             }
 
+            @include media('<=s-tablet', '>=xl-phone'){
+                width: 26rem;
+            }
+
             @include media('<=xl-phone'){
                 width: 100%;
             }

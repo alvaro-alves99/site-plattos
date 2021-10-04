@@ -4,6 +4,15 @@
     overflow: hidden;
     position: relative;
 
+        @include media('>=small-notebook'){
+            display: none;
+        }
+
+        @include media('>=s-tablet', '<=small-notebook'){
+            width: 90%;
+            float: right;
+        }
+
         &::after{
             @include settings-bg;
             background-size: cover;
@@ -15,12 +24,35 @@
             border-radius: 50%;
             background-image: url(../../img/BG_CREME.jpg);
             image-rendering: initial;
+
+                @include media('>=s-tablet', '<=small-notebook'){
+                    height: 19rem;
+                    width: 19rem;
+                    right: 0vw;
+                    top: -8vh;
+                }
         }
     
 
         &__title-container{
             margin: 21rem auto 2rem auto;
             width: 74%;
+
+                @include media('>=s-tablet', '<=small-notebook'){
+                    width: 80%;
+                    margin: 12rem auto 2rem auto;
+                }
+
+                @include media('>=l-tablet', '<=small-notebook'){
+                    padding-right: 20rem;
+                }
+
+                @include media('>=xl-tablet', '<=small-notebook'){
+                    display: flex;
+                    align-items: center;
+                    padding-right: 0;
+                    margin-top: 7rem;
+                }
         }
 
         &__title{
@@ -28,10 +60,72 @@
             font-weight: 400;
             margin-bottom: 2rem;
             margin-top: 3rem;
+
+                @include media('>=s-tablet', '<=small-notebook'){
+                    font-size: 4rem;
+                }
+
+                @include media('>=xl-tablet', '<=small-notebook'){
+                    padding: 3rem;
+                    font-size: 3.4rem;
+                }
         }
 
-        &__texto-descricao{
-            
+        &__btn-footer-container{
+            margin-left: 2rem;
 
+                @include media('>=s-tablet', '<=small-notebook'){
+                    margin-left: 0;
+                    text-align: center;
+                    margin-top: 1rem;
+                    margin-bottom: 4rem;
+                }
+
+                @include media('>=l-tablet', '<=small-notebook'){
+                    margin-top: 5rem;
+                }
         }
+
+        &__btn{
+            color: $primary-dark;
+            font-weight: 600;
+            font-size: 1.8rem;
+            text-decoration: none;
+
+                @include media('>=s-tablet', '<=small-notebook'){
+                    font-size: 2.5rem;
+                }
+
+                &::after{
+                    @include settings-bg;
+                    height: 1.6rem;
+                    width: 1.6rem;
+                    background-image: url(../../img/_logos/icon-seta-baixo.svg);
+                    transform: scaley(-1);
+                    vertical-align: middle;
+                    margin-left: 1rem;
+
+                        @include media('>=s-tablet', '<=small-notebook'){
+                            height: 2.2rem;
+                            width: 2.2rem;
+                        }
+                }
+
+                &::before{
+                    @include settings-bg;
+                    height: 1.6rem;
+                    width: 1.6rem;
+                    background-image: url(../../img/_logos/icon-seta-baixo.svg);
+                    transform: scaley(-1);
+                    vertical-align: middle;
+                    margin-right: 1rem;
+
+                        @include media('>=s-tablet', '<=small-notebook'){
+                            height: 2.2rem;
+                            width: 2.2rem;
+                        }
+                }
+        }
+
+
 }
